@@ -1,0 +1,58 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="lockerMaintain" extends="ajgl-web-ajgl" namespace="/lockerMaintain">
+		<!-- 跳转储物架维护界面 -->
+		<action name="showLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/lockerMaintain/lockerMaintain.jsp</result>
+		</action>
+		<!-- 跳转储物架新增界面 -->
+		<action name="showNewLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/lockerMaintain/newLocker.jsp</result>
+		</action>
+		<!-- 跳转储物架修改界面 -->
+		<action name="showModifyLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/lockerMaintain/modifyLocker.jsp</result>
+		</action>
+		<!-- 跳转储物架查看界面 -->
+		<action name="showLookLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/lockerMaintain/lookLocker.jsp</result>
+		</action>
+		<!-- 查询储物架 -->
+		<action name="queryLocker" class="lockerMaintainAction" method="queryLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">articleLockerBeanList.*,totalNum</param>
+			</result>
+		</action>
+		<!-- 新增储物架 -->
+		<action name="newLocker" class="lockerMaintainAction" method="newLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg</param>
+			</result>
+		</action>
+		<!-- 修改储物架 -->
+		<action name="modifyLocker" class="lockerMaintainAction" method="modifyLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg,flag</param>
+			</result>
+		</action>
+		<!-- 删除储物架 -->
+		<action name="deleteLocker" class="lockerMaintainAction" method="deleteLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg</param>
+			</result>
+		</action>
+		<!-- 查看储物架 -->
+		<action name="lookLocker" class="lockerMaintainAction" method="lookLocker">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 生成code -->
+		<action name="generateCode" class="lockerMaintainAction" method="generateCode">
+			<result name="success" type="json"></result>
+		</action>
+		
+	</package>
+</struts>

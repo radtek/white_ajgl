@@ -1,0 +1,34 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="agtLogin" extends="ajgl-web-agt" namespace="/agtLogin">
+		<!-- 进入登录页面-->
+		<action name="login">
+			<result name="success">/WEB-INF/view/agt/login/login.jsp</result>
+		</action>
+		<!-- 加载登录信息-->
+		<action name="findData" class="CaseManagementLoginAction" method="findData">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询登录民警的用户名和密码-->
+		<action name="findUserMessage" class="CaseManagementLoginAction" method="findUserMessage">
+			<result name="success" type="json"></result>
+		</action>
+		<!--点击登录页面-->
+		<action name="loginMeth" class="CaseManagementLoginAction" method="loginMeth">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 加载安管通小程序初始页面-->
+		<action name="loginHTML">
+			<result name="success">/WEB-INF/agt/html-cs/CS-menu.html</result>
+		</action>
+		<action name="findOCX" class="CaseManagementLoginAction" method="findOCX">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="findSyncTrialNoteStat" class="CaseManagementLoginAction" method="findSyncTrialNoteStat">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="updateAskroomAllocationRecord" class="CaseManagementLoginAction" method="updateAskroomAllocationRecord">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

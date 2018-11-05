@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="webUtil" extends="ajgl-web-ajgl" namespace="/webUtil">
+		<!-- 根据字典类型获取字典项 -->
+		<action name="findDictionaryItemByType" class="dictionaryItemAction" method="findDictionaryItemsByType">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="findDictionaryItemsByTypeForTree" class="dictionaryItemAction" method="findDictionaryItemsByTypeForTree">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="findBase64ByAttachId" class="showFileAction" method="findBase64ByAttachId">
+			<result name="success" type="json"></result>
+		</action>
+		
+	</package>
+</struts>

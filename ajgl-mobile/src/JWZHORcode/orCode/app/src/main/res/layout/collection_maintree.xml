@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="#ffffffff">
+	<include layout="@layout/collection_toolbar_bottom"></include>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_above="@+id/toolBar">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical" >
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:orientation="horizontal"
+			android:background="#03285f">
+			<ImageView
+				android:id="@+id/main_item_ivPersonv3"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_marginTop="9dp"
+				android:layout_marginLeft="15dp"
+				android:src="@drawable/mainv2_logo_back"
+				/>
+			<LinearLayout
+				android:id="@+id/main_item_lvback3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_gravity="center_vertical"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/main_item_ivPersonv3"
+				android:layout_toEndOf="@+id/main_item_ivPersonv3">
+				<TextView
+					android:id="@+id/main_item_tvNamev3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="0dp"
+					android:text="返回"
+					android:textColor="#ffffff"
+					android:textSize="20sp" />
+
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:text="选择类型"
+				android:textColor="#ffffff"
+				android:textSize="20sp"
+				android:layout_centerHorizontal="true"
+				android:layout_centerVertical="true"/>
+
+		</RelativeLayout>
+		<ListView
+			android:id="@+id/code_list"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:divider="#aaa"
+			android:dividerHeight="1px"
+			android:scrollbars="none">
+		</ListView>
+		</LinearLayout>
+		<!--<ListView android:id="@+id/code_list" android:background="#ffffffff"
+			android:fadingEdgeLength="0.0sp" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:drawSelectorOnTop="false"
+			android:cacheColorHint="#ffffffff"
+			android:dividerHeight="0.5dip" android:layout_weight="0.0"
+			android:fastScrollEnabled="true" android:scrollbars="none"
+			/>-->
+
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="videoRecording" extends="ajgl-web-ajgl" namespace="/videoRecording">
+		<!-- 进入登录页面-->
+		<action name="login">
+			<result name="success">/WEB-INF/view/yykl/videoRecordingList.jsp</result>
+		</action>
+		<!-- 进入刻录详情页面-->
+		<action name="recordingDetail">
+			<result name="success">/WEB-INF/view/yykl/recordingDetail.jsp</result>
+		</action>
+		 <!-- 加载下拉框信息-->
+		<action name="findRoomList" class="VideoRecordingAction" method="findRoomList">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="searchAllRecordFormListByCondition" class="VideoRecordingAction" method="searchAllRecordFormListByCondition">
+			<result name="success" type="json"></result> 
+		</action>
+		<!-- 通过使用单id查询使用单 -->
+		<action name="findBasicCaseByFormId" class="VideoRecordingAction" method="findBasicCaseByFormId">
+			<result name="success" type="json"></result>
+		</action>
+		<!--通过使用单id查询刻录记录 -->
+		<action name="findRecordingByFormId" class="VideoRecordingAction" method="findRecordingByFormId">
+			<result name="success" type="json"></result> 
+		</action>
+		
+		
+	</package>
+</struts>

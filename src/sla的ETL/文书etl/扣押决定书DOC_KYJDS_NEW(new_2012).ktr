@@ -1,0 +1,3140 @@
+<transformation>
+  <info>
+    <name>&#x6263;&#x62bc;&#x51b3;&#x5b9a;&#x4e66;DOC_KYJDS_NEW&#x28;new_2012&#x29;</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;&#x6587;&#x4e66;etl</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2016&#x2f;09&#x2f;22 16&#x3a;40&#x3a;22.928</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2017&#x2f;04&#x2f;14 14&#x3a;38&#x3a;03.278</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>ajgl&#x76ee;&#x6807;&#x5e93;</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>ajgl</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>source_v3&#x6e90;&#x5e93;</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>source_v3</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>t_sla_doc_kyjds_new_2012&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;</from><to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;</from><to>t_sla_jzws&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;</to><enabled>Y</enabled> </hop>
+  <hop> <from>t_sla_jzws&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;1</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;1</from><to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;1</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;1</from><to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;1</to><enabled>Y</enabled> </hop>
+  <hop> <from>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;1</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;2</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;2</from><to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;2</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;2</from><to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;2</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;1</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;2</to><enabled>Y</enabled> </hop>
+  <hop> <from>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;2</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;3</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;2</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;3</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;3</from><to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;3</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;3</from><to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;3</to><enabled>Y</enabled> </hop>
+  <hop> <from>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;3</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;4</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;4</from><to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;4</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;4</from><to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;4</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;3</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;4</to><enabled>Y</enabled> </hop>
+  <hop> <from>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;4</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;5</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;4</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;5</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;5</from><to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;5</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;5</from><to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;5</to><enabled>Y</enabled> </hop>
+  <hop> <from>INPUTPSN&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>MODIFIEDPSN&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>MODIFIEDPSN&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>PERSONID&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>A14&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>A16&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>A16&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>A17&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>A17&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>A18&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>A18&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>A20&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>PERSONID&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>A14&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>A20&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</from><to>JavaScript&#x4ee3;&#x7801;-policeName</to><enabled>Y</enabled> </hop>
+  <hop> <from>doc_kyjds_new&#x8868;&#x8f93;&#x5165;</from><to>INPUTPSN&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;</from><to>JavaScript&#x4ee3;&#x7801; 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801; 3</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;</to><enabled>Y</enabled> </hop>
+  <hop> <from>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;1</from><to>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;1&#x7f16;&#x53f7;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;1&#x7f16;&#x53f7;</from><to>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;1</to><enabled>Y</enabled> </hop>
+  <hop> <from>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;2</from><to>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;2&#x7f16;&#x53f7;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;2&#x7f16;&#x53f7;</from><to>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;2</to><enabled>Y</enabled> </hop>
+  <hop> <from>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;3</from><to>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;3&#x7f16;&#x53f7;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;3&#x7f16;&#x53f7;</from><to>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;3</to><enabled>Y</enabled> </hop>
+  <hop> <from>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;4</from><to>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;4&#x7f16;&#x53f7;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;4&#x7f16;&#x53f7;</from><to>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;4</to><enabled>Y</enabled> </hop>
+  <hop> <from>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;5</from><to>JavaScript&#x4ee3;&#x7801;5</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;5</from><to>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;5</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;-policeName</from><to>&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;-&#x8eab;&#x4efd;&#x8bc1;&#x53f7;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x66ff;&#x6362;NULL&#x503c;</from><to>&#x5b57;&#x6bb5;&#x9009;&#x62e9;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x67e5;&#x8be2;&#x6570;&#x636e;&#x6700;&#x65b0;&#x65f6;&#x95f4;</from><to>&#x66ff;&#x6362;NULL&#x503c;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;&#x62e9;</from><to>doc_kyjds_new&#x8868;&#x8f93;&#x5165;</to><enabled>Y</enabled> </hop>
+  <hop> <from>HTTP client</from><to>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;</from><to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;</from><to>&#x53d1;&#x9001;&#x9884;&#x8b66;&#x63d0;&#x9192;&#x6570;&#x636e;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;-&#x8eab;&#x4efd;&#x8bc1;&#x53f7;</from><to>&#x5230;&#x671f;&#x63d0;&#x9192;-&#x5f55;&#x5165;&#x4eba;&#x8b66;&#x53f7;-&#x67e5;&#x8be2;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5230;&#x671f;&#x63d0;&#x9192;-&#x5f55;&#x5165;&#x4eba;&#x8b66;&#x53f7;-&#x67e5;&#x8be2;</from><to>t_sla_doc_kyjds_new_2012&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;5</from><to>&#x83b7;&#x53d6;postUrl&#x53d8;&#x91cf;</to><enabled>Y</enabled> </hop>
+  <hop> <from>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;5</from><to>&#x83b7;&#x53d6;postUrl&#x53d8;&#x91cf;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;postUrl&#x53d8;&#x91cf;</from><to>HTTP client</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>A14&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_user</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>A14</name>
+        <field>USERID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>NAME</name>
+        <rename>A14name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>A16&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_user</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>A16</name>
+        <field>USERID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>NAME</name>
+        <rename>A16name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>POLICENUMBER</name>
+        <rename>A16PoliceNum</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>A17&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_user</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>A17</name>
+        <field>USERID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>NAME</name>
+        <rename>A17name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>POLICENUMBER</name>
+        <rename>A17PoliceNum</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>A18&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_unit</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>A18</name>
+        <field>UNITID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>UNITNAME_QC</name>
+        <rename>A18name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>A20&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_user</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>A20</name>
+        <field>USERID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>NAME</name>
+        <rename>A20name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>288</xloc>
+      <yloc>720</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>HTTP client</name>
+    <type>HTTP</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <url>http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080&#x2f;ajgl-web-all&#x2f;</url>
+    <urlInField>Y</urlInField>
+    <urlField>postUrl</urlField>
+    <encoding>UTF-8</encoding>
+    <httpLogin/>
+    <httpPassword>Encrypted </httpPassword>
+    <proxyHost/>
+    <proxyPort/>
+    <socketTimeout>10000</socketTimeout>
+    <connectionTimeout>10000</connectionTimeout>
+    <closeIdleConnectionsTime>-1</closeIdleConnectionsTime>
+    <lookup>
+    </lookup>
+    <result>
+      <name>result</name>
+      <code>code</code>
+      <response_time>response</response_time>
+    </result>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3200</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>INPUTPSN&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_user</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>INPUTPSN</name>
+        <field>USERID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>NAME</name>
+        <rename>INPUTPSNname</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;-policeName</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#x2f;&#x2f;var policeName &#x3d; A16name &#x2b; &#x22;,&#x22; &#x2b; A17name&#x3b;&#xd;&#xa;var policeName &#x3d; &#x22;&#x22;&#x3b;&#xd;&#xa;if&#x28;A16name &#x21;&#x3d; null&#x29;&#x7b;&#xd;&#xa;	policeName &#x2b;&#x3d; A16name&#x3b;&#xd;&#xa;	if&#x28;A17name &#x21;&#x3d; null&#x29;&#x7b;&#xd;&#xa;		policeName &#x2b;&#x3d; &#x22;,&#x22; &#x2b; A17name&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;&#x7d;else if&#x28;A17name &#x21;&#x3d; null&#x29;&#x7b;&#xd;&#xa;	policeName &#x2b;&#x3d;  A17name&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>policeName</name>
+        <rename>policeName</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>320</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801; 3</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var paperName &#x3d; B2 &#x2b; B3 &#x2b; B4 &#x2b; &#x22; &#x5b57;&#x22; &#x2b; &#x22;&#x5b;&#x22; &#x2b; B5 &#x2b; &#x22;&#x5d;&#x22; &#x2b; B6 &#x2b; &#x22;&#x53f7;&#x22;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>paperName</name>
+        <rename>paperName</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>768</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;1&#x7f16;&#x53f7;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var articleCode1 &#x3d; &#x22;WP&#x22; &#x2b; DOCID &#x2b; &#x22;1&#x22;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>articleCode1</name>
+        <rename>articleCode1</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1296</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;2&#x7f16;&#x53f7;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var articleCode2 &#x3d; &#x22;WP&#x22; &#x2b; DOCID &#x2b; &#x22;2&#x22;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>articleCode2</name>
+        <rename>articleCode2</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1616</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;3&#x7f16;&#x53f7;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var articleCode3 &#x3d; &#x22;WP&#x22; &#x2b; DOCID &#x2b; &#x22;3&#x22;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>articleCode3</name>
+        <rename>articleCode3</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1920</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;-&#x7269;&#x54c1;4&#x7f16;&#x53f7;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var articleCode4 &#x3d; &#x22;WP&#x22; &#x2b; DOCID &#x2b; &#x22;4&#x22;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>articleCode4</name>
+        <rename>articleCode4</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2240</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;5</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var articleCode5 &#x3d; &#x22;WP&#x22; &#x2b; DOCID &#x2b; &#x22;5&#x22;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>articleCode5</name>
+        <rename>articleCode5</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2611</xloc>
+      <yloc>74</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>MODIFIEDPSN&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_user</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>MODIFIEDPSN</name>
+        <field>USERID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>NAME</name>
+        <rename>MODIFIEDPSNname</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PERSONID&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>psn_m_criminal</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>PERSONID</name>
+        <field>PERSONID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>NAME</name>
+        <rename>PERSONIDname</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>doc_kyjds_new&#x8868;&#x8f93;&#x5165;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  CSSFONT&#xd;&#xa;, UNITID&#xd;&#xa;, MULTIID&#xd;&#xa;, INPUTPSN&#xd;&#xa;, INPUTTIME&#xd;&#xa;, MODIFIEDPSN&#xd;&#xa;, MODIFIEDTIME&#xd;&#xa;, DISTRICTTIME&#xd;&#xa;, PROVINCETIME&#xd;&#xa;, TAG&#xd;&#xa;, MODIFIEDTAG&#xd;&#xa;, DELETAG&#xd;&#xa;, LYDS&#xd;&#xa;, HCK_RKSJ&#xd;&#xa;, HCK_GXSJ&#xd;&#xa;, DOCID&#xd;&#xa;, REMARK&#xd;&#xa;, CASEID&#xd;&#xa;, PERSONID&#xd;&#xa;, A1&#xd;&#xa;, A2&#xd;&#xa;, A3&#xd;&#xa;, A4&#xd;&#xa;, A5&#xd;&#xa;, A6&#xd;&#xa;, A7&#xd;&#xa;, A8&#xd;&#xa;, A9&#xd;&#xa;, A10&#xd;&#xa;, A11&#xd;&#xa;, A12&#xd;&#xa;, A13&#xd;&#xa;, A14&#xd;&#xa;, A15&#xd;&#xa;, A16&#xd;&#xa;, A17&#xd;&#xa;, A18&#xd;&#xa;, A19&#xd;&#xa;, A20&#xd;&#xa;, B1&#xd;&#xa;, B2&#xd;&#xa;, B3&#xd;&#xa;, B4&#xd;&#xa;, B5&#xd;&#xa;, B6&#xd;&#xa;, B7&#xd;&#xa;, B8&#xd;&#xa;, B9&#xd;&#xa;, B10&#xd;&#xa;, B11&#xd;&#xa;, B12&#xd;&#xa;, B13&#xd;&#xa;, B14&#xd;&#xa;, B15&#xd;&#xa;, B16_1&#xd;&#xa;, B17_1&#xd;&#xa;, B18_1&#xd;&#xa;, B19_1&#xd;&#xa;, B16_2&#xd;&#xa;, B17_2&#xd;&#xa;, B18_2&#xd;&#xa;, B19_2&#xd;&#xa;, B16_3&#xd;&#xa;, B17_3&#xd;&#xa;, B18_3&#xd;&#xa;, B19_3&#xd;&#xa;, B16_4&#xd;&#xa;, B17_4&#xd;&#xa;, B18_4&#xd;&#xa;, B19_4&#xd;&#xa;, B16_5&#xd;&#xa;, B17_5&#xd;&#xa;, B18_5&#xd;&#xa;, B19_5&#xd;&#xa;, B20&#xd;&#xa;, B21&#xd;&#xa;, B22&#xd;&#xa;, C1&#xd;&#xa;, C2&#xd;&#xa;, C3&#xd;&#xa;, C4&#xd;&#xa;, C5&#xd;&#xa;, C6&#xd;&#xa;, C7&#xd;&#xa;, C8&#xd;&#xa;, C9&#xd;&#xa;, C10&#xd;&#xa;, C11&#xd;&#xa;, C12&#xd;&#xa;, C13&#xd;&#xa;, C14&#xd;&#xa;, C15&#xd;&#xa;, C16_1&#xd;&#xa;, C17_1&#xd;&#xa;, C18_1&#xd;&#xa;, C19_1&#xd;&#xa;, C16_2&#xd;&#xa;, C17_2&#xd;&#xa;, C18_2&#xd;&#xa;, C19_2&#xd;&#xa;, C16_3&#xd;&#xa;, C17_3&#xd;&#xa;, C18_3&#xd;&#xa;, C19_3&#xd;&#xa;, C16_4&#xd;&#xa;, C17_4&#xd;&#xa;, C18_4&#xd;&#xa;, C19_4&#xd;&#xa;, C16_5&#xd;&#xa;, C17_5&#xd;&#xa;, C18_5&#xd;&#xa;, C19_5&#xd;&#xa;, C22&#xd;&#xa;FROM doc_kyjds_new&#xd;&#xa; WHERE HCK_GXSJ &#x3e;&#x3d; &#x3f;&#xd;&#xa;-- WHERE HCK_GXSJ &#x3e;&#x3d; str_to_date&#x28;&#x27;2000-01-02 00&#x3a;00&#x3a;00&#x27;,&#x27;&#x25;Y-&#x25;m-&#x25;d &#x25;H&#x3a;&#x25;i&#x3a;&#x25;s&#x27;&#x29;&#xd;&#xa;-- WHERE HCK_GXSJ &#x3e;&#x3d; str_to_date&#x28;&#x27;2016-08-16 06&#x3a;57&#x3a;44&#x27;,&#x27;&#x25;Y-&#x25;m-&#x25;d &#x25;H&#x3a;&#x25;i&#x3a;&#x25;s&#x27;&#x29;&#xd;&#xa;ORDER BY HCK_GXSJ&#xd;&#xa;-- limit 50&#xd;&#xa;-- limit 1000&#xd;&#xa;-- limit 1</sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;&#x62e9;</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>newid</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>656</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;1</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>newid1</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;2</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>newid2</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1552</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;3</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>newid3</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1856</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;4</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>newid4</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2192</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;5</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>newid5</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2544</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_sla_doc_kyjds_new_2012&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>t_sla_doc_kyjds_new_2012</table>
+      <key>
+        <name>DOCID</name>
+        <field>docid</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>unitid</name>
+        <rename>UNITID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>multiid</name>
+        <rename>MULTIID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>inputpsn</name>
+        <rename>INPUTPSNname</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>inputtime</name>
+        <rename>INPUTTIME</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>modifiedpsn</name>
+        <rename>MODIFIEDPSNname</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>modifiedtime</name>
+        <rename>MODIFIEDTIME</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>districttime</name>
+        <rename>DISTRICTTIME</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>provincetime</name>
+        <rename>PROVINCETIME</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>hck_rksj</name>
+        <rename>HCK_RKSJ</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>hck_gxsj</name>
+        <rename>HCK_GXSJ</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>docid</name>
+        <rename>DOCID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>caseid</name>
+        <rename>CASEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>personid</name>
+        <rename>PERSONID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a1</name>
+        <rename>A1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a2</name>
+        <rename>A2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a3</name>
+        <rename>A3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a4</name>
+        <rename>A4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a5</name>
+        <rename>A5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a6</name>
+        <rename>A6</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a7</name>
+        <rename>A7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a8</name>
+        <rename>A8</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a9</name>
+        <rename>A9</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a10</name>
+        <rename>A10</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a11</name>
+        <rename>A11</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a12</name>
+        <rename>A12</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a13</name>
+        <rename>A13</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a14</name>
+        <rename>A14name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a15</name>
+        <rename>A15</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a16</name>
+        <rename>A16name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a17</name>
+        <rename>A17name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a18</name>
+        <rename>A18name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a19</name>
+        <rename>A19</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>a20</name>
+        <rename>A20name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b1</name>
+        <rename>B1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b2</name>
+        <rename>B2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b3</name>
+        <rename>B3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b4</name>
+        <rename>B4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b5</name>
+        <rename>B5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b6</name>
+        <rename>B6</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b7</name>
+        <rename>B7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b8</name>
+        <rename>B8</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b9</name>
+        <rename>B9</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b10</name>
+        <rename>B10</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b11</name>
+        <rename>B11</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b12</name>
+        <rename>B12</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b13</name>
+        <rename>B13</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b14</name>
+        <rename>B14</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b15</name>
+        <rename>B15</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b16_1</name>
+        <rename>B16_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b17_1</name>
+        <rename>B17_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b18_1</name>
+        <rename>B18_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b19_1</name>
+        <rename>B19_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b16_2</name>
+        <rename>B16_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b17_2</name>
+        <rename>B17_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b18_2</name>
+        <rename>B18_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b19_2</name>
+        <rename>B19_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b16_3</name>
+        <rename>B16_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b17_3</name>
+        <rename>B17_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b18_3</name>
+        <rename>B18_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b19_3</name>
+        <rename>B19_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b16_4</name>
+        <rename>B16_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b17_4</name>
+        <rename>B17_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b18_4</name>
+        <rename>B18_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b19_4</name>
+        <rename>B19_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b16_5</name>
+        <rename>B16_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b17_5</name>
+        <rename>B17_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b18_5</name>
+        <rename>B18_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b19_5</name>
+        <rename>B19_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b20</name>
+        <rename>B20</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b21</name>
+        <rename>B21</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>b22</name>
+        <rename>B22</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c1</name>
+        <rename>C1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c2</name>
+        <rename>C2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c3</name>
+        <rename>C3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c4</name>
+        <rename>C4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c5</name>
+        <rename>C5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c6</name>
+        <rename>C6</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c7</name>
+        <rename>C7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c8</name>
+        <rename>C8</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c9</name>
+        <rename>C9</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c10</name>
+        <rename>C10</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c11</name>
+        <rename>C11</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c12</name>
+        <rename>C12</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c13</name>
+        <rename>C13</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c14</name>
+        <rename>C14</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c15</name>
+        <rename>C15</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c16_1</name>
+        <rename>C16_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c17_1</name>
+        <rename>C17_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c18_1</name>
+        <rename>C18_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c19_1</name>
+        <rename>C19_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c16_2</name>
+        <rename>C16_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c17_2</name>
+        <rename>C17_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c18_2</name>
+        <rename>C18_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c19_2</name>
+        <rename>C19_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c16_3</name>
+        <rename>C16_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c17_3</name>
+        <rename>C17_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c18_3</name>
+        <rename>C18_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c19_3</name>
+        <rename>C19_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c16_4</name>
+        <rename>C16_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c17_4</name>
+        <rename>C17_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c18_4</name>
+        <rename>C18_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c19_4</name>
+        <rename>C19_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c16_5</name>
+        <rename>C16_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c17_5</name>
+        <rename>C17_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c18_5</name>
+        <rename>C18_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c19_5</name>
+        <rename>C19_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>c22</name>
+        <rename>C22</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>deletag</name>
+        <rename>DELETAG</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>inputpsnId</name>
+        <rename>jh</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>432</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_sla_jzws&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>t_sla_jzws</table>
+      <key>
+        <name>CASEID</name>
+        <field>caseId</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>DOCID</name>
+        <field>sourceId</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>type</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>id</name>
+        <rename>newid</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>sourceId</name>
+        <rename>DOCID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>excuteTime</name>
+        <rename>HCK_GXSJ</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>caseId</name>
+        <rename>CASEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>name</name>
+        <rename>name</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>writNum</name>
+        <rename>paperName</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>992</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;1</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>t_sawp_kywp</table>
+      <key>
+        <name>DOCID</name>
+        <field>paper</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>articleCode1</name>
+        <field>code</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>newid1</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>caseId</name>
+        <rename>CASEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>name</name>
+        <rename>B17_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>feature</name>
+        <rename>B19_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectName</name>
+        <rename>B7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paper</name>
+        <rename>DOCID</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>police</name>
+        <rename>policeName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>number</name>
+        <rename>B18_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectId</name>
+        <rename>PERSONID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperName</name>
+        <rename>paperName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>caseName</name>
+        <rename>A7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperType</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>code</name>
+        <rename>articleCode1</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>suspectIDCardNo</name>
+        <rename>suspectIDCardNo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber1</name>
+        <rename>A16PoliceNum</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber2</name>
+        <rename>A17PoliceNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1360</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>t_sawp_kywp</table>
+      <key>
+        <name>DOCID</name>
+        <field>paper</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>articleCode2</name>
+        <field>code</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>newid2</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>caseId</name>
+        <rename>CASEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectName</name>
+        <rename>B7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>police</name>
+        <rename>policeName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paper</name>
+        <rename>DOCID</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>name</name>
+        <rename>B17_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>feature</name>
+        <rename>B19_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>number</name>
+        <rename>B18_2</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectId</name>
+        <rename>PERSONID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperName</name>
+        <rename>paperName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>caseName</name>
+        <rename>A7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperType</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>code</name>
+        <rename>articleCode2</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>suspectIDCardNo</name>
+        <rename>suspectIDCardNo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber1</name>
+        <rename>A16PoliceNum</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber2</name>
+        <rename>A17PoliceNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1664</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;3</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>t_sawp_kywp</table>
+      <key>
+        <name>DOCID</name>
+        <field>paper</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>articleCode3</name>
+        <field>code</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>newid3</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>caseId</name>
+        <rename>CASEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectName</name>
+        <rename>B7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>police</name>
+        <rename>policeName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paper</name>
+        <rename>DOCID</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>name</name>
+        <rename>B17_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>feature</name>
+        <rename>B19_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>number</name>
+        <rename>B18_3</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectId</name>
+        <rename>PERSONID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperName</name>
+        <rename>paperName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>caseName</name>
+        <rename>A7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperType</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>code</name>
+        <rename>articleCode3</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>suspectIDCardNo</name>
+        <rename>suspectIDCardNo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber1</name>
+        <rename>A16PoliceNum</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber2</name>
+        <rename>A17PoliceNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1968</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;4</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>t_sawp_kywp</table>
+      <key>
+        <name>DOCID</name>
+        <field>paper</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>articleCode4</name>
+        <field>code</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>newid4</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>caseId</name>
+        <rename>CASEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectName</name>
+        <rename>B7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>police</name>
+        <rename>policeName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paper</name>
+        <rename>DOCID</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>name</name>
+        <rename>B17_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>feature</name>
+        <rename>B19_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>number</name>
+        <rename>B18_4</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectId</name>
+        <rename>PERSONID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperName</name>
+        <rename>paperName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>caseName</name>
+        <rename>A7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperType</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>code</name>
+        <rename>articleCode4</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>suspectIDCardNo</name>
+        <rename>suspectIDCardNo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber1</name>
+        <rename>A16PoliceNum</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber2</name>
+        <rename>A17PoliceNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2304</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>t_sla_kywp&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;5</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>t_sawp_kywp</table>
+      <key>
+        <name>DOCID</name>
+        <field>paper</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>articleCode5</name>
+        <field>code</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>id</name>
+        <rename>newid5</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>caseId</name>
+        <rename>CASEID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectName</name>
+        <rename>B7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>police</name>
+        <rename>policeName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paper</name>
+        <rename>DOCID</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>name</name>
+        <rename>B17_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>feature</name>
+        <rename>B19_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>number</name>
+        <rename>B18_5</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>suspectId</name>
+        <rename>PERSONID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperName</name>
+        <rename>paperName</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>caseName</name>
+        <rename>A7</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>paperType</name>
+        <rename>type</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>code</name>
+        <rename>articleCode5</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>suspectIDCardNo</name>
+        <rename>suspectIDCardNo</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber1</name>
+        <rename>A16PoliceNum</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>policeNumber2</name>
+        <rename>A17PoliceNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2688</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5230;&#x671f;&#x63d0;&#x9192;-&#x5f55;&#x5165;&#x4eba;&#x8b66;&#x53f7;-&#x67e5;&#x8be2;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>bpip_user</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>INPUTPSN</name>
+        <field>USERID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>POLICENUMBER</name>
+        <rename>jh</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x53d1;&#x9001;&#x9884;&#x8b66;&#x63d0;&#x9192;&#x6570;&#x636e;</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import net.sf.json.JSONObject;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import java.io.UnsupportedEncodingException;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import java.io.IOException;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	if (first){
+	  first = false;
+
+	  /* TODO: Your code here. (Using info fields)
+
+	  FieldHelper infoField = get(Fields.Info, "info_field_name");
+
+	  RowSet infoStream = findInfoRowSet("info_stream_tag");
+
+	  Object[] infoRow = null;
+
+	  int infoRowCount = 0;
+
+	  // Read all rows from info step before calling getRow() method, which returns first row from any
+	  // input rowset. As rowMeta for info and input steps varies getRow() can lead to errors.
+	  while((infoRow = getRowFrom(infoStream)) != null){
+
+	    // do something with info data
+	    infoRowCount++;
+	  }
+	  */
+	}
+
+	Object[] r = getRow();
+
+	if (r == null) {
+	  setOutputDone();
+	  return false;
+	}
+
+	// It is always safest to call createOutputRow() to ensure that your output row's Object[] is large
+    // enough to handle any new fields you are creating in this step.
+    r = createOutputRow(r, data.outputRowMeta.size());
+	
+    /* TODO: Your code here. (See Sample)
+    
+    // Get the value from an input field
+    String foobar = get(Fields.In, "a_fieldname").getString(r);
+
+    foobar += "bar";
+    
+    // Set a value in a new output field
+    get(Fields.Out, "output_fieldname").setValue(r, foobar);
+
+	*/
+	// Send the row on to the next step.
+
+	CommonData data1 = new CommonData();
+	String businessId = get(Fields.In, "DOCID").getString(r);
+	String businessType = get(Fields.In, "type").getString(r);
+	String type = "sawptx";
+	data1.setBusinessId(businessId);
+	data1.setBusinessType(businessType);
+	data1.setType(type);
+
+	JSONObject object = JSONObject.fromObject(data1);
+	//String result = object.toString();
+
+		String postUrl = get(Fields.In, "postUrl").getString(r);
+		postUrl	+= "/warningForETL/susObjWarning.action";
+		CloseableHttpClient httpclient = HttpClients.createDefault();
+		HttpPost post = new HttpPost(postUrl);
+
+		StringEntity s = null;
+		try {
+			s = new StringEntity(object.toString());
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		s.setContentEncoding("UTF-8");
+		s.setContentType("application/json");
+		post.setEntity(s);
+
+		HttpResponse res = null;
+		try {
+			res = httpclient.execute(post);
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		if ("200".equals(res.getStatusLine().getStatusCode())) {
+
+			String rtstr = null;
+			try {
+				rtstr = EntityUtils.toString(res.getEntity());
+			} catch (org.apache.http.ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			JSONObject result = JSONObject.fromObject(rtstr).getJSONObject(
+					"result");
+
+			//rs.put("state", result.getString("code"));
+			//rs.put("message", result.getString("message"));
+			//log.debug(result.toString());
+
+		} else {
+			//log.debug(String.valueOf("status:"
+					//+ res.getStatusLine().getStatusCode()));
+			//rs.put("state",
+				///	String.valueOf("status:"
+						//	+ res.getStatusLine().getStatusCode()));
+		}
+
+	//get(Fields.Out, "result").setValue(r, result);
+
+    putRow(data.outputRowMeta, r);
+
+	return true;
+}
+
+public class CommonData {
+		
+	protected String type ;
+
+	/**
+	 * 文书Id
+	 */
+	private String businessId;
+	/**
+	 * 文书包类名
+	 */
+	private String businessType;
+
+	public String getBusinessId() {
+		return businessId;
+	}
+
+	public void setBusinessId(String businessId) {
+		this.businessId = businessId;
+	}
+
+	public String getBusinessType() {
+		return businessType;
+	}
+
+	public void setBusinessType(String businessType) {
+		this.businessType = businessType;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}	
+}
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>result</field_name>
+
+        <field_type>String</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3440</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>type</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>com.taiji.pubsec.ajqlc.sla.model.DocKouYaJueDingNew2012</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&#x6263;&#x62bc;&#x51b3;&#x5b9a;&#x4e66;2012</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>880</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;&#x62e9;</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>updatetime</name>
+        <rename>updatetime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>468</xloc>
+      <yloc>52</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x6570;&#x636e;&#x5e93;&#x67e5;&#x8be2;-&#x8eab;&#x4efd;&#x8bc1;&#x53f7;</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>source_v3&#x6e90;&#x5e93;</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>psn_m_criminal</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>PERSONID</name>
+        <field>PERSONID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>IDCARDNO</name>
+        <rename>suspectIDCardNo</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>448</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x66ff;&#x6362;NULL&#x503c;</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>updatetime</name>
+        <value>1971-01-01 00&#x3a;00&#x3a;00</value>
+        <mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</mask>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>276</xloc>
+      <yloc>52</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x67e5;&#x8be2;&#x6570;&#x636e;&#x6700;&#x65b0;&#x65f6;&#x95f4;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT max&#x28;hck_gxsj&#x29; as updatetime FROM t_sla_doc_kyjds_new_2012 &#x3b;</sql>
+    <limit>1</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>100</xloc>
+      <yloc>52</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3328</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;1</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1344</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1616</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;3</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1888</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;4</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2256</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;5</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2592</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;postUrl&#x53d8;&#x91cf;</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>postUrl</name>
+        <variable>&#x24;&#x7b;postUrl&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2928</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;</send_true_to>
+<send_false_to>&#x53d1;&#x9001;&#x9884;&#x8b66;&#x63d0;&#x9192;&#x6570;&#x636e;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>code</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Integer</type><text>404</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3328</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;1</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;1</send_true_to>
+<send_false_to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;1</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>B16_1</leftvalue>
+   <function>IS NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>B17_1</leftvalue>
+     <function>IS NULL</function>
+     <rightvalue/>
+     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>AND</operator>
+     <conditions>
+      <condition>
+       <negated>N</negated>
+       <leftvalue>B18_1</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      <condition>
+       <negated>N</negated>
+       <operator>AND</operator>
+       <leftvalue>B19_1</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      </conditions>
+     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1136</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;2</send_true_to>
+<send_false_to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;2</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>B16_2</leftvalue>
+   <function>IS NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>B17_2</leftvalue>
+     <function>IS NULL</function>
+     <rightvalue/>
+     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>AND</operator>
+     <conditions>
+      <condition>
+       <negated>N</negated>
+       <leftvalue>B18_2</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      <condition>
+       <negated>N</negated>
+       <operator>AND</operator>
+       <leftvalue>B19_2</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      </conditions>
+     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1456</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;3</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;3</send_true_to>
+<send_false_to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;3</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>B16_3</leftvalue>
+   <function>IS NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>B17_3</leftvalue>
+     <function>IS NULL</function>
+     <rightvalue/>
+     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>AND</operator>
+     <conditions>
+      <condition>
+       <negated>N</negated>
+       <leftvalue>B18_3</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      <condition>
+       <negated>N</negated>
+       <operator>AND</operator>
+       <leftvalue>B19_3</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      </conditions>
+     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1760</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;4</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;4</send_true_to>
+<send_false_to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;4</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>B16_4</leftvalue>
+   <function>IS NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>B17_4</leftvalue>
+     <function>IS NULL</function>
+     <rightvalue/>
+     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>AND</operator>
+     <conditions>
+      <condition>
+       <negated>N</negated>
+       <leftvalue>B18_4</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      <condition>
+       <negated>N</negated>
+       <operator>AND</operator>
+       <leftvalue>B19_4</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      </conditions>
+     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2080</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8fc7;&#x6ee4;&#x8bb0;&#x5f55;5</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>&#x7a7a;&#x64cd;&#x4f5c; &#x28;&#x4ec0;&#x4e48;&#x4e5f;&#x4e0d;&#x505a;&#x29;5</send_true_to>
+<send_false_to>id&#x751f;&#x6210;&#x968f;&#x673a;&#x6570;5</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>B16_5</leftvalue>
+   <function>IS NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>B17_5</leftvalue>
+     <function>IS NULL</function>
+     <rightvalue/>
+     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>AND</operator>
+     <conditions>
+      <condition>
+       <negated>N</negated>
+       <leftvalue>B18_5</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      <condition>
+       <negated>N</negated>
+       <operator>AND</operator>
+       <leftvalue>B19_5</leftvalue>
+       <function>IS NULL</function>
+       <rightvalue/>
+       </condition>
+      </conditions>
+     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2432</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

@@ -1,0 +1,14 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="homePage" extends="ajgl-web-xtgl" namespace="/homePage">
+		<!-- 显示首页  -->
+		<action name="showHomePageJsp">
+			<result name="success">/WEB-INF/view/homePage/homePage.jsp</result>
+		</action>
+		<!-- 弹出岗位人员详情  -->
+		<action name="showPositionInfoJsp">
+			<result name="success">/WEB-INF/view/homePage/positionInfo.jsp</result>
+		</action>
+		
+	</package>
+</struts>

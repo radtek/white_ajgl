@@ -1,0 +1,51 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="personCheckRecord" extends="ajgl-web-ajgl" namespace="/personCheckRecord">
+		<!-- 人身检查记录-查看页面 -->
+		<action name="showLookPersonCheckRecordPage" class="personCheckRecordAction" method="showLookPersonCheckRecordPage">
+			<result name="success">/WEB-INF/view/ajgl/personCheckRecord/lookPersonCheckRecord.jsp</result>
+		</action>
+		<!-- 人身检查记录-新建或修改页面 -->
+		<action name="showNewOrUpdatePersonCheckRecordPage">
+			<result name="success">/WEB-INF/view/ajgl/personCheckRecord/newOrUpdatePersonCheckRecord.jsp</result>
+		</action>
+		<!-- 根据办案区使用单id查询人身检查记录 -->
+		<action name="searchPersonCheckRecordByHandlingAreaReceiptId" class="personCheckRecordAction" method="searchPersonCheckRecordByHandlingAreaReceiptId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 保存人身检查记录 -->
+		<action name="savePersonCheckRecord" class="personCheckRecordAction" method="savePersonCheckRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyPerson,modifyTime</param>
+			</result>
+		</action>
+		<!-- 修改人身检查记录 -->
+		<action name="updatePersonCheckRecord" class="personCheckRecordAction" method="updatePersonCheckRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyPerson,modifyTime</param>
+			</result>
+		</action>
+		<!-- 上传文件 -->
+		<action name="uploadFile" class="uploadAction" method="uploadFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 打印 -->
+		<action name="pcrPrint" class="personCheckRecordAction" method="pcrPrint">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		
+	</package>
+</struts>

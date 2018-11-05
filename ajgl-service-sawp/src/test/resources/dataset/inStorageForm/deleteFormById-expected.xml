@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<dataset>
+	<t_og_ry id = "czr"></t_og_ry>
+	<t_sawp_sawp></t_sawp_sawp>
+	<t_sawp_bgq id = "bgqId" mc = "mc"></t_sawp_bgq>
+	<t_sawp_cwg id = "cwgId" wzms = "wzms" bgq_id = "bgqId"></t_sawp_cwg>
+	<t_sawp_rkd></t_sawp_rkd>
+	<t_sawp_rkdx></t_sawp_rkdx>
+	<t_sawp_bgwz></t_sawp_bgwz>
+</dataset>

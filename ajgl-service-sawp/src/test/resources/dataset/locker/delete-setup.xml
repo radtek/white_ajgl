@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+	<t_sawp_bgq id = "bgqId"></t_sawp_bgq>
+	<t_sawp_cwg id = "cwgId" bm = "bm" bgq_id = "bgqId" wzms = "wzms" bz = "bz"></t_sawp_cwg>
+	<t_sawp_cwg id = "cwgId2" bm = "bm" bgq_id = "bgqId" wzms = "wzms" bz = "bz"></t_sawp_cwg>
+</dataset>

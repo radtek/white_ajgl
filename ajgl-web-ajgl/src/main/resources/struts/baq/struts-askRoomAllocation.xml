@@ -1,0 +1,39 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="askRoomAllocation" extends="ajgl-web-ajgl" namespace="/askRoomAllocation">
+		<!-- 讯（询）问室分配  -主页面 -->
+		<action name="showAskRoomAllocationSelectPage">
+			<result name="success">/WEB-INF/view/ajgl/askRoomAllocation/askRoomAllocationSelect.jsp</result>
+		</action>
+		<!-- 讯（询）问室分配 -分配使用单页面 -->
+		<action name="showReceiptRoomAssigned">
+			<result name="success">/WEB-INF/view/ajgl/askRoomAllocation/receiptRoomAssigned.jsp</result>
+		</action>
+		<!-- 讯（询）问室分配 -分配记录页面 -->
+		<action name="showAskRoomAllocationRecord">
+			<result name="success">/WEB-INF/view/ajgl/askRoomAllocation/askRoomAllocationRecord.jsp</result>
+		</action>
+		<!-- 查询所有问询室(包含所有状态) -->
+		<action name="queryAllAskRoom" class="askRoomAllocation" method="queryAllAskRoom">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询可分配使用单 -->
+		<action name="searchSelectedHandlingAreaReceiptByPage" class="askRoomAllocation" method="searchSelectedHandlingAreaReceiptByPage">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询问询室分配记录  -->
+		<action name="queryAskRoomAllocationRecord" class="askRoomAllocation" method="queryAskRoomAllocationRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">askRoomAllocationRecordQueryBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		<!-- 新增分配记录  -->
+		<action name="addAskRoomAllocationRecord" class="askRoomAllocation" method="addAskRoomAllocationRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">msg</param>
+			</result>
+		</action>
+	</package>
+</struts>

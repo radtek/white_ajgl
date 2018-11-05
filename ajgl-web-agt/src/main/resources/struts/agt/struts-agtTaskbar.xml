@@ -1,0 +1,92 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="agtTaskbar" extends="ajgl-web-agt" namespace="/agtTaskbar">
+		<!-- 进入安管通提示页面-->
+		<action name="agtTaskbar">
+			<result name="success">/WEB-INF/view/agt/agtTaskbar/agtTaskbar.jsp</result>
+		</action>
+		<!-- 进入消息提醒提示页面-->
+		<action name="messageAlert">
+			<result name="success">/WEB-INF/view/agt/agtTaskbar/messageAlert.jsp</result>
+		</action>
+		<!-- 进入嫌疑人信息完善页面-->
+		<action name="suspectMessage">
+			<result name="success">/WEB-INF/view/agt/agtTaskbar/suspectMessage.jsp</result>
+		</action>
+		<!-- 进入研判结果查看页面-->
+		<action name="showResearchMessageAlert">
+			<result name="success">/WEB-INF/view/agt/agtTaskbar/result.jsp</result>
+		</action>
+		<!-- 加载登录信息-->
+		<action name="findMessageCount" class="TaskbarAction" method="findMessageCount">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 加载登录信息-->
+		<action name="loginMeth" class="TaskbarAction" method="loginMeth">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 加载预警信息-->
+		<action name="findMessageAlert" class="TaskbarAction" method="findMessageAlert">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 修改嫌疑人信息-->
+		<action name="updateBasicCase" class="TaskbarAction" method="updateBasicCase">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 加载研判结果信息-->
+		<action name="findResult" class="TaskbarAction" method="findResult">
+			<result name="success" type="json"></result>
+		</action>
+	<!-- 由安管通进入的页面请求防止拦截 -->
+		<!-- 根据字典类型获取字典项 -->
+		<action name="findDictionaryItemByType" class="dictionaryItemAction" method="findDictionaryItemsByType">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 通过id查询使用单 -->
+		<action name="findBasicCaseByHarId" class="handlingAreaReceiptAction" method="findBasicCaseByHarId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 案件编号查询相关人员 -->
+		<action name="findPersonsByIdNum" class="handlingAreaReceiptAction" method="findPersonsByIdNum">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 上传文件 -->
+		<action name="uploadFile" class="uploadAction" method="uploadFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 办案区使用单-选择案件 -->
+		<action name="showCaseList">
+			<result name="success">/WEB-INF/view/util/showAGTCaseList.jsp</result>
+<!-- 			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/showCaseListByagt.jsp</result> -->
+		</action>
+		<!-- 分页查询 -->
+		<action name="searchCaseByPageForHAR" class="caseSearchAction" method="searchCaseByPageForHAR">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">cbcBeanLst.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- test-->
+		<action name="findMessageTS" class="TaskbarAction" method="findMessageTS">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 分页查询 -->
+		<action name="searchCaseByPageForHAR" class="caseSearchAction" method="searchCaseByPageForHAR">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">cbcBeanLst.*,totalNum,length</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>

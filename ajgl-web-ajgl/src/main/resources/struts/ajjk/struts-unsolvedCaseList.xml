@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="unsolvedCaseList" extends="ajgl-web-ajgl" namespace="/unsolvedCaseList">
+		<!-- 刑事案件到期提醒表-列表页面 -->
+		<action name="showUnsolvedCaseListPage">
+			<result name="success">/WEB-INF/view/ajjk/unsolvedCaseList/unsolvedCaseList.jsp</result>
+		</action>
+		<action name="searchAdministrativeCaseByPage" class="unsolvedCaseListAction" method="searchAdministrativeCaseByPage">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">unsolvedCaseBeanLst.*,totalNum,length,xingzhenglian,xingzhengpoan</param>
+			</result>
+		</action>
+		<action name="searchPenalCaseByPage" class="unsolvedCaseListAction" method="searchPenalCaseByPage">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">unsolvedCaseBeanLst.*,totalNum,length,xingshilian,xingshipoan</param>
+			</result>
+		</action>
+		<action name="exportExcelPenal" class="unsolvedCaseListAction" method="exportExcelPenal">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<action name="exportExcelAdministrative" class="unsolvedCaseListAction" method="exportExcelAdministrative">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

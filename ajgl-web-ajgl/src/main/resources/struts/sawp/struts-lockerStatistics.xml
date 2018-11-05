@@ -1,0 +1,47 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="lockerStatistics" extends="ajgl-web-ajgl" namespace="/lockerStatistics">
+	
+		<!-- 跳转储物架存储情况统计界面 -->
+		<action name="showLockerStatisticsPage" >
+			<result name="success">/WEB-INF/view/sawpgl/lockerStatistics/lookLockerStatistics.jsp</result>
+		</action>
+		
+		<!-- 查询所有的涉案物品（分页查询） -->
+		<action name="findLockerStatistics" class="lockerStatisticsAction" method="findLockerStatistics">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">lockerStatisticsServiceBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 查询所有的保管区 -->
+		<action name="findAllArea" class="lockerStatisticsAction" method="findAllArea">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据保管区id查询所有储物架 -->
+		<action name="findAllLockerByAreaId" class="lockerStatisticsAction" method="findAllLockerByAreaId">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 查询是否空闲字典项集合 -->
+		<action name="findStatusSelect" class="lockerStatisticsAction" method="findStatusSelect">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 调整单列表导出EXCEL -->
+		<action name="exportExcel" class="lockerStatisticsAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		<!-- 跳转查询储物架查询界面 -->
+		<action name="findLockerByAreaId" >
+			<result name="success">/WEB-INF/view/sawpgl/selectLockerAlert/selectLockerAlert.jsp</result>
+		</action>
+		
+	</package>
+</struts>

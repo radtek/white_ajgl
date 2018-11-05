@@ -1,0 +1,89 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="storageOut" extends="ajgl-web-ajgl" namespace="/storageOut">
+		<!-- 跳转到出库单列表 -->
+		<action name="toStorageOutRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/storageOut/storageOutRecord.jsp</result>
+		</action>
+		<!-- 跳转到新增出库单页面 -->
+		<action name="toNewRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/storageOut/addStorageOut.jsp</result>
+		</action>
+		<!-- 跳转到新增出库单页面 -->
+		<action name="toShowRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/storageOut/showStorageOut.jsp</result>
+		</action>
+		<!-- 查询出库单列表 -->
+		<action name="queryStorageOutRecord" class="storageOutAction" method="queryStorageOutRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">storageOutBeanList.*,totalNum</param>
+			</result>
+		</action>
+		
+		<!-- 删除出库单 -->
+		<action name="delStorageOut" class="storageOutAction" method="delStorageOut">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">msg,flag</param>
+			</result>
+		</action>
+		
+		<!-- 导出出库列表 -->
+		<action name="exportExcel" class="storageOutAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 保存出库单 -->
+		<action name="saveStorageOut" class="storageOutAction" method="saveStorageOut">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,id</param>
+			</result>
+		</action>
+		
+		<!-- 新增出库单页面数据初始化 -->
+		<action name="initData" class="storageOutAction" method="initData">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询所有CaseCode -->
+		<action name="findAllCaseCodeAndfindCode" class="storageOutAction" method="findAllCaseCodeAndfindCode">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 根据案件查库存 -->
+		<action name="queryStorageByCase" class="storageOutAction" method="queryStorageByCase">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">caseName,polices,outStorageFormItemBeanList.*,totalNum</param>
+			</result>
+		</action>
+		<!-- 查询出库单 -->
+		<action name="queryStorageOutById" class="storageOutAction" method="queryStorageOutById">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">outStorageFormBean.*,outStorageFormItemBeanList.*,fileBeanLst.*,totalNum,modifyPeople,updateTime</param>
+			</result>
+		</action>
+		<!-- 打印出库单 -->
+		<action name="printStorageOutById" class="storageOutAction" method="printStorageOutById">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		<!-- 上传文件 -->
+		<action name="uploadFile" class="uploadAction" method="uploadFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

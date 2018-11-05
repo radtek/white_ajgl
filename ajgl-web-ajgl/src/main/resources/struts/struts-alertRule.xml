@@ -1,0 +1,66 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="alertRule" extends="ajgl-web-ajgl" namespace="/alertRule">
+		<!-- 预警规则（办案区预警） -->
+		<action name="askRoomAlert" class="alertRulesAction">
+			<result name="success">/WEB-INF/view/ajgl/alertRule/rules.jsp</result>
+		</action>
+		
+		<!-- 预警规则（扣押物品预警） -->
+		<action name="sawpyjAlert" class="alertRulesAction">
+			<result name="success">/WEB-INF/view/sawpgl/rule/rule.jsp</result>
+		</action>
+		
+		<!-- 预警规则（案件监控预警） -->
+		<action name="anjkyjAlert" class="alertRulesAction">
+			<result name="success">/WEB-INF/view/ajjk/rule/rules.jsp</result>
+		</action>
+		
+		<!-- 保存预警规则记录 -->
+		<action name="saveRule" class="alertRulesAction" method="saveRule">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">msg</param>
+			</result>
+		</action>
+		
+		<!-- 更新预警规则状态 -->
+		<action name="updateStatus" class="alertRulesAction" method="updateStatus">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">msg</param>
+			</result>
+		</action>
+		
+		<!-- 根据模块查询预警规则 -->
+		<action name="findRulesByTheirModulu" class="alertRulesAction" method="findRulesByTheirModulu">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">msg,alertRuleBeanList.*</param>
+			</result>
+		</action>
+		
+		<!-- 预警 人员弹窗页面 -->
+		<action name="showpersonByPage">
+			<result name="success">/WEB-INF/view/util/personAlert.jsp</result>
+		</action>
+		<!-- 预警人员弹窗加载页面 -->
+		<action name="initPersonManagePage" class="alertRulesAction" method="initPersonManagePage">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询人员 -->
+		<action name="searchPersonList" class="alertRulesAction" method="searchPersonList">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 预警角色弹窗页面 -->
+		<action name="showRoleByPage">
+			<result name="success">/WEB-INF/view/util/roleAlert.jsp</result>
+		</action>
+		<action name="findDictionaryItemsByType" class="dictionaryItemAction" method="findDictionaryItemsByType">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="queryRole" class="alertRulesAction" method="queryRole">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

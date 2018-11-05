@@ -1,0 +1,111 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="carryGoodsRecord" extends="ajgl-web-ajgl" namespace="/carryGoodsInfo">
+		<!-- 维护随身物品界面 - 查看界面-->
+		<action name="showCarryGoodsInfo" class="carryGoodsInfoAction" method="showCarryGoodsInfo">
+			<result name="success">/WEB-INF/view/ajgl/carryGoodsInfo/carryGoodsInfo.jsp</result>
+		</action>
+		<!-- 维护随身物品界面 - 点击维护按钮-->
+		<action name="shoNewOrUpdateCarryGoodsInfo">
+			<result name="success">/WEB-INF/view/ajgl/carryGoodsInfo/newOrUpdateCarryGoodsInfo.jsp</result>
+		</action>
+		<!-- 随身物品返还-查看界面 -->
+		<action name="showCarryGoodsReturnRecord" class="carryGoodsInfoAction" method="showCarryGoodsReturnRecord">
+			<result name="success">/WEB-INF/view/ajgl/carryGoodsInfo/carryGoodsReturnRecord.jsp</result>
+		</action>
+		<!-- 随身物品返还-修改界面 -->
+		<action name="showUpdateCarryGoodsReturnRecord">
+			<result name="success">/WEB-INF/view/ajgl/carryGoodsInfo/updateCarryGoodsReturnRecord.jsp</result>
+		</action>
+		<!-- 随身物品返还-修改领取人 -->
+		<action name="modifyReceiver">
+			<result name="success">/WEB-INF/view/ajgl/carryGoodsInfo/modifyReceiver.jsp</result>
+		</action>
+		<!-- 箱子选择 -->
+		<action name="selectBox">
+			<result name="success">/WEB-INF/view/ajgl/carryGoodsInfo/selectBox.jsp</result>
+		</action>
+		<!-- 查询随身物品记录 -->
+		<action name="queryCarryGoodsReceipt" class="carryGoodsInfoAction" method="queryCarryGoodsReceipt">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyTime,modifyPerson,flag,carryGoodsInfoBean.*,handlingPolice</param>
+			</result>
+		</action>
+		<!-- 新增随身物品信息及记录 -->
+		<action name="addCarryGoodsInfo" class="carryGoodsInfoAction" method="addCarryGoodsInfo">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyTime,modifyPerson</param>
+			</result>
+		</action>
+		<!-- 修改随身物品记录 -->
+		<action name="modifyCreateReceipt" class="carryGoodsInfoAction" method="modifyCreateReceipt">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyTime,modifyPerson</param>
+			</result>
+		</action>
+		<!-- 提交管理物品记录 -->
+		<action name="saveCarryGoodsManagement" class="carryGoodsInfoAction" method="saveCarryGoodsManagement">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyTime,modifyPerson</param>
+			</result>
+		</action>
+		<!-- 查询储物柜 -->
+		<action name="querylocker" class="carryGoodsInfoAction" method="querylocker">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询随身物品返还记录-->
+		<action name="queryReturnRecordByGoodsRecordId" class="carryGoodsInfoAction" method="queryReturnRecordByGoodsRecordId">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyTime,modifyPerson,carryGoodsInfoBean.*,carryGoodsRecordBeanList.*,btnFlag</param>
+			</result>
+		</action>
+		<!-- 添加随身物品返还记录-->
+		<action name="addReturnRecord" class="carryGoodsInfoAction" method="addReturnRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyTime,modifyPerson</param>
+			</result>
+		</action>
+		<!-- 上传文件 -->
+		<action name="uploadFile" class="uploadAction" method="uploadFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 根据随身物品Id查询随身物品记录 -->
+		<action name="queryCarryGoodsById" class="carryGoodsInfoAction" method="queryCarryGoodsById">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获取空箱子 -->
+		<action name="findAnEmptyBox" class="carryGoodsInfoAction" method="findAnEmptyBox">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 开箱 -->
+		<action name="openBox" class="carryGoodsInfoAction" method="openBox">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 保存高拍仪图片 -->
+		<action name="saveBase64Photo" class="carryGoodsInfoAction" method="saveBase64Photo">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 通过附件的id 查找附件并转成base64位 -->
+		<action name="findBase64Byid" class="carryGoodsInfoAction" method="findBase64Byid">
+			<result name="success" type="json"></result>
+		</action>
+		
+	</package>
+</struts>

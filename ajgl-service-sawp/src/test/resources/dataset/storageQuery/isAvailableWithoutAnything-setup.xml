@@ -1,0 +1,11 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<dataset>
+	<t_sawp_bgq id = "bgqId1" zt = "0000000002002"></t_sawp_bgq>
+	<t_sawp_bgq id = "bgqId2" zt = "0000000002001"></t_sawp_bgq>
+	<t_sawp_bgq id = "bgqId3" zt = "0000000002002"></t_sawp_bgq>
+	<t_sawp_cwg id = "cwgId1" bgq_id = "bgqId1"></t_sawp_cwg>
+	<t_sawp_cwg id = "cwgId2" bgq_id = "bgqId2"></t_sawp_cwg>
+	<t_sawp_cwg id = "cwgId3" bgq_id = "bgqId3"></t_sawp_cwg>
+	<t_sawp_sawp id = "sawpId" zksl = "5"></t_sawp_sawp>
+	<t_sawp_bgwz id = "bgwzId" zksl = "2" bcsl = "2" sawp_id = "sawpId" cwg_id = "cwgId1"></t_sawp_bgwz>
+</dataset>

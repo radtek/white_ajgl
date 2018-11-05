@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<t_og_ry id="personId" />
+<t_og_zzjg id = "1"></t_og_zzjg>
+  <t_og_dw id = "1"></t_og_dw>
+  <t_baq_wxs id = '1' dw_id="1" jksph="jksph" mc="mc" bz="bz" lx="lx" bm="bm" zt='1' />
+  <t_baq_wxs id = '2' dw_id="1" jksph="jksph2" mc="mc2" bz="bz2" lx="lx2" bm="bm2" zt='2' />
+	<t_baq_baqsyd id="sydId1" cjr="cjr" cjsj="2016-01-01 12:00:00"
+    cjbm="cjbm" zxxgr_id="personId" xgsj="2016-01-01 12:00:00" zt="0000000006001" />
+    <t_baq_baqsyd id="sydId2" cjr="cjr" cjsj="2016-01-01 12:00:00"
+    cjbm="cjbm" zxxgr_id="personId" xgsj="2016-01-01 12:00:00" zt="0000000006001" />
+    <t_baq_baqsyd id="sydId3" cjr="cjr" cjsj="2016-01-01 12:00:00"
+    cjbm="cjbm" zxxgr_id="personId" xgsj="2016-01-01 12:00:00" zt="0000000006001" />
+    <t_baq_baqsyd id="sydId4" cjr="cjr" cjsj="2016-01-01 12:00:00"
+    cjbm="cjbm" zxxgr_id="personId" xgsj="2016-01-01 12:00:00" zt="0000000006001" />
+    <t_baq_wxsfpjl id="id1" baqsyd_id="sydId1" wxs_id="1" lksj="2016-01-01 12:00:00"/>
+    <t_baq_wxsfpjl id="id2" baqsyd_id="sydId2" wxs_id="1" />
+</dataset>

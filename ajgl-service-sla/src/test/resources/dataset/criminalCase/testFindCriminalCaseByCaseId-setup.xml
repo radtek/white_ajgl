@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <t_sla_jcj id="id"  dqbldw="handingUnit"
+    xq="popedom" boatNum="1" censorNum="1" policeAssNum="1"
+    policeNum="1" rescuewNum="1" rescueyNum="1" rescurhNum="1"
+    salvationPeople="1" salvationWou="1" voitureNum="1" />
+  <t_sla_ajjbxx caseTimeStart="2016-01-01 12:00:00" caseKind="caseKind"
+    caseTimeEnd="2016-01-02 12:00:00" caseId="caseId" caseName="caseName"
+    caseSort="caseSort" community="community" caseState="caseState"
+    inputPerson="inputPerson" caseAddress="caseAddress" alarmInfo_id="id"
+    businessType="1" dieNum="1" injureNum="1" lossValue="1.1"
+    markedRate="1" totalValue="1"/>
+</dataset>

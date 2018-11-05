@@ -1,0 +1,67 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="activityRecord" extends="ajgl-web-ajgl" namespace="/activityRecord">
+		<!-- 活动记录 - 查看界面-->
+		<action name="showActivityRecord" class="activityRecordAction" method="showActivityRecord">
+			<result name="success">/WEB-INF/view/ajgl/activityRecord/activityRecord.jsp</result>
+		</action>
+		<!-- 活动记录 - 维护界面-->
+		<action name="showUpdateActivityRecord">
+			<result name="success">/WEB-INF/view/ajgl/activityRecord/updateActivityRecord.jsp</result>
+		</action>
+		<!-- 活动记录 - 维护界面-->
+		<action name="showWordJsp">
+			<result name="success">/WEB-INF/view/ajgl/activityRecord/showWord.jsp</result>
+		</action>
+		<!-- 查询证据笔录 -->
+		<action name="findWordByHarId" class="activityRecordAction" method="findWordByHarId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 获取用户名和密码 -->
+		<action name="findUserMessage" class="activityRecordAction" method="findUserMessage">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询活动记录 -->
+		<action name="addAskRoomAllocationRecord" class="activityRecordAction" method="addAskRoomAllocationRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">msg,flag</param>
+			</result>
+		</action>
+		<!-- 查询活动记录 -->
+		<action name="queryActivityRecordList" class="activityRecordAction" method="queryActivityRecordList">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询活动记录 加载预警消息页面 -->
+		<action name="showWarningMessage">
+			<result name="success">/WEB-INF/view/ajgl/activityRecord/showWarningMessage.jsp</result>
+		</action>
+		<!-- 查询活动记录 预警消息 查询-->
+		<action name="findWarningMessageByPage" class="activityRecordAction" method="findWarningMessageByPage">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询活动记录 加载超时预警消息页面 -->
+		<action name="showTimeOutWarningMessage">
+			<result name="success">/WEB-INF/view/ajgl/activityRecord/showTimeOutWarningMessage.jsp</result>
+		</action>
+		<!-- 查询活动记录 超时预警消息 查询-->
+		<action name="findTimeOutWarningMessageByPage" class="activityRecordAction" method="findTimeOutWarningMessageByPage">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询房间 -->
+		<action name="findAllActivityRoom" class="activityRecordAction" method="findAllActivityRoom">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 上传文件 -->
+		<action name="uploadFile" class="uploadAction" method="uploadFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

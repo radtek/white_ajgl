@@ -1,0 +1,64 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="harPrint" extends="ajgl-web-ajgl" namespace="/harPrint">
+		<!-- 打印人身检查记录 -->
+		<action name="printPersonCheckRecord" class="hARPrintAction" method="printPersonCheckRecord">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 打印随身携带物品信息 -->
+		<action name="printCarryGoodsCheckRecord" class="hARPrintAction" method="printCarryGoodsCheckRecord">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 打印信息采集情况 -->
+		<action name="printCollectInfoSituation" class="hARPrintAction" method="printCollectInfoSituation">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result>
+		</action>
+		<!-- 打印物品返还记录 -->
+		<action name="printCarryGoodsReturnRecord" class="hARPrintAction" method="printCarryGoodsReturnRecord">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		<!-- 打印临时物品取出记录 -->
+		<action name="printTemporaryLstation" class="hARPrintAction" method="printTemporaryLstation">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		
+		<!-- 打印离开记录 -->
+		<action name="printLeaveSituation" class="hARPrintAction" method="printLeaveSituation">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 打印活动记录 -->
+		<action name="printActivityRecord" class="hARPrintAction" method="printActivityRecord">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 打印使用单 -->
+		<action name="printHandlingAreaReceipt" class="hARPrintAction" method="printHandlingAreaReceipt">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

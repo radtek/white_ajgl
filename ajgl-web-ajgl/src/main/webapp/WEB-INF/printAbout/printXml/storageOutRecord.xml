@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ReportConfig name="tt" templatePath="../printDocx/StorageOutRecord.docx">
+    <parameters>
+        <parameter name="n1" dataType="java.lang.String"/>
+        <parameter name="t1" dataType="java.util.List"/>
+    </parameters>
+    <executors>
+    	<!-- 基本情况 -->
+        <executor name="executor1" type="jsonExecutor">
+          <value>${in1}</value>
+          <bookmarks>
+           	<bookmark name="n0" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n0" /> 
+            <bookmark name="n1" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n1" /> 
+            <bookmark name="n2" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n2" /> 
+            <bookmark name="n3" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n3" /> 
+            <bookmark name="n4" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n4" /> 
+            <bookmark name="n5" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n5" /> 
+            <bookmark name="n6" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n6" /> 
+            <bookmark name="n7" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n7" /> 
+            <bookmark name="n8" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n8" /> 
+            <bookmark name="n9" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportTextReplacer" pointer="key-n9" /> 
+          </bookmarks>          
+          <ins>
+            <in name="in1" type="java.lang.String" outRef="n1" executorRef="parameterExecutor" />
+          </ins> 
+        </executor>
+        <!-- 活动记录 -->
+        <executor name="executor2" type="jsonArrayExecutor">
+          <value>${in2}</value>
+          <ins>
+            <in name="in2" type="java.lang.String" outRef="t1" executorRef="parameterExecutor" />
+          </ins>          
+          <bookmarkLoops>   
+            <bookmarkLoop name="bookmarkLoop1" type="poiCrLoopExecutor" pointer="table-index-1">
+              <bookmarks> 
+                <bookmark name="t1" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c1"/>
+                <bookmark name="t2" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c2"/>
+                <bookmark name="t3" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c3"/>
+                <bookmark name="t4" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c4"/>
+                <bookmark name="t5" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c5"/>
+                <bookmark name="t6" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c6"/>
+                <bookmark name="t7" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c7"/>
+                <bookmark name="t8" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c8"/>
+                <bookmark name="t9" type="com.taiji.pubsec.common.tools.doc.msoffice.impl.poicr.replacer.PoiCrReportLoopTextReplacer" pointer="cell-c9"/>
+              </bookmarks>
+            </bookmarkLoop>
+          </bookmarkLoops>      
+        </executor>   
+    </executors>
+</ReportConfig>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+  <Properties>
+    <Property name="pathRoot">g:</Property>
+  </Properties>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout
+        pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+    </Console>
+    <RollingFile name="RollingFile" fileName="${pathRoot}/logs/ajgl.log"
+      filePattern="${pathRoot}/logs/ajgl-%d{MM-dd-yyyy}.log.gz">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+            <Policies>
+        <TimeBasedTriggeringPolicy />
+        <SizeBasedTriggeringPolicy size="25 MB"/>
+      </Policies>
+      <DefaultRolloverStrategy max="200"/>
+    </RollingFile>
+  </Appenders>
+
+  <Loggers>
+  	<logger name="com.taiji.pubsec.common.tool.mission.task.core.MainTask" level="info"></logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx" level="info"></logger>
+    <logger name="com.taiji" level="trace"></logger>
+    <logger name="org.hibernate" level="info"></logger>
+    <logger name="org.springframework" level="info"></logger>
+    <logger name="org.dbunit" level="info"></logger>
+    <logger name="com.opensymphony.xwork2.ognl" level="error"></logger>
+
+	<logger name="com.taiji.pubsec.ajgl.dbtx.executor.ArrestExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnArrestExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.BailExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnBailExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.DetainedExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnDetainedExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.EnterCaseAreaExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnEnterCaseAreaExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.ExtendedDetentionExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnExtendedDetentionExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.ReplenishDetectExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnReplenishDetectExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.ResidentialSurveillanceExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnResidentialSurveillanceExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.SubpoenaExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnSubpoenaExecutor" />  
+    </logger>
+    <logger name="com.taiji.pubsec.ajgl.dbtx.executor.SusObjExecutor" level="debug"  
+            additivity="false">  
+            <appender-ref ref="RollingFileWarnSusObjExecutor" />  
+    </logger>
+
+    <Root level="info">
+      <AppenderRef ref="Console" />
+      <AppenderRef ref="RollingFile" />
+    </Root>
+
+  </Loggers>
+
+
+</Configuration>

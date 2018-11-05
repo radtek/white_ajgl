@@ -1,0 +1,56 @@
+﻿[
+      {
+            "index": 0,
+            "id": "str_id_0",
+            "text": "办案通",
+            "remark": "主窗体名称"
+      },
+      {
+            "index": 1,
+            "id": "str_id_1",
+            "text": "缺少BaseUrl配置项！",
+            "remark": ""
+      },
+       {
+            "index": 2,
+            "id": "str_id_2",
+            "text": "读取Config.ini文件错误！",
+            "remark": ""
+      },
+        {
+            "index": 3,
+            "id": "str_id_3",
+            "text": "找不到Config.ini文件！",
+            "remark": ""
+      },
+       {
+            "index": 4,
+            "id": "str_id_4",
+            "text": "无法打开目标！",
+            "remark": ""
+      },
+     {
+            "index": 5,
+            "id": "str_id_5",
+            "text": "无法连接服务，程序即将结束",
+            "remark": ""
+      },
+     {
+            "index": 6,
+            "id": "str_id_6",
+            "text": "正在加载,请稍候再试...",
+            "remark": ""
+      },
+      {
+            "index": 7,
+            "id": "str_id_7",
+            "text": "提示",
+            "remark": ""
+      },
+     {
+            "index": 8,
+            "id": "str_id_8",
+            "text": "404|错误|异常|已取消",
+            "remark": ""
+      }
+]

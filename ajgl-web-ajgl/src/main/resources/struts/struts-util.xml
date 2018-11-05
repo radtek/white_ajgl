@@ -1,0 +1,9 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="urlAfterLogin" extends="ajgl-web-ajgl" namespace="/urlAfterLogin">
+		<!-- 根据角色获取登录地址 -->
+		<action name="findUrlByRole" class="urlAfterLoginAction" method="findUrlByRole">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

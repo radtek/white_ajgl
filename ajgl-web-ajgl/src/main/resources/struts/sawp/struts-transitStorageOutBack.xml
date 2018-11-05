@@ -1,0 +1,83 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="transitStorageOutBack" extends="ajgl-web-ajgl" namespace="/transitStorageOutBack">
+		<!-- 跳转到出库单列表 -->
+		<action name="toTransitStorageOutBackRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStorageOutBack/transitStorageOutBackRecord.jsp</result>
+		</action>
+		<!-- 跳转到新增出库单页面 -->
+		<action name="toNewRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStorageOutBack/addTransitStorageOutBack.jsp</result>
+		</action>
+		<!-- 跳转到出库单详情页面 -->
+		<action name="toShowRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStorageOutBack/showTransitStorageOutBack.jsp</result>
+		</action>
+		<!-- 查询出库单列表 -->
+		<action name="queryTransitStorageOutBackRecord" class="transitStorageOutBackAction" method="queryTransitStorageOutBackRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">transitStorageOutBackBeanList.*,totalNum</param>
+			</result>
+		</action>
+		
+		<!-- 删除出库单 -->
+		<action name="delTransitStorageOutBack" class="transitStorageOutBackAction" method="delTransitStorageOutBack">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">msg,flag</param>
+			</result>
+		</action>
+		
+		<!-- 导出出库列表 -->
+		<action name="exportExcel" class="transitStorageOutBackAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+
+		<!--新增暂存物品出库返还 -->
+		<action name="findTransitStoreManageOutBackByMakingId" class="transitStorageOutBackAction" method="findTransitStoreManageOutBackByMakingId">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">temporaryStorageOutBean.*,msg</param>
+			</result>
+		</action>
+		
+		<!--保存暂存物品出库返还新增 -->
+		<action name="saveTransitStorageOutBack" class="transitStorageOutBackAction" method="saveTransitStorageOutBack">
+			<result name="success" type="json">
+			</result>
+		</action>
+		
+		<!-- 查询出库单 -->
+		<action name="queryTransitStorageOutBackByCode" class="transitStorageOutBackAction" method="queryTransitStorageOutBackByCode">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">temporaryStorageOutBean.*,tempObjectBeanList.*,fileBeanLst.*,totalNum,modifyPeople,updateTime</param>
+			</result>
+		</action>
+		
+		<!-- 确认出库-->
+		<action name="affirmStorageOut" class="transitStorageOutBackAction" method="affirmStorageOut">
+			<result name="success" type="json">
+			  <param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			
+			</result>
+		</action>
+		
+		<!-- 上传文件 -->
+		<action name="uploadFile" class="uploadAction" method="uploadFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_baq_baqsyd id = "baqsydId" cjsj = "2011-11-11 11:11:11" zxxgr_id="personId" zt = "zt" xgsj = "2011-11-11 11:11:22"></t_baq_baqsyd>
+	<t_baq_wxs id = "wxsId"></t_baq_wxs>
+	<t_baq_hdjlxx id = "hdjlxxId" zxxgr_id="personId" baqsyd_id = "baqsydId"></t_baq_hdjlxx>
+	<t_baq_baqhdjl></t_baq_baqhdjl>
+</dataset>

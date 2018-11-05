@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+   <t_og_zzjg id="zzjgId" bm="bm" mc="mc"></t_og_zzjg>
+	<t_og_ry id="ryid" org_id="zzjgId" zt="zt" sjc="2017-10-10 10:10:10"></t_og_ry>
+    <t_baq_baqsyd id = "baqsyd_id" cjsj ="2017-04-18 22:22:00" zt="zt" xgsj ="2017-04-18 22:22:00"></t_baq_baqsyd>
+	<t_baq_sswpxx id="sswpxxid" baqsyd_id="baqsyd_id"  sary="李宁" xgsj="2017-04-18 22:22:00"></t_baq_sswpxx>
+    <t_baq_jbqk id = "jbqkid" sydbh = "sydbh" bamj="bamj" baqsyd_id = "baqsyd_id" bwxrxm="bwxrxm" jrbaqsj= "2017-04-18 22:22:00" xb="xb" xgsj="2017-04-18 22:22:00" ssaj="ssaj"></t_baq_jbqk>
+	<t_sawp_zcrkd id="zcrkd"  bm = "bm"  rksj = "2017-04-18 22:22:00"  sydbh = "sydbh" czsj = "2017-04-18 22:22:00"  bz = "bz"  cjr_id = "ryid"></t_sawp_zcrkd>
+    <t_sawp_zcwpq id = "wpqid"></t_sawp_zcwpq>
+    <t_sawp_zcwpg id = "wpgid" area_id="wpqid"></t_sawp_zcwpg>
+    <t_sawp_zcrkd_zcwpg id="zjbid" rkd_id="zcrkd" bgg_id ="wpgid"></t_sawp_zcrkd_zcwpg>
+</dataset>

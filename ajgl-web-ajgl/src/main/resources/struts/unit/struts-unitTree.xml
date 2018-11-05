@@ -1,0 +1,9 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="roleUnitTree" extends="ajgl-web-ajgl" namespace="/roleUnitTree">
+	     <!-- 加载部门树 -->
+		<action name="initDepartmentTree" class="RoleUtilAction" method="initDepartmentTree">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

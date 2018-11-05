@@ -1,0 +1,27 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="dhinterface1" extends="ajgl-web-all" namespace="/dhinterface">
+		<!-- 查询关联的物品图片url列表 -->
+		<action name="queryInvolvedArticle" class="interfaceForDHAction" method="queryInvolvedArticle">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 发送笔录word文件地址 -->
+		<action name="sendNoteFile" class="interfaceForDHAction" method="sendNoteFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 获取使用单word文件 -->
+		<action name="getCaseFormAttachment" class="hARPrintAction" method="printHandlingAreaReceipt">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 下载 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

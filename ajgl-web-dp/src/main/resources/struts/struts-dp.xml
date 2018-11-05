@@ -1,0 +1,39 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="dp" extends="ajgl-web-dp" namespace="/dp">
+	 <!-- 首页跳转 -->
+		<action name="showDPIndex">
+			<result name="success">/WEB-INF/view/dpIndex.jsp</result>
+		</action>
+		<action name="showCrownCase">
+			<result name="success">/WEB-INF/view/crownCase/showCrownCase.jsp</result>
+		</action>
+		<action name="showAdministrativeCase">
+			<result name="success">/WEB-INF/view/administrativeCase/showAdministrativeCase.jsp</result>
+		</action>
+		<action name="showAskRoom">
+			<result name="success">/WEB-INF/view/askRoom/showAskRoom.jsp</result>
+		</action>
+		<action name="showPersonDetails">
+			<result name="success">/WEB-INF/view/askRoom/showPersonDetails.jsp</result>
+		</action>
+	 <!-- 刑事案件到期提醒-->
+		<action name="findCrownCaseList" class="largeScreenAction" method="findCrownCaseList">
+			<result name="success" type="json"></result>
+		</action>
+	 <!-- 行政案件到期提醒-->
+		<action name="findAdministrativeCaseList" class="largeScreenAction" method="findAdministrativeCaseList">
+			<result name="success" type="json"></result>
+		</action>
+	 <!-- 询问室-->
+		<action name="findAskRoomList" class="largeScreenAction" method="findAskRoomList">
+			<result name="success" type="json"></result>
+		</action>
+	 <!-- 详情页面 活动记录-->
+		<action name="findActivationRecord" class="largeScreenAction" method="findActivationRecord">
+			<result name="success" type="json"></result>
+		</action>
+		
+		
+	</package>
+</struts>

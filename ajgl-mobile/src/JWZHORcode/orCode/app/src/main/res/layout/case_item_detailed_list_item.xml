@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListView tree字段 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:minHeight="40dip"
+	android:background="@color/btn_white_border">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginTop="5dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginLeft="15dp"
+		android:background="@color/btn_gray_border">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="@color/btn_white_border">
+			<TextView
+				android:id="@+id/case_item_adjustment_list_item_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="入库时间"
+				android:textColor="@color/black"
+				android:layout_marginTop="8dp"
+				android:textSize="15sp"
+				android:maxEms="4"
+				android:minEms="4"
+				android:ellipsize="end"/>
+			<TextView
+				android:id="@+id/case_item_list_item_time_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="2016-01-01 12:12:12"
+				android:textColor="@color/black"
+				android:layout_marginTop="8dp"
+				android:textSize="15sp"
+				android:layout_marginLeft="15dp"
+				android:maxEms="8"
+				android:minEms="8"
+				android:ellipsize="end"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=" "
+				android:textColor="@color/black"
+				android:layout_marginTop="8dp"
+				android:textSize="15sp"
+				android:layout_marginLeft="10dp"
+				android:maxEms="1"
+				android:minEms="1"
+				android:ellipsize="end"/>
+			<TextView
+				android:id="@+id/case_item_list_item_count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="9999"
+				android:textColor="@color/black"
+				android:layout_marginTop="8dp"
+				android:textSize="15dp"
+				android:layout_marginRight="10dp"
+				android:maxEms="4"
+				android:minEms="4"
+				android:ellipsize="end"/>
+
+		</LinearLayout>
+
+
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginTop="5dp"
+		android:layout_marginRight="15dp"
+		android:layout_marginLeft="15dp"
+		android:background="@color/btn_gray_border">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="0.5dp"
+			android:orientation="vertical"
+			android:background="@color/btn_white_border">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="0dp"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:background="@color/btn_white_border">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="3dp"
+					android:orientation="horizontal"
+					android:background="@color/btn_white_border">
+					<ImageView
+						android:id="@+id/case_item_out_list_item_code_search_iv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="6dp"
+						android:layout_marginRight="5dp"
+						android:src="@drawable/xs_icon_site"
+						/>
+					<TextView
+						android:id="@+id/case_item_out_list_item_old_address_title_tv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="存放区域"
+						android:textColor="@color/gray"
+						android:layout_marginTop="4dp"
+						android:layout_marginBottom="4dp"
+						android:textSize="14sp"
+						android:maxEms="4"
+						android:minEms="4"
+						android:ellipsize="end"/>
+					<TextView
+						android:id="@+id/case_item_list_item_address_tv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="毒品二区"
+						android:textColor="@color/gray"
+						android:layout_marginTop="4dp"
+						android:layout_marginBottom="4dp"
+						android:textSize="14sp"
+						android:layout_marginLeft="1dp"
+						android:layout_marginRight="20dp"
+						android:maxEms="16"
+						android:minEms="2"
+						android:layout_weight="1"
+						android:ellipsize="end"/>
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="1dp"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:id="@+id/case_item_list_item_new_address_lay"
+				android:visibility="visible"
+				android:background="@color/btn_white_border">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="3dp"
+					android:orientation="horizontal"
+					android:background="@color/btn_white_border">
+					<ImageView
+						android:id="@+id/case_item_list_item_new_address_iv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="6dp"
+						android:layout_marginRight="5dp"
+						android:src="@drawable/xs_icon_site_"
+						/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="存放位置"
+						android:textColor="@color/gray"
+						android:layout_marginTop="4dp"
+						android:layout_marginBottom="4dp"
+						android:textSize="14sp"
+						android:maxEms="4"
+						android:minEms="4"
+						android:ellipsize="end"/>
+					<TextView
+						android:id="@+id/case_item_list_item_new_address_tv"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="小型物品库三排一层"
+						android:textColor="@color/gray"
+						android:layout_marginTop="4dp"
+						android:layout_marginBottom="4dp"
+						android:textSize="14sp"
+						android:layout_marginLeft="1dp"
+						android:layout_marginRight="20dp"
+						android:maxEms="16"
+						android:minEms="2"
+						android:layout_weight="1"
+						android:ellipsize="end"/>
+				</LinearLayout>
+			</LinearLayout>
+
+
+
+
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

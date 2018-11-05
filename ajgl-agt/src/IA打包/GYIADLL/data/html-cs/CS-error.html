@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=8,IE=Edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>案管客户端</title>
+<link rel="stylesheet" href="./cs.css">
+
+<script type="text/javascript" src="./winBridgeJs.js"></script>
+<!--关闭按钮旋转-->
+<script type="text/javascript" src="./common/library/jquery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="./custom/default/js/jQueryRotate.2.2.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var value = 0
+    $("#btn-close-window").rotate({ 
+       bind: 
+         { 
+            mouseover: function(){
+                value +=90;
+                $(this).rotate({ animateTo:value, duration: 500})
+            },
+            mouseleave: function(){
+                value +=-90;
+                $(this).rotate({ animateTo:value})
+          },
+         
+         } 
+    });
+    rotation(); 
+  }); 
+</script>
+
+</head>
+
+
+<body>
+<div class="cs-content cs-content-error">
+<div class="cs-content-top" id="divMouseMove"><a id="btn-close-window" href="javascript:void(0)" onclick="exitForm(); return false;"></a></div>
+ <div class="box404">
+        <img src="../images/cs/bg-404.png">
+        <p class="text">办案通服务连接异常，请尝试刷新。</p>
+        <button onclick="reLoadForm()">刷新</button>
+    </div>
+ </div>
+</body>
+
+<script>
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    function Load() {
+//alert(window.location);
+        var x=GetQueryString("xw");
+        var y=GetQueryString("yh");
+//alert(x);
+        window.external.setWindowSize(x, y);
+    }
+   
+    setTimeout('Load()', 10);
+
+//拖动处理
+var oldX=0;
+var oldY=0;
+var addPressEvent=0;
+document.getElementById("divMouseMove").onmousedown = function() 
+ {
+   oldX=event.screenX;
+   oldY=event.screenY;
+   if (addPressEvent==0) 
+   { 
+        addPressEvent=1;
+        if(document.attachEvent)
+            {
+               document.detachEvent('onmousemove', moveOnMousePress); 
+               document.detachEvent('onmouseup', moveOnMouseUP);
+               document.attachEvent('onmousemove', moveOnMousePress,false); 
+               document.attachEvent('onmouseup', moveOnMouseUP,false);
+            }
+            else
+            {
+               document.removeEventListener('mousemove', moveOnMousePress); 
+               document.removeEventListener('mouseup', moveOnMouseUP);
+               document.addEventListener('mousemove', moveOnMousePress,false); 
+               document.addEventListener('mouseup', moveOnMouseUP,false);
+            }
+   }
+ }
+    var rushCount=0;
+    function moveOnMousePress() 
+    {
+        rushCount++;//降低频率
+        if(rushCount>7){
+        rushCount=0;
+        moveForm(event.screenX-oldX,event.screenY-oldY);
+        oldX=event.screenX;
+        oldY=event.screenY;
+      }
+    }
+    function moveOnMouseUP() 
+    {
+           addPressEvent=0;
+           if(document.attachEvent)
+            {
+               document.detachEvent('onmousemove', moveOnMousePress); 
+               document.detachEvent('onmouseup', moveOnMouseUP);
+            }
+            else
+            {
+               document.removeEventListener('mousemove', moveOnMousePress); 
+               document.removeEventListener('mouseup', moveOnMouseUP);
+            }
+      //松开最后执行一次
+      moveForm(event.screenX-oldX,event.screenY-oldY);
+      oldX=event.screenX;
+      oldY=event.screenY;
+    }
+//--拖动处理完
+    
+ //windows方法
+    //IE打开url
+    function openUrlExplorer(Url) {
+        window.external.openUrlExplorer(Url);
+    }
+    //winform内嵌ie打开url
+    function openWebForm(formId,formName,Url, formWidth, formHeight)
+    {
+        window.external.openUrlByWinForm(formId,formName,Url, formWidth, formHeight);
+    }
+    function reLoadForm() {
+        window.external.reLoadForm();
+    }
+    //设置窗体大小
+    function setWindowSize(x,y) {
+        window.external.setWindowSize(x,y);
+    }
+     //拖动
+    function moveForm(addX,addY) {
+        if(addX==0&&addY==0)return;
+        window.external.moveForm(addX,addY);
+    }
+    //设置位置,参数窗体左上坐标
+    function setFormLocation(X,Y) {
+        window.external.setFormLocation(addX,addY);
+    }
+
+    //读取配置文件
+    function getConfig(node,key) {
+        return window.external.getConfig(node,key); 
+    }
+    //读取配置文件
+    function getConfigAll(node) {
+        return window.external.getConfigAllString(node); 
+    }
+    //隐藏程序
+    function hideForm() {
+        window.external.hideForm();
+    }
+    //关闭当前窗口
+    function exitForm() {
+        window.external.exitForm();
+    }
+    //结束程序
+    function exitProgram() {
+        window.external.exitProgram();
+    }
+    //获取屏幕宽
+    function getScreenWidth() {
+       return window.external.getScreenWidth();
+    }
+    //获取屏幕高
+    function getScreenHeight() {
+       return window.external.getScreenHeight();
+    }
+    //获取工作区域宽度(不包含任务栏的区域宽度)
+    function getWorkingAreaWidth() {
+       return window.external.getWorkingAreaWidth();
+    }
+    //获取工作区域高度(不包含任务栏的区域高度)
+    function getWorkingAreaHeight() {
+       return window.external.getWorkingAreaHeight();
+    }
+    //---
+    //menu专用
+    //闪动小图标
+    function myStock() {
+        window.external.Stock();
+    }
+    //设置小图标鼠标悬浮文字,并指定是否闪动图标
+    function showNewMessage(msgText, isStock) {
+        window.external.showNewMessage(msgText, isStock);
+    }
+    //---
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="adjustmentStorageForm" extends="ajgl-web-ajgl" namespace="/adjustmentStorageForm">
+	
+		<!-- 跳转涉案物品调整单列表界面 -->
+		<action name="showAdjustmentStorageFormListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/adjustmentStorageForm/adjustmentStorageFormList.jsp</result>
+		</action>
+		
+		<!-- 跳转新增涉案物品调整单新建界面 -->
+		<action name="showNewAdjustmentStorageFormPage" >
+			<result name="success">/WEB-INF/view/sawpgl/adjustmentStorageForm/newAdjustmentStorageForm.jsp</result>
+		</action>
+		
+		<!-- 跳转新增涉案物品调整单查看界面 -->
+		<action name="showLookAdjustmentStorageFormPage" >
+			<result name="success">/WEB-INF/view/sawpgl/adjustmentStorageForm/lookAdjustmentStorageForm.jsp</result>
+		</action>
+		
+		<!-- 新增涉案物品调整单 -->
+		<action name="newAdjustmentStorageForm" class="adjustmentStorageFormAction" method="newAdjustmentStorageForm">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg,flag,adjustmentStorageFormId</param>
+			</result>
+		</action>
+		
+		<!-- 根据涉案物品保管位置id集合查询所有涉案物品保管位置对象集合 -->
+		<action name="findSotrageByIdList" class="adjustmentStorageFormAction" method="findSotrageByIdList">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据条件查询调整单（分页） -->
+		<action name="findAdjustmentStorageFormByCondition" class="adjustmentStorageFormAction" method="findAdjustmentStorageFormByCondition">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">adjustmentStorageFormServiceBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 根据id查询调整单 -->
+		<action name="findAdjustmentStorageFormById" class="adjustmentStorageFormAction" method="findAdjustmentStorageFormById">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据保管区id和案件编号查询可用储物柜 -->
+		<action name="initDataForStorageSelectPage" class="adjustmentStorageFormAction" method="initDataForStorageSelectPage">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获得流水单号 -->
+		<action name="acquireNum" class="adjustmentStorageFormAction" method="acquireNum">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 调整单列表导出EXCEL -->
+		<action name="exportExcel" class="adjustmentStorageFormAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+	</package>
+</struts>

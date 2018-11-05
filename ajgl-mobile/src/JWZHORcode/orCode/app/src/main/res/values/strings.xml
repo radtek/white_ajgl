@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, CaptureActivity!</string>
+    <string name="app_name">涉案物品管理</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- 假登陆系统 0假登陆-->
+    <string name="isLoginTestSystem">1</string>
+    <!-- 存在密码用户自动登陆系统 1自动登陆-->
+    <string name="isAutoLogin">0</string>
+
+    <!-- 开始检查新版本 1检查-->
+    <string name="isStartcheckAppUpdate">0</string>
+
+
+    <string name="isTestCaseItemIn">0</string>
+    <string name="isTestCaseItemOut">0</string>
+    <string name="isTestCaseItemBack">0</string>
+    <string name="isTestCaseItemAdjustment">0</string>
+    <string name="isTestTemporaryInAdjustment">0</string>
+    <string name="isTestTemporaryOutAdjustment">0</string>
+
+    <string name="isTestCaseItemSearch">0</string>
+    <!-- 扫描货架后,如果货架不在单据中添加假数据 1添加-->
+    <string name="isTestShelfSearch">0</string>
+    <!-- 最后提交假成功 1假成功-->
+    <string name="isTestFin">0</string>
+    <!-- 扫描物品添加假数据 1添加　０使用上一个界面传过来的数据-->
+    <string name="isTestScanCaseItem">0</string>
+
+    <string name="loading">装载数据&#8230;</string>
+    <string name="nodata">暂时没有操作信息&#8230;</string>
+    <string name="nocasedata">物品没有库存&#8230;</string>
+
+    <!--SavLogin-->
+    <string name="savLogin_fileName">CaseSavLogin</string>
+
+    <!-- 登陆验证设备和用户匹配 1验证-->
+    <string name="isCheackDeviceNumAndUser">0</string>
+
+    <!-- http请求错误弹出 -->
+    <string name="IsShowHttpErr">false</string>
+    <!-- http请求错误记录 -->
+    <string name="IsSavHttpErr">true</string>
+
+    <!-- caseIp -->
+    <string name="http">http://</string>
+    <string name="case_Ip">127.0.0.1</string>
+    <string name="case_post">20047</string>
+
+             <string name="url_GetLoginStep1">/ajgl-web-all/index.jsp</string>
+             <string name="url_GetLoginStep2">/ajgl-web-all/login</string>
+             <string name="url_GetLoginStep3">/ajgl-web-all/interface/acquireLoginInfoDetail.action</string>
+             <string name="url_GetLoginOut"></string>
+
+             <string name="url_sreachCaseItem">/ajgl-web-all/interface/acquireInvolvedArticle.action</string>
+             <string name="url_sreachCaseShelf">/ajgl-web-all/interface/acquireArticleLockerInfoByCode.action</string>
+             <string name="url_sreachInStorage">/ajgl-web-all/interface/acquireInStorageForm.action</string>
+             <string name="url_putInStorage">/ajgl-web-all/interface/putInStorage.action</string>
+             <string name="url_sreachOutStorage">/ajgl-web-all/interface/acquireOutStorageForm.action</string>
+             <string name="url_putOutStorage">/ajgl-web-all/interface/putOutStorage.action</string>
+             <string name="url_sreachBackStorage">/ajgl-web-all/interface/acquireBackStorageForm.action</string>
+             <string name="url_putBackStorage">/ajgl-web-all/interface/putBackStorage.action</string>
+             <string name="url_sreachAdjustmentStorage">/ajgl-web-all/interface/acquireAdjustmentForm.action</string>
+             <string name="url_putAdjustmentStorage">/ajgl-web-all/interface/putAjustmentStorage.action</string>
+    <!--暂存-->
+
+            <string name="url_sreachTemporaryInAdjustment">/ajgl-web-all/tempobject/findTempStorageInDetail.action</string>
+            <string name="url_sreachTemporaryOutAdjustment">/ajgl-web-all/tempobject/findTempStorageOut.action</string>
+            <string name="url_putTemporaryInAdjustment">/ajgl-web-all/tempobject/updateTempStorageIn.action</string>
+            <string name="url_putTemporaryOutAdjustment">/ajgl-web-all/tempobject/updateTempStorageOut.action</string>
+            <string name="url_sreachTemporaryShelf">/ajgl-web-all/tempobject/findStorageSelf.action</string>
+    <!--
+   <string name="url_sreachTemporaryInAdjustment">/ajgl-web-interface/tempobject/findTempStorageInDetail.action</string>
+   <string name="url_sreachTemporaryOutAdjustment">/ajgl-web-interface/tempobject/findTempStorageOut.action</string>
+   <string name="url_putTemporaryInAdjustment">/ajgl-web-interface/tempobject/updateTempStorageIn.action</string>
+   <string name="url_putTemporaryOutAdjustment">/ajgl-web-interface/tempobject/updateTempStorageOut.action</string>
+   <string name="url_sreachTemporaryShelf">/ajgl-web-interface/tempobject/findStorageSelf.action</string>
+    -->
+   <!--
+       <string name="url_GetLoginStep1">/ajgl/index.jsp</string>
+       <string name="url_GetLoginStep2">/ajgl/login</string>
+       <string name="url_GetLoginStep3">/ajgl/interface/acquireLoginInfoDetail.action</string>
+       <string name="url_GetLoginOut"></string>
+
+       <string name="url_sreachCaseItem">/ajgl/interface/acquireInvolvedArticle.action</string>
+       <string name="url_sreachCaseShelf">/ajgl/interface/acquireArticleLockerInfoByCode.action</string>
+       <string name="url_sreachInStorage">/ajgl/interface/acquireInStorageForm.action</string>
+       <string name="url_putInStorage">/ajgl/interface/putInStorage.action</string>
+       <string name="url_sreachOutStorage">/ajgl/interface/acquireOutStorageForm.action</string>
+       <string name="url_putOutStorage">/ajgl/interface/putOutStorage.action</string>
+       <string name="url_sreachBackStorage">/ajgl/interface/acquireBackStorageForm.action</string>
+       <string name="url_putBackStorage">/ajgl/interface/putBackStorage.action</string>
+       <string name="url_sreachAdjustmentStorage">/ajgl/interface/acquireAdjustmentForm.action</string>
+       <string name="url_putAdjustmentStorage">/ajgl/interface/putAjustmentStorage.action</string>
+   -->
+        <!--
+
+                   <string name="url_GetLoginStep1">/ajgl-web-ajgl/index.jsp</string>
+                   <string name="url_GetLoginStep2">/ajgl-web-ajgl/login</string>
+                   <string name="url_GetLoginStep3">/ajgl-web-interface/interface/login.action</string>
+                   <string name="url_GetLoginOut"></string>
+
+                   <string name="url_sreachCaseItem">/ajgl-web-interface/interface/acquireInvolvedArticle.action</string>
+                   <string name="url_sreachCaseShelf">/ajgl-web-interface/interface/acquireArticleLockerInfoByCode.action</string>
+                   <string name="url_sreachInStorage">/ajgl-web-interface/interface/acquireInStorageForm.action</string>
+                   <string name="url_putInStorage">/ajgl-web-interface/interface/putInStorage.action</string>
+                   <string name="url_sreachOutStorage">/ajgl-web-interface/interface/acquireOutStorageForm.action</string>
+                   <string name="url_putOutStorage">/ajgl-web-interface/interface/putOutStorage.action</string>
+                   <string name="url_sreachBackStorage">/ajgl-web-interface/interface/acquireBackStorageForm.action</string>
+                   <string name="url_putBackStorage">/ajgl-web-interface/interface/putBackStorage.action</string>
+                   <string name="url_sreachAdjustmentStorage">/ajgl-web-interface/interface/acquireAdjustmentForm.action</string>
+                   <string name="url_putAdjustmentStorage">/ajgl-web-interface/interface/putAjustmentStorage.action</string>
+           -->
+        <!-- 更新 -->
+
+    <string name="updateApp_checkNew">/ajgl-web-all/interface/acquireLatestAppVersionInfo.action</string>
+    <string name="updateApp_downUrl">/ajgl-web-all/interface/downloadFile.action?attachmentId=</string>
+    <string name="dialog_update_title">更新</string>
+    <string name="dialog_update_msg">发现新版本，版本号：</string>
+    <string name="dialog_update_msg2">，是否立即更新</string>
+    <string name="dialog_update_btnupdate">更新</string>
+    <string name="dialog_update_btnnext">下次再说</string>
+    <string name="dialog_downloading_msg">正在下载更新。。。</string>
+    <string name="dialog_alert_title">警告</string>
+    <string name="dialog_downfailed_btndown">重新下载</string>
+    <string name="dialog_downfailed_btnnext">以后再说</string>
+    <string name="dialog_error_title">错误</string>
+    <string name="dialog_downfailed_msg">下载更新失败，是否重试？</string>
+    <string name="exit_button_check">正在检测更新</string>
+    <string name="exit_button">退出更新</string>
+
+</resources>

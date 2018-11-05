@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+  <t_sawp_ckd bm="bm" bz="bz" ajbh="ajbh" sfqbfh="0000000007001" wsmc="wsmc"
+    lqr="lqr" cklx="cklx"></t_sawp_ckd>
+   <t_sawp_ckdx cksl = "2" bz = "bz" sawp_id = "sawpId" cwg_id = "cwgId"></t_sawp_ckdx>
+   <t_sawp_bgwz id = "bgwzId" zksl = "3" bcsl = "5" sawp_id = "sawpId" cwg_id = "cwgId"></t_sawp_bgwz>
+</dataset>

@@ -1,0 +1,955 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.taiji.pubsec.ajgl</groupId>
+	<artifactId>ajgl-parent</artifactId>
+	<version>0.9.2-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<argLine>
+			-Xmx512m -XX:PermSize=128m -XX:MaxPermSize=128m
+			-XX:-UseSplitVerifier
+			-Dfile.encoding=utf-8
+		</argLine>
+		<jfinal.version>2.2.RELEASE</jfinal.version>
+		<spring.version>3.2.8.RELEASE</spring.version>
+		<hibernate.version>3.6.9.Final</hibernate.version>
+		<struts.version>2.3.24.1</struts.version>
+		<hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
+		<log4j.version>2.0.2</log4j.version>
+		<slf4j.version>1.6.4</slf4j.version>
+		<junit.version>4.10</junit.version>
+		<commons-lang.version>3.3</commons-lang.version>
+		<commons-beanutils.version>1.8.3</commons-beanutils.version>
+		<mysql.version>5.1.36</mysql.version>
+		<h2.version>1.3.172</h2.version>
+		<mysql-connector-java.version>5.1.18</mysql-connector-java.version>
+		<dbunit.version>2.5.0</dbunit.version>
+		<spring-test-dbunit.version>1.2.1</spring-test-dbunit.version>
+		<cometd.version>3.0.8</cometd.version>
+		<xbean.version>3.11</xbean.version>
+		<servlet.jstl.version>1.2</servlet.jstl.version>
+		<servlet.api.version>3.0-alpha-1</servlet.api.version>
+		<servlet.jsp.version>2.2</servlet.jsp.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<json-lib.version>2.3</json-lib.version>
+		<httpmime.version>4.3.1</httpmime.version>
+		<quartz.version>2.2.2</quartz.version>
+		<cometd-javascript-jquery.version>3.0.9</cometd-javascript-jquery.version>
+		<javaee-api.version>7.0</javaee-api.version>
+		<xom.version>1.2.5</xom.version>
+		<eigenbase-xom.version>1.3.0.11999</eigenbase-xom.version>
+		<olap4j.version>1.2.0</olap4j.version>
+		<commons-dbcp.version>1.2.2</commons-dbcp.version>
+		<commons-vfs.version>1.0</commons-vfs.version>
+		<commons-math.version>1.2</commons-math.version>
+		<eigenbase-properties.version>1.1.0.10924</eigenbase-properties.version>
+		<eigenbase-resgen.version>1.3.0.11873</eigenbase-resgen.version>
+		<ehcache.version>2.9.1</ehcache.version>
+		<cxf-rt-transports-common.version>2.5.4</cxf-rt-transports-common.version>
+		<cxf-rt.version>2.6.1</cxf-rt.version>
+		<activemq-version>5.6.0</activemq-version>
+		<spring-jms.version>3.0.7.RELEASE</spring-jms.version>
+		<taiji.business.component.version>0.0.2-SNAPSHOT</taiji.business.component.version>
+		<taiji.persistence.version>0.2.1-SNAPSHOT</taiji.persistence.version>
+		<taiji.common-tools.version>0.2.1-SNAPSHOT</taiji.common-tools.version>
+		<commons-dbcp2.version>2.0.1</commons-dbcp2.version>
+		<!-- jackson -->
+		<org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
+		<!-- jackson -->
+		
+		<!-- org.apache.httpcomponents -->
+		<org.apache.httpcomponents-client.version>4.5.2</org.apache.httpcomponents-client.version>
+		<org.apache.httpcomponents-core.version>4.4.4</org.apache.httpcomponents-core.version>
+		<!-- org.apache.httpcomponents -->
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>beijing</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- 预警模块-定时任务提前时间 -->
+				<pom.yj.time>1</pom.yj.time>
+				<!-- 项目上线日期  -->
+				<pom.ajgl.start.date>2016-09</pom.ajgl.start.date>
+				<pom.szptip.url>http://192.168.19.99:8081/szpt-web-all</pom.szptip.url>
+				<pom.szptdl.url>http://52.4.1.223:9869/comet-server-proxy/cometd</pom.szptdl.url>
+				<pom.agt.url>http://52.4.1.223:9869/ajgl-web-all</pom.agt.url>
+				<pom.oort.url>http://52.4.1.223:9869/ajgl-web-all/cometd</pom.oort.url>
+				<pom.oort.cloud>http://52.4.1.223:9869/ajgl-web-all/cometd</pom.oort.cloud>
+				<pom.cwg.ip>52.4.1.229</pom.cwg.ip>
+				<pom.cwg.port>8031</pom.cwg.port>
+				<pom.dh.ip>52.4.1.210</pom.dh.ip>
+				<pom.dh.port>9000</pom.dh.port>
+				<pom.dh.user>system</pom.dh.user>
+				<pom.dh.password>123456</pom.dh.password>
+				<pom.szpt.ip>192.168.0.7</pom.szpt.ip>
+				<pom.szpt.port>8080</pom.szpt.port>
+				<pom.ajgl.database.driverClassName>com.mysql.jdbc.Driver</pom.ajgl.database.driverClassName>
+				<pom.ajgl.database.url>jdbc:mysql://52.4.1.222:3306/ajgl_kf?useUnicode=true&amp;characterEncoding=utf8</pom.ajgl.database.url>
+				<pom.ajgl.database.username>root</pom.ajgl.database.username>
+				<pom.ajgl.database.password>root</pom.ajgl.database.password>
+				<pom.ajgl.hibernate.show_sql>false</pom.ajgl.hibernate.show_sql>
+				<pom.ajgl.hibernate.format_sql>true</pom.ajgl.hibernate.format_sql>
+				<pom.ajgl.hibernate.hbm2ddl.auto>none</pom.ajgl.hibernate.hbm2ddl.auto>
+				<pom.ajgl.hibernate.generateDdl>false</pom.ajgl.hibernate.generateDdl>
+				<pom.ajgl.hibernate.dialect>org.hibernate.dialect.MySQLDialect</pom.ajgl.hibernate.dialect>
+				<pom.ajgl.hibernate.dbpool.max>5</pom.ajgl.hibernate.dbpool.max>
+				<pom.ajgl.hibernate.dbpool.min>2</pom.ajgl.hibernate.dbpool.min>
+				<pom.ajgl.hibernate.dbpool.initial>3</pom.ajgl.hibernate.dbpool.initial>
+				<pom.ajgl.hibernate.dbpool.idleTestPeriod>14400</pom.ajgl.hibernate.dbpool.idleTestPeriod>
+
+				<pom.ajgl.dbtx.builder.amq.kahaDB.directory>data/activemq</pom.ajgl.dbtx.builder.amq.kahaDB.directory>
+				<pom.ajgl.dbtx.builder.amq.transportConnector.uri>tcp://localhost:61616</pom.ajgl.dbtx.builder.amq.transportConnector.uri>
+
+				<pom.ajgl.dbtx.executor.amq.kahaDB.directory>data/activemq</pom.ajgl.dbtx.executor.amq.kahaDB.directory>
+				<pom.ajgl.dbtx.executor.amq.transportConnector.uri>tcp://localhost:61616</pom.ajgl.dbtx.executor.amq.transportConnector.uri>
+			</properties>
+
+		</profile>
+
+	</profiles>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.jfinal</groupId>
+				<artifactId>jfinal</artifactId>
+				<classifier>bin</classifier>
+				<version>${jfinal.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-frontend-jaxws</artifactId>
+				<version>${cxf-rt.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-transports-common</artifactId>
+				<version>${cxf-rt-transports-common.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-core</artifactId>
+				<version>${cxf-rt.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-rt-transports-http-jetty</artifactId>
+				<version>${cxf-rt.version}</version>
+				<type>jar</type>
+				<scope>compile</scope>
+				<exclusions>
+					<exclusion>
+						<artifactId>jetty-server</artifactId>
+						<groupId>org.eclipse.jetty</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache</artifactId>
+				<version>${ehcache.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jms</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-acl</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>${commons-dbcp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-vfs</groupId>
+				<artifactId>commons-vfs</artifactId>
+				<version>${commons-vfs.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-math</artifactId>
+				<version>${commons-math.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>eigenbase</groupId>
+				<artifactId>eigenbase-properties</artifactId>
+				<version>${eigenbase-properties.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>eigenbase</groupId>
+				<artifactId>eigenbase-resgen</artifactId>
+				<version>${eigenbase-resgen.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>xom</groupId>
+				<artifactId>xom</artifactId>
+				<version>${xom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>eigenbase</groupId>
+				<artifactId>eigenbase-xom</artifactId>
+				<version>${eigenbase-xom.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.olap4j</groupId>
+				<artifactId>olap4j</artifactId>
+				<version>${olap4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.olap4j</groupId>
+				<artifactId>olap4j-xmla</artifactId>
+				<version>${olap4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${javaee-api.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>front-common</artifactId>
+				<version>${taiji.common-tools.version}</version>
+				<type>war</type>
+			</dependency>
+
+			<dependency>
+				<groupId>net.sf.json-lib</groupId>
+				<artifactId>json-lib</artifactId>
+				<classifier>jdk15</classifier>
+				<version>${json-lib.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpmime</artifactId>
+				<version>${httpmime.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+			<!-- ============== Spring相关依赖 ================ -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+		      <groupId>com.taiji.pubsec.common</groupId>
+		      <artifactId>spring-web-tool</artifactId>
+		      <version>${taiji.common-tools.version}</version>
+		    </dependency>  
+			<!-- test -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>spring-tool</artifactId>
+				<version>${taiji.common-tools.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>format-tool</artifactId>
+				<version>${taiji.common-tools.version}</version>
+			</dependency>
+
+			<!-- ============== ActiveMQ ============== -->
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-spring</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.xbean</groupId>
+				<artifactId>xbean-spring </artifactId>
+				<version>${xbean.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>commons-logging</artifactId>
+						<groupId>commons-logging</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-core</artifactId>
+				<version>${activemq-version}</version>
+                <exclusions>
+                  <exclusion>
+                    <artifactId>hadoop-core</artifactId>
+                    <groupId>org.apache.hadoop</groupId>
+                  </exclusion>
+                </exclusions>        
+			</dependency>
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-all</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-amqp</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-broker</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-client</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-pool</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.activemq</groupId>
+				<artifactId>activemq-web</artifactId>
+				<version>${activemq-version}</version>
+			</dependency>
+
+
+			<!-- ============== 测试相关依赖 ================ -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>${h2.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.dbunit</groupId>
+				<artifactId>dbunit</artifactId>
+				<version>${dbunit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.github.springtestdbunit</groupId>
+				<artifactId>spring-test-dbunit</artifactId>
+				<version>${spring-test-dbunit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- ============== hibernate相关依赖 ================ -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate.javax.persistence</groupId>
+				<artifactId>hibernate-jpa-2.0-api</artifactId>
+				<version>${hibernate.jpa.version}</version>
+			</dependency>
+
+			<!-- ============== struts2相关依赖 ================ -->
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-core</artifactId>
+				<version>${struts.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-convention-plugin</artifactId>
+				<version>${struts.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-config-browser-plugin</artifactId>
+				<version>${struts.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-spring-plugin</artifactId>
+				<version>${struts.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-json-plugin</artifactId>
+				<version>${struts.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-junit-plugin</artifactId>
+				<version>${struts.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- ============== servlet相关依赖 ================ -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${servlet.jstl.version}</version>
+                <scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet.api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>${servlet.jsp.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- ============== log4j相关依赖 ================ -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-web</artifactId>
+				<version>${log4j.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-ext</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<!-- ============== others ================ -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>${commons-beanutils.version}</version>
+			</dependency>
+
+			<!-- ============== 数据库相关 ================ -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>c3p0</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>${c3p0.version}</version>
+			</dependency>
+
+			<!-- ============== cometd ================ -->
+			<dependency>
+				<groupId>org.cometd.javascript</groupId>
+				<artifactId>cometd-javascript-jquery</artifactId>
+				<version>${cometd-javascript-jquery.version}</version>
+				<type>war</type>
+			</dependency>
+			<dependency>
+        		<groupId>com.taiji.pubsec.common</groupId>
+       			<artifactId>comet-service</artifactId>
+        		<version>${taiji.common-tools.version}</version> 
+      		</dependency>
+			<dependency>
+				<groupId>org.cometd.java</groupId>
+				<artifactId>cometd-java-annotations</artifactId>
+				<version>${cometd.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cometd.java</groupId>
+				<artifactId>cometd-java-oort</artifactId>
+				<version>${cometd.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cometd.java</groupId>
+				<artifactId>cometd-java-server</artifactId>
+				<version>${cometd.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.cometd.java</groupId>
+				<artifactId>cometd-java-client</artifactId>
+				<version>${cometd.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-dbcp2</artifactId>
+				<version>${commons-dbcp2.version}</version>
+			</dependency>
+
+			<!-- ============== 自有组件相关依赖 ================ -->
+			<!-- Hibernate封装组件 -->
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>persistence</artifactId>
+				<version>${taiji.persistence.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>front-common</artifactId>
+				<version>${taiji.common-tools.version}</version>
+				<classifier>classes</classifier>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.basiscomponents</groupId>
+				<artifactId>dictionary</artifactId>
+				<version>${taiji.business.component.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.basiscomponents</groupId>
+				<artifactId>authority</artifactId>
+				<version>${taiji.business.component.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.basiscomponents</groupId>
+				<artifactId>organization</artifactId>
+				<version>${taiji.business.component.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.basiscomponents</groupId>
+				<artifactId>org-authority</artifactId>
+				<version>${taiji.business.component.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.basiscomponents.attachment</groupId>
+				<artifactId>attachment-service</artifactId>
+				<version>${taiji.business.component.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>format-tool</artifactId>
+				<version>${taiji.common-tools.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>springsecurity-acl-hibernateimpl</artifactId>
+				<version>${taiji.common-tools.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.taiji.pubsec.common</groupId>
+				<artifactId>springsecurity-resource</artifactId>
+				<version>${taiji.common-tools.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.sonar-plugins.java</groupId>
+				<artifactId>sonar-jacoco-listeners</artifactId>
+				<version>1.2</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<!-- jackson -->
+			<dependency>
+				<groupId>org.codehaus.jackson</groupId>
+				<artifactId>jackson-mapper-asl</artifactId>
+				<version>${org.codehaus.jackson.version}</version>
+			</dependency>
+			<!-- jackson -->
+			
+			<!-- org.apache.httpcomponents -->
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${org.apache.httpcomponents-client.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpcore</artifactId>
+				<version>${org.apache.httpcomponents-core.version}</version>
+			</dependency>			
+			<!-- org.apache.httpcomponents -->
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.codehaus.sonar-plugins.java</groupId>
+			<artifactId>sonar-jacoco-listeners</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.5</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<configuration>
+						<runOrder>random</runOrder>
+						<properties>
+							<name>listener</name>
+							<value>org.sonar.java.jacoco.JUnitListener</value>
+						</properties>
+					</configuration>
+					<version>2.15</version>
+				</plugin>
+				<!-- 测试覆盖率插件 -->
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.7.4.201502262128</version>
+					<executions>
+						<execution>
+							<id>default-prepare-agent</id>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.2.1</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.9.1</version>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<tagBase>https://192.168.19.5/svn/proj-ajgl/tags/</tagBase>
+						<branchBase>https://192.168.19.5/svn/proj-ajgl/branches/</branchBase>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>2.6</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
+
+			<!-- 打包成war -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<version>3.0</version>
+					<attachClasses>true</attachClasses>
+					<classesClassifier>classes</classesClassifier>
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+
+	</build>
+
+
+	<!-- 配置项目报告 -->
+	<reporting>
+		<plugins>
+			<!-- 无需配置Project Info Reports Plugin即默认包含所有Project Information报告 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<dependencyDetailsEnabled>false</dependencyDetailsEnabled>
+					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+				</configuration>
+				<!-- simpler configuration without reportSets available for usual cases -->
+				<reportSets>
+					<reportSet>
+						<reports>
+							<!-- index一定要生成,否则链接问题 -->
+							<report>index</report>
+							<report>dependencies</report>
+							<report>project-team</report>
+							<report>issue-tracking</report>
+							<report>license</report>
+							<report>scm</report>
+							<report>cim</report>
+							<report>modules</report>
+							<report>plugins</report>
+							<report>summary</report>
+						</reports>
+						<inherited>true</inherited>
+					</reportSet>
+				</reportSets>
+			</plugin>
+
+			<!-- 使用dashboard插件来生成全局报告 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>dashboard-maven-plugin</artifactId>
+				<version>1.0.0-beta-1</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- 项目还需要做的TODO报告 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>taglist-maven-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<linkXRef>true</linkXRef>
+					<xrefLocation>${project.reporting.outputDirectory}/../xref</xrefLocation>
+					<testXrefLocation>${project.reporting.outputDirectory}/../xref-test</testXrefLocation>
+					<tags>
+						<tag>TODO</tag>
+						<tag>@todo</tag>
+						<tag>FIXME</tag>
+					</tags>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<!-- Environment Setting -->
+
+
+	<distributionManagement>
+		<!-- release版本程序包发布到的maven代理仓库配置 -->
+		<repository>
+			<!-- 该id仓库登录的用户名和密码需要在本地setting.xml文件的server元素中配置，妿 <servers> <server> 
+				<id>proj-releases</id> <username>admin</username> <password>1qazxcde32</password> 
+				</server> </servers> -->
+			<id>proj-releases</id>
+			<name>Proj Release Repository</name>
+			<url>http://192.168.19.106:8081/nexus/content/repositories/pub-sec-Releases/ </url>
+		</repository>
+		<!-- snapshot版本程序包发布到的maven代理仓库配置 -->
+		<snapshotRepository>
+			<id>proj-snapshots</id>
+			<name>Proj Snapshot Repository</name>
+			<url>http://192.168.19.106:8081/nexus/content/repositories/pub-sec-Snapshots/ </url>
+		</snapshotRepository>
+	</distributionManagement>
+	<scm>
+		<connection>scm:svn:https://192.168.19.5/svn/proj-ajgl/trunk</connection>
+		<developerConnection>scm:svn:https://192.168.19.5/svn/proj-ajgl/trunk</developerConnection>
+	</scm>
+	<!-- 持续集成环境配置 -->
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://builds.apache.org/job/maven-archetype-m3/</url>
+	</ciManagement>
+
+
+	<!-- Project Meta Data -->
+	<!-- 项目名称 -->
+	<!-- 项目描述 -->
+	<!-- 项目网站地址 -->
+	<!-- 开发人员信恿 -->
+	<developers>
+		<developer>
+			<id>zhangsan</id>
+			<email>zhangsan@mail.taiji.com.cn</email>
+			<name>张三</name>
+			<organization>pubsec1.architecture</organization>
+			<roles>
+				<role>designer</role>
+				<role>coder</role>
+			</roles>
+			<timezone>8</timezone>
+		</developer>
+	</developers>
+
+	<!--许可证 -->
+	<licenses>
+		<license>
+			<url>http://127.0.0.1:8080/LICENSE.txt</url>
+			<comments>todo</comments>
+			<name>内部使用</name>
+		</license>
+	</licenses>
+
+</project>

@@ -1,0 +1,82 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="interface" extends="ajgl-web-all" namespace="/interface">
+		
+		<!-- 获取涉案物品在库详细信息 -->
+		<action name="acquireInvolvedArticle" class="inOutStorageAction" method="acquireInvolvedArticle">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获取入库单详情及细项信息 -->
+		<action name="acquireInStorageForm" class="inOutStorageAction" method="acquireInStorageForm">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获取出库单详情及细项信息 -->
+		<action name="acquireOutStorageForm" class="inOutStorageAction" method="acquireOutStorageForm">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获取返还单详情及细项信息 -->
+		<action name="acquireBackStorageForm" class="inOutStorageAction" method="acquireBackStorageForm">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获取调整单详情及细项信息 -->
+		<action name="acquireAdjustmentForm" class="inOutStorageAction" method="acquireAdjustmentForm">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 调整操作 -->
+		<action name="putAjustmentStorage" class="inOutStorageAction" method="putAjustmentStorage">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 返还操作 -->
+		<action name="putBackStorage" class="inOutStorageAction" method="putBackStorage">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 入库操作 -->
+		<action name="putInStorage" class="inOutStorageAction" method="putInStorage">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 出库操作 -->
+		<action name="putOutStorage" class="inOutStorageAction" method="putOutStorage">
+			<result name="success" type="json"></result>
+		</action>
+    
+        <!-- 获取用户信息 -->
+       <action name="acquireLoginInfoDetail" class="loginInterfaceAction" method="acquireLoginInfoDetail">
+          <result name="success" type="json"></result>
+       </action>
+       
+       <!-- 获取储物柜信息 -->
+       <action name="acquireArticleLockerInfoByCode" class="inOutStorageAction" method="acquireArticleLockerInfoByCode">
+          <result name="success" type="json"></result>
+       </action>
+       
+       <!-- 签收预警消息 -->
+		<action name="signMessage" class="warningForPDAAction" method="signMessage">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 查询新的预警消息 -->
+		<action name="findNewMessagesByConditions" class="warningForPDAAction" method="findNewMessagesByConditions">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 查询旧的预警消息 -->
+		<action name="findOldMessagesByConditions" class="warningForPDAAction" method="findOldMessagesByConditions">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

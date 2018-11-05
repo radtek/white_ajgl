@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/loginui"
+    >
+
+    <Button
+        android:id="@+id/updateapp_btn_exit"
+        android:layout_width="248dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="300dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:background="#ffffd910"
+        android:text="@string/exit_button_check"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

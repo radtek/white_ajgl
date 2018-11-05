@@ -1,0 +1,48 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="suspectSearch" extends="ajgl-web-ajgl" namespace="/suspectSearch">
+		<!-- 嫌疑人查询-列表页面 -->
+		<action name="showSuspectSearchPage">
+			<result name="success">/WEB-INF/view/ajjk/suspectSearch/suspectSearch.jsp</result>
+		</action>
+		<!-- 初始化页面数据 -->
+		<action name="initData" class="suspectSearchAction" method="initData">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询嫌疑人 -->
+		<action name="initSuspect" class="suspectSearchAction" method="initSuspect">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 分页查询 -->
+		<action name="searchAllSuspectByPage" class="suspectSearchAction" method="searchAllSuspectByPage">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">cpsBeanLst.*,totalNum,length</param>
+			</result>
+		</action>
+		<!-- 嫌疑人流程 -->
+		<action name="showSuspectInfoPage">
+			<result name="success">/WEB-INF/view/ajjk/suspectSearch/suspectInfo.jsp</result>
+		</action>
+		<!-- 嫌疑人流程 -->
+		<action name="searchPersonInfo" class="suspectSearchAction" method="searchPersonInfo">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 人员详情 -->
+		<action name="showPersonDetailPage">
+			<result name="success">/WEB-INF/view/ajjk/suspectSearch/personDetail.jsp</result>
+		</action>
+		<!-- 人员详情 -->
+		<action name="searchPersonDetail" class="suspectSearchAction" method="searchPersonDetail">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 嫌疑详情 -->
+		<action name="showSuspectDetailPage">
+			<result name="success">/WEB-INF/view/ajjk/suspectSearch/suspectDetail.jsp</result>
+		</action>
+		<!-- 嫌疑详情 -->
+		<action name="searchSuspectDetail" class="suspectSearchAction" method="searchSuspectDetail">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taiji.pubsec.orcode.addressorcode" >
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 写入扩展存储，向扩展卡写入数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!-- SD卡读取权限-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- 防止休眠 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--商店权限-->
+    <uses-permission android:name="cybertech.permission.READ_PSTORE"/>
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_USERINFO"/>
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_SERVER_SYNC_TIME"/>
+    <uses-permission android:name="cybertech.permission.READ_PSTORE_LOCATIONINFO"/>
+    <uses-permission android:name="cybertech.permission.WRITE_PSTORE_OPERATIONLOG"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:name="com.taiji.myContext"
+        android:theme="@style/AppTheme" >
+     <!--   <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+android:screenOrientation="landscape"
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <activity
+
+            android:name="com.taiji.article.caseitem.MainStartActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+
+<!--
+                              <intent-filter>
+                                  <action android:name="android.intent.action.MAIN" />
+                                  <category android:name="android.intent.category.LAUNCHER" />
+                              </intent-filter>
+            -->
+
+                  <intent-filter>
+                    <action android:name="pstore.intent.action.MAIN"/>
+                    <category android:name="pstore.intent.category.APP"/>
+                  </intent-filter>
+
+
+        </activity>
+           <!--
+           <activity
+               android:name="com.londroid.tree.TreeActivity"
+               android:label="@string/title_activity_main" >
+           </activity>-->
+        <activity
+            android:name="com.taiji.Login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+
+        <activity
+            android:name="com.taiji.article.caseitem.CaseScanAllActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+
+        <activity
+            android:name="com.taiji.article.caseitem.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.taiji.UpdateApp.Update_AppActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+
+        <activity
+            android:name="com.taiji.pubsec.orcode.phonegaptest.MainTestActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".CaptureActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".CaptureBaseActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.taiji.article.caseitem.CaseArticleActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.taiji.article.caseitem.CaseScanItemActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.taiji.article.caseitem.CaseScanShelfActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.londroid.tree.TreeActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="org.apache.cordova.CordovaActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main" >
+        </activity>
+    </application>
+
+</manifest>

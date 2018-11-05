@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_baq_hdjlxx id = "hdjlxxId" zxxgr_id="123" baqsyd_id = "baqsydId"></t_baq_hdjlxx>
+	<t_baq_baqhdjl hdnr = "hdnr1" hdlx = "hdlx1" zcy = "zcy11" jssj = "2010-10-10 10:10:10" whr = "whr1" whsj = "2010-10-10 10:10:10" bz = "bz1" wxs_id = "wxsId" baqhdjlxx_id = "hdjlxxId"></t_baq_baqhdjl>
+	<t_baq_baqhdjl hdnr = "hdnr22" hdlx = "hdlx22" zcy = "zcy22" jssj = "2010-10-10 10:10:10" whr = "whr22" whsj = "2010-10-10 10:10:10" bz = "bz22" wxs_id = "wxsId" baqhdjlxx_id = "hdjlxxId"></t_baq_baqhdjl>
+</dataset>

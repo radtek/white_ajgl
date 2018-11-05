@@ -1,0 +1,72 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="transitStoreArea" extends="ajgl-web-ajgl" namespace="/transitStoreArea">
+		<!-- 跳转到出库单列表 -->
+		<action name="transitStoreAreaListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStoreArea/transitStoreAreaList.jsp</result>
+		</action>
+		
+		<!-- 新增修改暂存物品保管区页面-->
+		<action name="showNewOrUpdateTransitStoreAreaPage" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStoreArea/newOrUpdateTransitStoreArea.jsp</result>
+		</action>
+		
+		<!-- 分页查询暂存物品保管区 -->
+		<action name="findtransitStoreAreaByPaging" class="transitStoreAreaAction" method="findtransitStoreAreaByPaging">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">storageAreaBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 新建暂存物品保管区 -->
+		<action name="newTransitStoreArea" class="transitStoreAreaAction" method="newTransitStoreArea">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		
+		<!-- 修改物品保管区 -->
+		<action name="updateTransitStoreArea" class="transitStoreAreaAction" method="updateTransitStoreArea">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		
+		<!-- 修改暂存物品保管区状态 -->
+		<action name="updateTransitStoreAreaState" class="transitStoreAreaAction" method="updateTransitStoreAreaState">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 删除物品保管区 -->
+		<action name="deleteTransitStoreAreaByIds" class="transitStoreAreaAction" method="deleteTransitStoreAreaByIds">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据id查询物证管理区 -->
+		<action name="findTransitStoreAreaById" class="transitStoreAreaAction" method="findTransitStoreAreaById">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 验证暂存物品保管区编码是否唯一 -->
+		<action name="verifyCodeIsOnly" class="transitStoreAreaAction" method="verifyCodeIsOnly">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 验证暂存物品保管区名称是否唯一 -->
+		<action name="verifyNameIsOnly" class="transitStoreAreaAction" method="verifyNameIsOnly">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!--储物架维护 查询物证管理区 -->
+		<action name="findTransitStoreAreaByFrame" class="transitStoreAreaAction" method="findTransitStoreAreaByFrame">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">storageAreaBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>

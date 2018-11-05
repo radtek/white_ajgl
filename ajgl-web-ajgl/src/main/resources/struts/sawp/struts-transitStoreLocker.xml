@@ -1,0 +1,66 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="transitStoreLocker" extends="ajgl-web-ajgl" namespace="/transitStoreLocker">
+		<!-- 跳转到暂存物品储物架查看列表 -->
+		<action name="transitStoreLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStoreLocker/transitStoreLockerList.jsp</result>
+		</action>
+		
+		<!-- 跳转暂存物品储物架新增界面 -->
+		<action name="showNewLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStoreLocker/newLocker.jsp</result>
+		</action>
+		
+		<!-- 跳转暂存物品储物架修改界面 -->
+		<action name="showModifyTransitStoreLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStoreLocker/modifyLocker.jsp</result>
+		</action>
+	
+		<!-- 跳转暂存物品储物架查看界面 -->
+		<action name="showLookTransitStoreLockerListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStoreLocker/lookLocker.jsp</result>
+		</action>
+		
+		<!-- 查询暂存物品储物架 -->
+		<action name="queryTransitStoreLocker" class="transitStoreLockerAction" method="queryTransitStoreLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">articleLockerBeanList.*,totalNum</param>
+			</result>
+		</action>
+		
+		<!-- 新增暂存物品储物架 -->
+		<action name="newTransitStoreLocker" class="transitStoreLockerAction" method="newTransitStoreLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg</param>
+			</result>
+		</action>
+		
+		<!-- 删除暂存物品储物架 -->
+		<action name="deleteTransitStoreLocker" class="transitStoreLockerAction" method="deleteTransitStoreLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg</param>
+			</result>
+		</action>
+	
+		<!-- 查看暂存物品储物架 -->
+		<action name="lookTransitStoreLocker" class="transitStoreLockerAction" method="lookTransitStoreLocker">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 修改暂存物品储物架 -->
+		<action name="modifyTransitStoreLocker" class="transitStoreLockerAction" method="modifyTransitStoreLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg,flag</param>
+			</result>
+		</action>
+		
+		<!-- 生成code -->
+		<action name="generateCode" class="transitStoreLockerAction" method="generateCode">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

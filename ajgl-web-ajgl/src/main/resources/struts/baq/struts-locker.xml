@@ -1,0 +1,70 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="locker" extends="ajgl-web-ajgl" namespace="/locker">
+		<!-- 储物柜维护-列表页面 -->
+		<action name="showLockerListPage">
+			<result name="success">/WEB-INF/view/ajgl/locker/lockerList.jsp</result>
+		</action>
+		<!-- 储物柜维护-新建页面 -->
+		<action name="showNewOrUpdateLockerPage">
+			<result name="success">/WEB-INF/view/ajgl/locker/newOrUpdateLocker.jsp</result>
+		</action>
+		<!-- 新建储物柜 -->
+		<action name="saveLocker" class="lockerManageAction" method="saveLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		<!-- 修改储物柜 -->
+		<action name="updateLocker" class="lockerManageAction" method="updateLocker">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		<!-- 修改储物柜状态 -->
+		<action name="updateLockerStatus" class="lockerManageAction" method="updateLockerStatus">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除储物柜 -->
+		<action name="deleteLockerByIds" class="lockerManageAction" method="deleteLockerByIds">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 按条件查询所有储物柜 -->
+		<action name="searchAllLockerListByCondition" class="lockerManageAction" method="searchAllLockerListByCondition">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">lockerBeanList.*,totalNum,length,bn</param>
+			</result>
+		</action>
+		<!-- 查询所有的储物柜区号 -->
+		<action name="findAllAreaCode" class="lockerManageAction" method="findAllAreaCode">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询所有的储物柜柜号 -->
+		<action name="findAllAreaCodeSecond" class="lockerManageAction" method="findAllAreaCodeSecond">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 根据id查询储物柜 -->
+		<action name="searchLockerById" class="lockerManageAction" method="searchLockerById">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 根据储物柜id查询储物柜在库情况信息 -->
+		<action name="findMessageByLockerRoomId" class="lockerManageAction" method="findMessageByLockerRoomId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 验证编号是否唯一 -->
+		<action name="verifyCodeIsOnly" class="lockerManageAction" method="verifyCodeIsOnly">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查找本使用单用的和空的储物柜 -->
+		<action name="findEmptyAndHarLocker" class="lockerManageAction" method="findEmptyAndHarLocker">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 开箱一 -->
+		<action name="openLocker" class="lockerManageAction" method="openLocker">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

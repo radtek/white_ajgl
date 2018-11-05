@@ -1,0 +1,83 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="backStorageForm" extends="ajgl-web-ajgl" namespace="/backStorageForm">
+	
+		<!-- 跳转涉案物品返还单列表界面 -->
+		<action name="showBackStorageFormListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/backStorageForm/backStorageFormList.jsp</result>
+		</action>
+		
+		<!-- 跳转涉案物品返还单新建界面 -->
+		<action name="showNewBackStorageFormPage" >
+			<result name="success">/WEB-INF/view/sawpgl/backStorageForm/newBackStorageForm.jsp</result>
+		</action>
+		
+		<!-- 跳转涉案物品返还单查看界面 -->
+		<action name="showLookBackStorageFormPage" >
+			<result name="success">/WEB-INF/view/sawpgl/backStorageForm/lookBackStorageForm.jsp</result>
+		</action>
+		
+		<!-- 新建返还单 -->
+		<action name="newBackStorageForm" class="backStorageFormAction" method="newBackStorageForm">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">msg,flag,backStorageFormId</param>
+			</result>
+		</action>
+		
+		<!-- 返还单查询（分页） -->
+		<action name="findBackStorageFormByCondition" class="backStorageFormAction" method="findBackStorageFormByCondition">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">backStorageFormServiceBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 根据id查询返还单 -->
+		<action name="findBackStorageFormById" class="backStorageFormAction" method="findBackStorageFormById">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 删除返还单 -->
+		<action name="deleteBackStorageFormByIds" class="backStorageFormAction" method="deleteBackStorageFormByIds">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据案件编号和保管区id查询储物架 -->
+		<action name="initDataForStorageSelectPage" class="backStorageFormAction" method="initDataForStorageSelectPage">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获取可选出库单编号集合 -->
+		<action name="acquireStorageOutCodeList" class="backStorageFormAction" method="acquireStorageOutCodeList">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据出库单id查询返还单信息 -->
+		<action name="findBackStorageFormByOsfId" class="backStorageFormAction" method="findBackStorageFormByOsfId">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 返还单列表导出EXCEL -->
+		<action name="exportExcel" class="backStorageFormAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		<!-- 打印返还单 -->
+		<action name="printBackStorageFormById" class="backStorageFormAction" method="printBackStorageFormById">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		<!-- 获得流水单号 -->
+		<action name="acquireNum" class="backStorageFormAction" method="acquireNum">
+			<result name="success" type="json"></result>
+		</action>
+	
+	</package>
+</struts>

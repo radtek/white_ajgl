@@ -1,0 +1,31 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="collectInfoSituation" extends="ajgl-web-ajgl" namespace="/collectInfoSituation">
+		<!-- 采集信息情况-查看页面 -->
+		<action name="showLookCollectInfoSituationPage" class="collectInfoSituationAction" method="showLookCollectInfoSituationPage">
+			<result name="success">/WEB-INF/view/ajgl/collectInfoSituation/lookCollectInfoSituation.jsp</result>
+		</action>
+		<!-- 采集信息情况-新建或修改页面 -->
+		<action name="showNewOrUpdateCollectInfoSituationPage">
+			<result name="success">/WEB-INF/view/ajgl/collectInfoSituation/newOrUpdateCollectInfoSituation.jsp</result>
+		</action>
+		<!-- 根据办案区使用单id查询采集信息情况 -->
+		<action name="searchCollectInfoSituationByHandlingAreaReceiptId" class="collectInfoSituationAction" method="searchCollectInfoSituationByHandlingAreaReceiptId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 保存采集信息情况 -->
+		<action name="saveCollectInfoSituation" class="collectInfoSituationAction" method="saveCollectInfoSituation">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyPerson,modifyTime</param>
+			</result>
+		</action>
+		<!-- 修改采集信息情况 -->
+		<action name="updateCollectInfoSituation" class="collectInfoSituationAction" method="updateCollectInfoSituation">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">modifyPerson,modifyTime</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_baq_sswpxx id = "1" sswpgly = "sswpgly2" bary = "bary2" sary = "sary2" zxxgr_id="123" xgsj = "2010-10-10 10:10:10" baqsyd_id = "1"></t_baq_sswpxx>
+	<t_baq_sswprkxx wpmc = "wpmc2" tz = "tz2" bh = "bh2" sl = "sl2" zt = "zt2" bgcs = "bgcs2" jldw = "jldw2" sswpxx_id = "1"></t_baq_sswprkxx>
+	<t_baq_sswprkxx wpmc = "wpmc" tz = "tz" bh = "bh" sl = "sl" zt = "zt" bgcs = "bgcs" jldw = "jldw" sswpxx_id = "1"></t_baq_sswprkxx>
+	<t_baq_sswprkxx wpmc = "wpmc4" tz = "tz4" bh = "bh4" sl = "sl4" zt = "zt4" bgcs = "bgcs4" jldw = "jldw4" sswpxx_id = "1"></t_baq_sswprkxx>
+</dataset>

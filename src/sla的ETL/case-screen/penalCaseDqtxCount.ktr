@@ -1,0 +1,2955 @@
+<transformation>
+  <info>
+    <name>penalCaseDqtxCount</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;case-screen</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2017&#x2f;04&#x2f;05 14&#x3a;14&#x3a;39.123</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2017&#x2f;04&#x2f;06 13&#x3a;52&#x3a;24.208</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>ajgl_dp&#x6570;&#x636e;</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>ajgl_dp</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>ajgl&#x76ee;&#x6807;&#x5e93;</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>ajgl</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10cc9da0ce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x5211;&#x62d8;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</from><to>xj&#x751f;&#x6210;&#x968f;&#x673a;id</to><enabled>Y</enabled> </hop>
+  <hop> <from>xj&#x751f;&#x6210;&#x968f;&#x673a;id</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;xj</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;xj</from><to>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x5211;&#x62d8;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</to><enabled>Y</enabled> </hop>
+  <hop> <from>bgjy&#x751f;&#x6210;&#x968f;&#x673a;id</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;bgjy</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x53d8;&#x66f4;&#x7f81;&#x62bc;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</from><to>bgjy&#x751f;&#x6210;&#x968f;&#x673a;id</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;bgjy</from><to>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x53d8;&#x66f4;&#x7f81;&#x62bc;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</to><enabled>Y</enabled> </hop>
+  <hop> <from>tqdb&#x751f;&#x6210;&#x968f;&#x673a;id</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;tqdb</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x63d0;&#x8bf7;&#x902e;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</from><to>tqdb&#x751f;&#x6210;&#x968f;&#x673a;id</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;tqdb</from><to>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x63d0;&#x8bf7;&#x902e;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</to><enabled>Y</enabled> </hop>
+  <hop> <from>pb&#x751f;&#x6210;&#x968f;&#x673a;id</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;pb</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;pb</from><to>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x6279;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</to><enabled>Y</enabled> </hop>
+  <hop> <from>ysqs&#x751f;&#x6210;&#x968f;&#x673a;id</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;ysqs</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x79fb;&#x9001;&#x8d77;&#x8bc9;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</from><to>ysqs&#x751f;&#x6210;&#x968f;&#x673a;id</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;ysqs</from><to>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x79fb;&#x9001;&#x8d77;&#x8bc9;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</to><enabled>Y</enabled> </hop>
+  <hop> <from>qbhs&#x751f;&#x6210;&#x968f;&#x673a;id</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;qbhs</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x53d6;&#x4fdd;&#x5019;&#x5ba1;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</from><to>qbhs&#x751f;&#x6210;&#x968f;&#x673a;id</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;qbhs</from><to>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x53d6;&#x4fdd;&#x5019;&#x5ba1;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</to><enabled>Y</enabled> </hop>
+  <hop> <from>jsjz&#x751f;&#x6210;&#x968f;&#x673a;id</from><to>&#x589e;&#x52a0;&#x5e38;&#x91cf;jsjz</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x76d1;&#x89c6;&#x5c45;&#x4f4f;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</from><to>jsjz&#x751f;&#x6210;&#x968f;&#x673a;id</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x589e;&#x52a0;&#x5e38;&#x91cf;jsjz</from><to>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x76d1;&#x89c6;&#x5c45;&#x4f4f;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29;</from><to>JavaScript&#x4ee3;&#x7801;&#x28;xj&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f;</from><to>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;xj&#x29;</from><to>&#x5b57;&#x6bb5;&#x9009;&#x62e9;xj</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;&#x62e9;xj</from><to>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x5211;&#x62d8;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;bgjy&#x29;</from><to>&#x5b57;&#x6bb5;&#x9009;&#x62e9;bgjy</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;&#x62e9;bgjy</from><to>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x53d8;&#x66f4;&#x7f81;&#x62bc;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;ysqs&#x29;</from><to>&#x5b57;&#x6bb5;&#x9009;ysqs</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;ysqs</from><to>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x79fb;&#x9001;&#x8d77;&#x8bc9;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;qbhs&#x29;</from><to>&#x5b57;&#x6bb5;&#x9009;&#x62e9;qbhs</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;&#x62e9;qbhs</from><to>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x53d6;&#x4fdd;&#x5019;&#x5ba1;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;jsjz&#x29;</from><to>&#x5b57;&#x6bb5;&#x9009;&#x62e9;jsjz</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;&#x62e9;jsjz</from><to>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x76d1;&#x89c6;&#x5c45;&#x4f4f;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 2</from><to>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 3</from><to>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 4</from><to>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 5</from><to>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 5</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 2</from><to>JavaScript&#x4ee3;&#x7801;&#x28;bgjy&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 5</from><to>JavaScript&#x4ee3;&#x7801;&#x28;ysqs&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 6</from><to>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 6</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 7</from><to>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 7</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 6</from><to>JavaScript&#x4ee3;&#x7801;&#x28;qbhs&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 7</from><to>JavaScript&#x4ee3;&#x7801;&#x28;jsjz&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 3</from><to>JavaScript&#x4ee3;&#x7801;&#x28;tqdb&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;tqdb&#x29;</from><to>&#x5b57;&#x6bb5;&#x9009;&#x62e9;tqdb</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;&#x62e9;tqdb</from><to>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x63d0;&#x8bf7;&#x902e;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 4</from><to>JavaScript&#x4ee3;&#x7801;&#x28;pb&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>JavaScript&#x4ee3;&#x7801;&#x28;pb&#x29;</from><to>&#x5b57;&#x6bb5;&#x9009;&#x62e9;pb</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x5b57;&#x6bb5;&#x9009;&#x62e9;pb</from><to>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x6279;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</to><enabled>Y</enabled> </hop>
+  <hop> <from>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x6279;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</from><to>pb&#x751f;&#x6210;&#x968f;&#x673a;id</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;bgjy&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var bgjyFromTime &#x3d; fromTime&#x3b;&#xd;&#xa;var bgjyToTime &#x3d; toTime&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>bgjyFromTime</name>
+        <rename>bgjyFromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>bgjyToTime</name>
+        <rename>bgjyToTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;jsjz&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var jsjzFromTime &#x3d; fromTime&#x3b;&#xd;&#xa;var jsjzToTime &#x3d; toTime&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>jsjzFromTime</name>
+        <rename>jsjzFromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>jsjzToTime</name>
+        <rename>jsjzToTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;qbhs&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var qbhsFromTime &#x3d; fromTime&#x3b;&#xd;&#xa;var qbhsToTime &#x3d; toTime&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>qbhsFromTime</name>
+        <rename>qbhsFromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>qbhsToTime</name>
+        <rename>qbhsToTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;xj&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var xjFromTime &#x3d; fromTime&#x3b;&#xd;&#xa;var xjToTime &#x3d; toTime&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>xjFromTime</name>
+        <rename>xjFromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>xjToTime</name>
+        <rename>xjToTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;ysqs&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var ysqsFromTime &#x3d; fromTime&#x3b;&#xd;&#xa;var ysqsToTime &#x3d; toTime&#x3b;&#xd;&#xa;ysqsFromTime.setMonth&#x28;ysqsFromTime.getMonth&#x28;&#x29; - 2&#x29;&#x3b;&#xd;&#xa;ysqsToTime.setMonth&#x28;ysqsToTime.getMonth&#x28;&#x29; - 2&#x29;&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>ysqsFromTime</name>
+        <rename>ysqsFromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ysqsToTime</name>
+        <rename>ysqsToTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var fromTime&#x3b;&#xd;&#xa;var toTime&#x3b;&#xd;&#xa;var nowTime &#x3d; nowTime&#x3b;&#xd;&#xa;if&#x28;nowTime.getHours&#x28;&#x29; &#x3c; 9&#x29;&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setDate&#x28;fromTime.getDate&#x28;&#x29; - 1&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;&#x7d;else&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setDate&#x28;toTime.getDate&#x28;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>fromTime</name>
+        <rename>fromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>toTime</name>
+        <rename>toTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>bgjy&#x751f;&#x6210;&#x968f;&#x673a;id</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>bgjyId</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>jsjz&#x751f;&#x6210;&#x968f;&#x673a;id</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>jsjzId</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>pb&#x751f;&#x6210;&#x968f;&#x673a;id</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>pbId</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>qbhs&#x751f;&#x6210;&#x968f;&#x673a;id</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>qbhsId</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>tqdb&#x751f;&#x6210;&#x968f;&#x673a;id</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>tqdbId</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>xj&#x751f;&#x6210;&#x968f;&#x673a;id</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>xjId</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ysqs&#x751f;&#x6210;&#x968f;&#x673a;id</name>
+    <type>RandomValue</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>ysqsId</name>
+        <type>random uuid4</type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1120</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;bgjy</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>dqtx_type_xj</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_bgjy</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD02</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_tqdb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD03</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_pb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD04</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_ysqs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD05</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_qbhs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD06</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_jsjz</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD07</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>GASJ020</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;jsjz</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>dqtx_type_xj</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_bgjy</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD02</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_tqdb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD03</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_pb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD04</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_ysqs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD05</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_qbhs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD06</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_jsjz</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD07</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>GASJ020</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;pb</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>dqtx_type_xj</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_bgjy</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD02</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_tqdb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD03</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_pb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD04</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_ysqs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD05</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_qbhs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD06</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_jsjz</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD07</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>GASJ020</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;qbhs</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>dqtx_type_xj</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_bgjy</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD02</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_tqdb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD03</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_pb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD04</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_ysqs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD05</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_qbhs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD06</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_jsjz</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD07</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>GASJ020</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;tqdb</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>dqtx_type_xj</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_bgjy</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD02</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_tqdb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD03</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_pb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD04</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_ysqs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD05</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_qbhs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD06</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_jsjz</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD07</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>GASJ020</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;xj</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>dqtx_type_xj</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_bgjy</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD02</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_tqdb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD03</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_pb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD04</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_ysqs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD05</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_qbhs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD06</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_jsjz</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD07</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>GASJ020</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x589e;&#x52a0;&#x5e38;&#x91cf;ysqs</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>dqtx_type_xj</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD01</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_bgjy</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD02</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_tqdb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD03</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_pb</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD04</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_ysqs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD05</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_qbhs</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD06</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>dqtx_type_jsjz</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>XSLCJD07</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>GASJ020</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1232</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x5211;&#x62d8;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl_dp&#x6570;&#x636e;</connection>
+    <commit>0</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>z_gasj</table>
+      <key>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <field>schemaID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dqtx_type_xj</name>
+        <field>columnValue1</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>xjId</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>schemaID</name>
+        <rename>schemaID_penalCaseDqtxCount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue1</name>
+        <rename>dqtx_type_xj</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue5</name>
+        <rename>xjCountNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1376</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x53d6;&#x4fdd;&#x5019;&#x5ba1;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl_dp&#x6570;&#x636e;</connection>
+    <commit>0</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>z_gasj</table>
+      <key>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <field>schemaID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dqtx_type_qbhs</name>
+        <field>columnValue1</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>qbhsId</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>schemaID</name>
+        <rename>schemaID_penalCaseDqtxCount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue1</name>
+        <rename>dqtx_type_qbhs</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue5</name>
+        <rename>qbhsCountNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1376</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x53d8;&#x66f4;&#x7f81;&#x62bc;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl_dp&#x6570;&#x636e;</connection>
+    <commit>0</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>z_gasj</table>
+      <key>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <field>schemaID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dqtx_type_bgjy</name>
+        <field>columnValue1</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>bgjyId</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>schemaID</name>
+        <rename>schemaID_penalCaseDqtxCount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue1</name>
+        <rename>dqtx_type_bgjy</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue5</name>
+        <rename>bgjyCountNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1376</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x6279;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl_dp&#x6570;&#x636e;</connection>
+    <commit>0</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>z_gasj</table>
+      <key>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <field>schemaID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dqtx_type_pb</name>
+        <field>columnValue1</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>pbId</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>schemaID</name>
+        <rename>schemaID_penalCaseDqtxCount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue1</name>
+        <rename>dqtx_type_pb</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue5</name>
+        <rename>pbCountNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1376</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x63d0;&#x8bf7;&#x902e;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl_dp&#x6570;&#x636e;</connection>
+    <commit>0</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>z_gasj</table>
+      <key>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <field>schemaID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dqtx_type_tqdb</name>
+        <field>columnValue1</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>tqdbId</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>schemaID</name>
+        <rename>schemaID_penalCaseDqtxCount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue1</name>
+        <rename>dqtx_type_tqdb</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue5</name>
+        <rename>tqdbCountNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1376</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x76d1;&#x89c6;&#x5c45;&#x4f4f;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl_dp&#x6570;&#x636e;</connection>
+    <commit>0</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>z_gasj</table>
+      <key>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <field>schemaID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dqtx_type_jsjz</name>
+        <field>columnValue1</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>jsjzId</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>schemaID</name>
+        <rename>schemaID_penalCaseDqtxCount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue1</name>
+        <rename>dqtx_type_jsjz</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue5</name>
+        <rename>jsjzCountNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1376</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x63d2;&#x5165; &#x2f; &#x66f4;&#x65b0;&#xff08;&#x79fb;&#x9001;&#x8d77;&#x8bc9;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;&#xff09;</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl_dp&#x6570;&#x636e;</connection>
+    <commit>0</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>z_gasj</table>
+      <key>
+        <name>schemaID_penalCaseDqtxCount</name>
+        <field>schemaID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>dqtx_type_ysqs</name>
+        <field>columnValue1</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>ysqsId</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>schemaID</name>
+        <rename>schemaID_penalCaseDqtxCount</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue1</name>
+        <rename>dqtx_type_ysqs</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>columnValue5</name>
+        <rename>ysqsCountNum</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1376</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x5211;&#x62d8;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  count&#x28;&#x2a;&#x29; as xjCountNum&#xd;&#xa;FROM t_sla_xsajryjl&#xd;&#xa;where &#xd;&#xa;detainedDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and &#xd;&#xa;detainedDeadline &#x3c; &#x3f;&#xd;&#xa;and &#xd;&#xa;suspectId is not null &#xd;&#xa;and&#xd;&#xa;suspectName is not null </sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;&#x62e9;xj</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>944</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x53d6;&#x4fdd;&#x5019;&#x5ba1;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  count&#x28;&#x2a;&#x29; as qbhsCountNum&#xd;&#xa;FROM t_sla_xsajryjl&#xd;&#xa;where &#xd;&#xa;bailDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and &#xd;&#xa;bailDeadline &#x3c; &#x3f;&#xd;&#xa;and &#xd;&#xa;suspectId is not null &#xd;&#xa;and&#xd;&#xa;suspectName is not null </sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;&#x62e9;qbhs</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>944</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x53d8;&#x66f4;&#x7f81;&#x62bc;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  count&#x28;&#x2a;&#x29; as bgjyCountNum&#xd;&#xa;FROM t_sla_xsajryjl&#xd;&#xa;where &#xd;&#xa;extendedDetainedDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and &#xd;&#xa;extendedDetainedDeadline &#x3c; &#x3f;&#xd;&#xa;and &#xd;&#xa;suspectId is not null &#xd;&#xa;and&#xd;&#xa;suspectName is not null &#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;&#x62e9;bgjy</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>944</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x63d0;&#x8bf7;&#x902e;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  count&#x28;&#x2a;&#x29; as tqdbCountNum&#xd;&#xa;FROM t_sla_xsajryjl&#xd;&#xa;where id in &#xd;&#xa;&#x28;select id from t_sla_xsajryjl where extendedDetainedDeadline is null&#xd;&#xa; and detainedDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and detainedDeadline &#x3c; &#x3f; &#x29;&#xd;&#xa;or id in&#xd;&#xa;&#x28;select id from t_sla_xsajryjl where extendedDetainedDeadline is not null&#xd;&#xa;and extendedDetainedDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and extendedDetainedDeadline &#x3c; &#x3f; &#x29;&#xd;&#xa;and &#xd;&#xa;suspectId is not null &#xd;&#xa;and&#xd;&#xa;suspectName is not null &#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;&#x62e9;tqdb</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>944</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x76d1;&#x89c6;&#x5c45;&#x4f4f;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  count&#x28;&#x2a;&#x29; as jsjzCountNum&#xd;&#xa;FROM t_sla_xsajryjl&#xd;&#xa;where &#xd;&#xa;residentialSurveillanceDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and &#xd;&#xa;residentialSurveillanceDeadline &#x3c; &#x3f;&#xd;&#xa;and &#xd;&#xa;suspectId is not null &#xd;&#xa;and&#xd;&#xa;suspectName is not null </sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;&#x62e9;jsjz</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>944</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x79fb;&#x9001;&#x8d77;&#x8bc9;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  count&#x28;&#x2a;&#x29; as ysqsCountNum&#xd;&#xa;FROM t_sla_xsajryjl&#xd;&#xa;where &#xd;&#xa;arrestDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and &#xd;&#xa;arrestDeadline &#x3c; &#x3f;&#xd;&#xa;and &#xd;&#xa;suspectId is not null &#xd;&#xa;and&#xd;&#xa;suspectName is not null &#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;ysqs</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>944</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f;</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>nowTime</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;&#x62e9;xj</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>xjFromTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>xjToTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>xjFromTime</name>
+        <rename>FROMTIME</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>xjToTime</name>
+        <rename>TOTIME</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>752</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;&#x62e9;bgjy</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>bgjyFromTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>bgjyToTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>bgjyFromTime</name>
+        <rename>FROMTIME</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>bgjyToTime</name>
+        <rename>TOTIME</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>752</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;ysqs</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>ysqsFromTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ysqsToTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>ysqsFromTime</name>
+        <rename>ysqsFromTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ysqsToTime</name>
+        <rename>ysqsToTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>752</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;&#x62e9;qbhs</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>qbhsFromTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>qbhsToTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>qbhsFromTime</name>
+        <rename>qbhsFromTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>qbhsToTime</name>
+        <rename>qbhsToTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>752</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;&#x62e9;jsjz</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>jsjzFromTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>jsjzToTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>jsjzFromTime</name>
+        <rename>jsjzFromTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>jsjzToTime</name>
+        <rename>jsjzToTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>752</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var fromTime&#x3b;&#xd;&#xa;var toTime&#x3b;&#xd;&#xa;var nowTime &#x3d; nowTime&#x3b;&#xd;&#xa;if&#x28;nowTime.getHours&#x28;&#x29; &#x3c; 9&#x29;&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setDate&#x28;fromTime.getDate&#x28;&#x29; - 1&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;&#x7d;else&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setDate&#x28;toTime.getDate&#x28;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>fromTime</name>
+        <rename>fromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>toTime</name>
+        <rename>toTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 2</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>nowTime</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 3</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var fromTime&#x3b;&#xd;&#xa;var toTime&#x3b;&#xd;&#xa;var nowTime &#x3d; nowTime&#x3b;&#xd;&#xa;if&#x28;nowTime.getHours&#x28;&#x29; &#x3c; 9&#x29;&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setDate&#x28;fromTime.getDate&#x28;&#x29; - 1&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;&#x7d;else&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setDate&#x28;toTime.getDate&#x28;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>fromTime</name>
+        <rename>fromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>toTime</name>
+        <rename>toTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 3</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>nowTime</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 4</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var fromTime&#x3b;&#xd;&#xa;var toTime&#x3b;&#xd;&#xa;var nowTime &#x3d; nowTime&#x3b;&#xd;&#xa;if&#x28;nowTime.getHours&#x28;&#x29; &#x3c; 9&#x29;&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setDate&#x28;fromTime.getDate&#x28;&#x29; - 1&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;&#x7d;else&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setDate&#x28;toTime.getDate&#x28;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>fromTime</name>
+        <rename>fromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>toTime</name>
+        <rename>toTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 4</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>nowTime</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 5</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var fromTime&#x3b;&#xd;&#xa;var toTime&#x3b;&#xd;&#xa;var nowTime &#x3d; nowTime&#x3b;&#xd;&#xa;if&#x28;nowTime.getHours&#x28;&#x29; &#x3c; 9&#x29;&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setDate&#x28;fromTime.getDate&#x28;&#x29; - 1&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;&#x7d;else&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setDate&#x28;toTime.getDate&#x28;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>fromTime</name>
+        <rename>fromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>toTime</name>
+        <rename>toTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 5</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>nowTime</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 6</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var fromTime&#x3b;&#xd;&#xa;var toTime&#x3b;&#xd;&#xa;var nowTime &#x3d; nowTime&#x3b;&#xd;&#xa;if&#x28;nowTime.getHours&#x28;&#x29; &#x3c; 9&#x29;&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setDate&#x28;fromTime.getDate&#x28;&#x29; - 1&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;&#x7d;else&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setDate&#x28;toTime.getDate&#x28;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>fromTime</name>
+        <rename>fromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>toTime</name>
+        <rename>toTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 6</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>nowTime</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;&#x83b7;&#x53d6;&#x67e5;&#x8be2;&#x65f6;&#x95f4;&#x29; 7</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var fromTime&#x3b;&#xd;&#xa;var toTime&#x3b;&#xd;&#xa;var nowTime &#x3d; nowTime&#x3b;&#xd;&#xa;if&#x28;nowTime.getHours&#x28;&#x29; &#x3c; 9&#x29;&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setDate&#x28;fromTime.getDate&#x28;&#x29; - 1&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;&#x7d;else&#x7b;&#xd;&#xa;	fromTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	fromTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	fromTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	fromTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;	&#xd;&#xa;	toTime &#x3d; new Date&#x28;&#x29;&#x3b;&#xd;&#xa;	toTime.setDate&#x28;toTime.getDate&#x28;&#x29; &#x2b; 1&#x29;&#x3b;&#xd;&#xa;	toTime.setHours&#x28;9&#x29;&#x3b;&#xd;&#xa;	toTime.setMinutes&#x28;0&#x29;&#x3b;&#xd;&#xa;	toTime.setSeconds&#x28;0&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>fromTime</name>
+        <rename>fromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>toTime</name>
+        <rename>toTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>224</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x83b7;&#x53d6;&#x7cfb;&#x7edf;&#x4fe1;&#x606f; 7</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>nowTime</name>
+        <type>system date &#x28;variable&#x29;</type>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>64</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;tqdb&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var tqdbFromTime &#x3d; fromTime&#x3b;&#xd;&#xa;var tqdbToTime &#x3d; toTime&#x3b;&#xd;&#xa;var tqdbFromTime1 &#x3d; fromTime&#x3b;&#xd;&#xa;var tqdbToTime1 &#x3d; toTime&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>tqdbFromTime</name>
+        <rename>tqdbFromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>tqdbToTime</name>
+        <rename>tqdbToTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>tqdbFromTime1</name>
+        <rename>tqdbFromTime1</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>tqdbToTime1</name>
+        <rename>tqdbToTime1</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;&#x62e9;tqdb</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>tqdbFromTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>tqdbToTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>tqdbFromTime1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>tqdbToTime1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>tqdbFromTime</name>
+        <rename>tqdbFromTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>tqdbToTime</name>
+        <rename>tqdbToTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>tqdbFromTime1</name>
+        <rename>tqdbFromTime1</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>tqdbToTime1</name>
+        <rename>tqdbToTime1</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>752</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>JavaScript&#x4ee3;&#x7801;&#x28;pb&#x29;</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;var pbFromTime &#x3d; fromTime&#x3b;&#xd;&#xa;var pbToTime &#x3d; toTime&#x3b;&#xd;&#xa;pbFromTime.setDate&#x28;pbFromTime.getDate&#x28;&#x29; - 7&#x29;&#x3b;&#xd;&#xa;pbToTime.setDate&#x28;pbToTime.getDate&#x28;&#x29; - 7&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;var pbFromTime1 &#x3d; pbFromTime&#x3b;&#xd;&#xa;var pbToTime1 &#x3d; pbToTime&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>pbFromTime</name>
+        <rename>pbFromTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>pbToTime</name>
+        <rename>pbToTime</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>pbFromTime1</name>
+        <rename>pbFromTime1</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>pbToTime1</name>
+        <rename>pbToTime1</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>608</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x5b57;&#x6bb5;&#x9009;&#x62e9;pb</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>pbFromTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>pbToTime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>pbFromTime1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>pbToTime1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>pbFromTime</name>
+        <rename>pbFromTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>pbToTime</name>
+        <rename>pbToTime</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>pbFromTime1</name>
+        <rename>pbFromTime1</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>pbToTime1</name>
+        <rename>pbToTime1</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>752</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>&#x8868;&#x8f93;&#x5165;-&#x67e5;&#x8be2;&#x6279;&#x6355;&#x5230;&#x671f;&#x63d0;&#x9192;&#x4eba;&#x6b21;</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>ajgl&#x76ee;&#x6807;&#x5e93;</connection>
+    <sql>SELECT&#xd;&#xa;  count&#x28;&#x2a;&#x29; as pbCountNum&#xd;&#xa;FROM t_sla_xsajryjl&#xd;&#xa;where id in &#xd;&#xa;&#x28;select id from t_sla_xsajryjl where extendedDetainedDeadline is null&#xd;&#xa; and detainedDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and detainedDeadline &#x3c; &#x3f; &#x29;&#xd;&#xa;or id in&#xd;&#xa;&#x28;select id from t_sla_xsajryjl where extendedDetainedDeadline is not null&#xd;&#xa;and extendedDetainedDeadline &#x3e;&#x3d; &#x3f;&#xd;&#xa;and extendedDetainedDeadline &#x3c; &#x3f; &#x29;&#xd;&#xa;and &#xd;&#xa;suspectId is not null &#xd;&#xa;and&#xd;&#xa;suspectName is not null &#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup>&#x5b57;&#x6bb5;&#x9009;&#x62e9;pb</lookup>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>944</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

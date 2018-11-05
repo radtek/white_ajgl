@@ -1,0 +1,160 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="handlingAreaReceipt" extends="ajgl-web-ajgl" namespace="/handlingAreaReceipt">
+		<!-- 办案区使用单-列表页面 -->
+		<action name="showHandlingAreaReceiptListPage">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/handlingAreaReceiptList.jsp</result>
+		</action>
+		<!-- 办案区使用单-警员列表页面 -->
+		<action name="showPoliceList">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/showPoliceList.jsp</result>
+		</action>
+		<!-- 办案区使用单-警员详情页面 -->
+		<action name="showPoliceDetail">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/showPoliceDetail.jsp</result>
+		</action>
+		<!-- 办案区使用单-警员录入页面 -->
+		<action name="checkPolice">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/checkPolice.jsp</result>
+		</action>
+		<!-- 办案区使用单-摄像头页面 -->
+		<action name="showCamera">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/webCamera.jsp</result>
+		</action>
+		<!-- 办案区使用单-新建页面 -->
+		<action name="showNewHandlingAreaReceiptPage">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/newHandlingAreaReceipt.jsp</result>
+		</action>
+		<!-- 办案区使用单-查看页面 -->
+		<action name="showLookHandlingAreaReceiptPage" class="handlingAreaReceiptAction" method="showLookHandlingAreaReceiptPage">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/lookHandlingAreaReceipt.jsp</result>
+		</action>
+		<!-- 办案区使用单-修改页面 -->
+		<action name="showUpdateHandlingAreaReceiptPage">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/updateHandlingAreaReceipt.jsp</result>
+		</action>
+		<!-- 办案区使用单-选择案件 -->
+		<action name="showCaseList">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/showCaseList.jsp</result>
+		</action>
+		<!-- 办案区使用单-选择使用单 -->
+		<action name="showSelectHandlingAreaReceipt">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/showSelectHandlingAreaReceipt.jsp</result>
+		</action>
+		<!-- 初始化页面数据 -->
+		<action name="findAllIco" class="handlingAreaReceiptAction" method="findAllIco">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 初始化页面数据 -->
+		<action name="initDataListPage" class="handlingAreaReceiptAction" method="initDataListPage">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除使用单 -->
+		<action name="deleteHandlingAreaReceipt" class="handlingAreaReceiptAction" method="deleteHandlingAreaReceipt">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag</param>
+			</result>
+		</action>
+		<!-- 分页查询 -->
+		<action name="searchAllHandlingAreaReceiptByPage" class="handlingAreaReceiptAction" method="searchAllHandlingAreaReceiptByPage">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">harSearchBeanlst.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 通过警号查警员信息 -->
+		<action name="findPoliceInfoByPoliceCode" class="handlingAreaReceiptAction" method="findPoliceInfoByPoliceCode">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 通过民警卡查警员信息 -->
+		<action name="findPoliceByBrandId" class="handlingAreaReceiptAction" method="findPoliceByBrandId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 通过id查询使用单 -->
+		<action name="findBasicCaseByHarId" class="handlingAreaReceiptAction" method="findBasicCaseByHarId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 新建使用单 -->
+		<action name="saveHandlingAreaReceipt" class="handlingAreaReceiptAction" method="saveHandlingAreaReceipt">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,errorMessage</param>
+			</result>
+		</action>
+		<!-- 更新使用单 -->
+		<action name="updateBasicCase" class="handlingAreaReceiptAction" method="updateBasicCase">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,modifyPerson,modifyTime,errorMessage</param>
+			</result>
+		</action>
+		<!-- 初始化页面数据 -->
+		<action name="initDataCreatePage" class="handlingAreaReceiptAction" method="initDataCreatePage">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 案件编号查询相关人员 -->
+		<action name="findPersonsByIdNum" class="handlingAreaReceiptAction" method="findPersonsByIdNum">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 完成使用单 -->
+		<action name="doneHandlingAreaReceipt" class="handlingAreaReceiptAction" method="doneHandlingAreaReceipt">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		
+		<!-- 最终离开检查 -->
+		<action name="finalLeaveCheck" class="handlingAreaReceiptAction" method="finalLeaveCheck">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		<!-- 使用单检查 -->
+		<action name="handlingAreaReceiptCheck" class="handlingAreaReceiptAction" method="handlingAreaReceiptCheck">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		<!-- 查询对应页面 -->
+		<action name="findUrl" class="handlingAreaReceiptAction" method="findUrl">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 选择使用单 -->
+		<action name="selectHandlingAreaReceipt" class="handlingAreaReceiptAction" method="selectHandlingAreaReceipt">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 上传文件 -->
+		<action name="uploadFile" class="uploadAction" method="uploadFile">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 下载文件 -->
+		<action name="downloadFile" class="downloadAction" method="download">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+		
+		<!-- 有卡的警员列表页面 -->
+		<action name="showPoliceWhoHasCardListPage">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaReceipt/policeWhoHasCardListPage.jsp</result>
+		</action>
+		<!-- 查询有卡的警员列表 -->
+		<action name="showAllPoliceWhoHasCard" class="handlingAreaReceiptAction" method="showAllPoliceWhoHasCard">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 定位卡解绑 -->
+		<action name="locationCardControl" class="handlingAreaReceiptAction" method="locationCardControl">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,errorMessage</param>
+			</result>
+		</action>
+	</package>
+</struts>

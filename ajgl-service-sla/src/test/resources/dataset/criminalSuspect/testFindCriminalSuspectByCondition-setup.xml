@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <t_sla_ajjbxx caseTimeStart="2016-01-01 12:00:00" caseKind="caseKind"
+    caseTimeEnd="2016-01-02 12:00:00" caseId="caseId" caseName="caseName"
+    caseSort="caseSort" community="community" caseState="caseState"
+    inputPerson="inputPerson" caseAddress="caseAddress"
+    businessType="1" dieNum="1" injureNum="1" lossValue="1.1"
+    markedRate="1" totalValue="1"/>
+    <t_sla_jcj caseId="caseId"
+    xq="popedom" boatNum="1" censorNum="1" policeAssNum="1"
+    policeNum="1" rescuewNum="1" rescueyNum="1" rescurhNum="1"
+    salvationPeople="1" salvationWou="1" voitureNum="1" />
+    
+    <t_sla_ajjbxx caseTimeStart="2016-01-01 12:00:00" caseKind="caseKind"
+    caseTimeEnd="2016-01-02 12:00:00" caseId="caseId2" caseName="caseName"
+    caseSort="caseSort" community="community" caseState="caseState"
+    inputPerson="inputPerson" caseAddress="caseAddress"
+    businessType="1" dieNum="1" injureNum="1" lossValue="1.1"
+    markedRate="1" totalValue="1"/>
+    <t_sla_jcj caseId="caseId2"
+    xq="popedom" boatNum="1" censorNum="1" policeAssNum="1"
+    policeNum="1" rescuewNum="1" rescueyNum="1" rescurhNum="1"
+    salvationPeople="1" salvationWou="1" voitureNum="1" />
+    
+    <t_sla_sary personId = "personId" name = "name" sex = "sex" birthdayStart = "2010-10-10 10:10:10" birthdayEnd = "2010-10-20 10:10:10"
+    	idcardNo = "idcardNo" address = "address" doorDetail = "doorDetail" nativePlace = "nativePlace" tone = "tone" avoirdupois = "0" footSize = "0" shoesSize = "0" staturest = "0"></t_sla_sary>
+   	<t_sla_sary personId = "personId2" name = "name2" sex = "sex" birthdayStart = "2010-10-10 10:10:10" birthdayEnd = "2010-10-20 10:10:10"
+   		idcardNo = "idcardNo" address = "address" doorDetail = "doorDetail" nativePlace = "nativePlace" tone = "tone" avoirdupois = "0" footSize = "0" shoesSize = "0" staturest = "0"></t_sla_sary>
+    <t_sla_aj_xyrgx id = "xyrgxId" case_id = "caseId" person_id = "personId2" detentionLength = "1" finesNo = "1"></t_sla_aj_xyrgx>
+    <t_sla_aj_xyrgx id = "xyrgxId2" case_id = "caseId2" person_id = "personId2" detentionLength = "1" finesNo = "1"></t_sla_aj_xyrgx>
+	
+	
+</dataset>

@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="transitStorageReturnTimeOut" extends="ajgl-web-ajgl" namespace="/transitStorageReturnTimeOut">
+		<!-- 跳转到出库单列表 -->
+		<action name="toTransitStorageReturnTimeOut" >
+			<result name="success">/WEB-INF/view/sawpgl/transitStorageReturnTimeOut/transitStorageReturnTimeOut.jsp</result>
+		</action>
+		<!-- 查询超时未返还物品清单 -->
+		<action name="queryTransitStorageReturnTimeOut" class="transitStorageReturnTimeOutAction" method="queryTransitStorageReturnTimeOut">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">returnTimeOutList.*,totalNum,</param>
+			</result>
+		</action>
+		
+		<!-- 导出出库列表 -->
+		<action name="exportExcel" class="transitStorageReturnTimeOutAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

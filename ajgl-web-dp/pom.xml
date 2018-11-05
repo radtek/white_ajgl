@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>ajgl-parent</artifactId>
+		<groupId>com.taiji.pubsec.ajgl</groupId>
+		<relativePath>../ajgl-parent/pom.xml</relativePath>
+		<version>0.9.2-SNAPSHOT</version>
+	</parent>
+	<artifactId>ajgl-web-dp</artifactId>
+	<packaging>war</packaging>
+
+	<dependencies>
+
+
+		
+		
+		    <dependency>
+      <groupId>org.quartz-scheduler</groupId>
+      <artifactId>quartz</artifactId>
+      <scope>compile</scope>
+    </dependency>      
+
+  <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-service-alert</artifactId>
+      <version>${project.version}</version>
+    </dependency>  
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-dbtx-builder</artifactId>
+      <version>${project.version}</version>
+    </dependency>  
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-dbtx-client</artifactId>
+      <version>${project.version}</version>
+    </dependency>    
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-dbtx-executor</artifactId>
+      <version>${project.version}</version>
+    </dependency>   
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-dbtx-task</artifactId>
+      <version>${project.version}</version>
+    </dependency>   
+    
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-web-ajgl</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-web-ajgl</artifactId>
+      <version>${project.version}</version>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-service-sawp</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-service-baq</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-interface-jzpt</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.taiji.pubsec.ajgl</groupId>
+      <artifactId>ajgl-interface-cwg</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!-- 打印组件↓ -->
+    <dependency>
+      <groupId>com.taiji.pubsec.common</groupId>
+      <artifactId>doc-msoffice-impl-service</artifactId>
+      <version>0.2.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.10-FINAL</version>
+    </dependency>      
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-excelant</artifactId>
+      <version>3.10-FINAL</version>
+    </dependency>       
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.10-FINAL</version>
+    </dependency>    
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml-schemas</artifactId>
+      <version>3.10-FINAL</version>
+    </dependency>     
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>ooxml-schemas</artifactId>
+      <version>1.1</version>
+    </dependency>       
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-scratchpad</artifactId>
+      <version>3.10-FINAL</version>
+    </dependency>   
+    <dependency>
+      <groupId>org.apache.xmlbeans</groupId>
+      <artifactId>xmlbeans</artifactId>
+      <version>2.6.0</version>
+    </dependency>    
+    <!-- 打印组件↑ -->
+    <!-- <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.springtestdbunit</groupId>
+      <artifactId>spring-test-dbunit</artifactId>
+      <scope>test</scope>
+    </dependency>    
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-junit-plugin</artifactId>
+      <scope>test</scope>
+    </dependency>   
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-servlet_3.0_spec</artifactId>
+      <version>1.0</version>
+      <scope>test</scope>
+    </dependency> -->           
+	
+
+	</dependencies>
+	<name>大屏web模块</name>
+</project>

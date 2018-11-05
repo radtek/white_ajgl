@@ -1,0 +1,13 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="otherRoom" extends="ajgl-web-ajgl" namespace="/otherRoom">
+		<!-- 其他房间维护-列表页面 -->
+		<action name="showOtherRoomListPage">
+			<result name="success">/WEB-INF/view/ajgl/otherRoom/otherRoomList.jsp</result>
+		</action>
+		<!-- 其他房间维护-新建页面 -->
+		<action name="showNewOrUpdateOtherRoomPage">
+			<result name="success">/WEB-INF/view/ajgl/otherRoom/newOrUpdateOtherRoom.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListView tree字段 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:minHeight="40dip"
+	android:background="@color/btn_white_border">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginTop="0dp"
+		android:layout_marginRight="0dp"
+		android:layout_marginLeft="0dp"
+		android:layout_marginBottom="1dp"
+		android:background="@color/btn_white">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:orientation="horizontal"
+			android:background="@color/btn_white">
+			<TextView
+				android:id="@+id/case_item_list_item_order_number"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="序号"
+				android:textColor="@color/gray"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp"
+				android:layout_marginLeft="16dp"
+				android:textSize="16sp"
+				android:maxEms="2"
+				android:minEms="2"
+				android:ellipsize="end"/>
+			<TextView
+				android:id="@+id/case_item_list_item_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="物品名称"
+				android:textColor="@color/gray"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp"
+				android:textSize="16sp"
+				android:layout_marginLeft="0dp"
+				android:maxEms="5"
+				android:minEms="5"
+				android:ellipsize="end"/>
+			<TextView
+				android:id="@+id/case_item_list_item_earmark"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="特征"
+				android:textColor="@color/gray"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp"
+				android:textSize="16sp"
+				android:layout_marginLeft="0dp"
+				android:layout_weight="1"
+				android:maxEms="7"
+				android:minEms="7"
+				android:ellipsize="end"/>
+			<TextView
+				android:id="@+id/case_item_list_item_count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="数量"
+				android:textColor="@color/gray"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp"
+				android:textSize="16sp"
+				android:layout_marginLeft="0dp"
+				android:layout_marginRight="5dp"
+				android:maxEms="4"
+				android:minEms="4"
+				android:ellipsize="end"/>
+
+		</LinearLayout>
+	</LinearLayout>
+	
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="lookForm" extends="ajgl-web-ajgl" namespace="/lookForm">
+	
+		<action name="checkForm" class="lookFormAction" method="checkForm">
+			<!-- 转发入库单查看页面 -->
+			<result name="com.taiji.pubsec.ajqlc.sawp.model.InStorageForm" type="redirectAction">
+				<param name="actionName">viewStorageIn</param>
+			    <param name="namespace">/storageIn</param>
+			    <param name="inStorageFormId">${transmitFormId}</param>
+			    <param name="clickOrder">6</param>
+			    <param name="clickListOrder">0</param>
+			</result>
+			
+			<!-- 转发暂存物品入库单查看页面 -->
+			<result name="com.taiji.pubsec.ajqlc.sawp.model.TemporaryStorageIn" type="redirectAction">
+				<param name="actionName">viewTransitStoreIn</param>
+			    <param name="namespace">/transitStoreManage</param>
+			    <param name="code">${transmitFormId}</param>
+			    <param name="clickOrder">6</param>
+			    <param name="clickListOrder">0</param>
+			</result>
+			
+			<!-- 转发出库单查看页面 -->
+			<result name="com.taiji.pubsec.ajqlc.sawp.model.OutStorageForm" type="redirectAction">
+				<param name="actionName">toShowRecord</param>
+			    <param name="namespace">/storageOut</param>
+			    <param name="id">${transmitFormId}</param>
+			    <param name="clickOrder">6</param>
+			    <param name="clickListOrder">0</param>
+			</result>
+			
+			<!-- 转发返还单查看页面 -->
+			<result name="com.taiji.pubsec.ajqlc.sawp.model.BackStorageForm" type="redirectAction">
+				<param name="actionName">showLookBackStorageFormPage</param>
+			    <param name="namespace">/backStorageForm</param>
+			    <param name="bsfId">${transmitFormId}</param>
+			    <param name="clickOrder">6</param>
+			    <param name="clickListOrder">0</param>
+			</result>
+			
+			<!-- 转发调整单查看页面 -->
+			<result name="com.taiji.pubsec.ajqlc.sawp.model.AdjustgmentStorageForm" type="redirectAction">
+				<param name="actionName">showLookAdjustmentStorageFormPage</param>
+			    <param name="namespace">/adjustmentStorageForm</param>
+			    <param name="asfId">${transmitFormId}</param>
+			    <param name="clickOrder">6</param>
+			    <param name="clickListOrder">0</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-4.3.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+           http://www.springframework.org/schema/tx
+     	   http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+    <context:component-scan base-package="com.taiji.pubsec.ajqlc.wrapper.jzpt.service.impl" />
+    <!-- 初始化请求报文 案件管理 朱教信息 -->
+     <bean id = "qqbwBean" class = "com.taiji.pubsec.ajqlc.wrapper.jzpt.util.Bean.QqbwBean">
+          <property name="fwqqzmc" value="贵阳市公安局经开分局全流程闭环式案件管理"></property>
+          <property name="fwqqzbs" value="A00052019921000000001"></property>
+          <property name="fwqqzipdz" value="10.161.172.189"></property>
+          <property name="fwqqzdkh" value="9003"></property>
+          <property name="lxrxm" value="朱文珂"></property>
+          <property name="lxrdh" value="13765820123"></property>
+          <property name="lxrsfzh" value="030497"></property>
+          <property name="fwbs" value="SZNB52000022000000088"></property>
+          <property name="fwzxbs" value="贵州省服务总线"></property>
+          <property name="xxczryxm" value="朱文珂"></property>
+          <property name="xxczrysfzh" value="520111198008020632"></property>
+          <property name="xxczryjgdm" value="520199000000"></property>
+     </bean>
+      <!-- 初始化请求报文 实战平台  雷警官信息 -->
+     <bean id = "qqbwBeanLeiKun" class = "com.taiji.pubsec.ajqlc.wrapper.jzpt.util.Bean.QqbwBean">
+          <property name="fwqqzmc" value="警务实战平台"></property>
+          <property name="fwqqzbs" value="A00052019921000000002"></property>
+          <property name="fwqqzipdz" value="10.161.172.189"></property>
+          <property name="fwqqzdkh" value="9003"></property>
+          <property name="lxrxm" value="雷坤"></property>
+          <property name="lxrdh" value="13984826677"></property>
+          <property name="lxrsfzh" value="042016"></property>
+          <property name="fwbs" value="SZNB52000022000000088"></property>
+          <property name="fwzxbs" value="贵州省服务总线"></property>
+          <property name="xxczryxm" value="雷坤"></property>
+          <property name="xxczrysfzh" value="520201198607050035"></property>
+          <property name="xxczryjgdm" value="520199000000"></property>
+     </bean>
+      <!-- 初始化以<SinoMessage>开头的请求报文 案件管理 朱教信息 -->
+     <bean id = "qqbwSinoBean" class = "com.taiji.pubsec.ajqlc.wrapper.jzpt.util.Bean.QqbwSinoBean">
+           <property name="serviceID" value="A00052019921000000001"></property>
+           <property name="ip" value="10.161.172.189"></property>
+           <property name="fwyhxm" value="朱文珂"></property>
+           <property name="fwyhsfzh" value="520111198008020632"></property>
+           <property name="Fwyhdwdm" value="520199000000"></property>
+     </bean>
+     <!-- 初始化以<SinoMessage>开头的请求报文 实战平台 雷警官信息 -->
+     <bean id = "qqbwSinoBeanLekun" class = "com.taiji.pubsec.ajqlc.wrapper.jzpt.util.Bean.QqbwSinoBean">
+           <property name="serviceID" value="A00052019921000000002"></property>
+           <property name="ip" value="10.161.172.189"></property>
+           <property name="fwyhxm" value="雷坤"></property>
+           <property name="fwyhsfzh" value="520201198607050035"></property>
+           <property name="Fwyhdwdm" value="520199000000"></property>
+     </bean>
+	
+	<!--公安部常住人口查询-->
+	<bean id="personInfoService" class="com.taiji.pubsec.ajqlc.wrapper.jzpt.service.impl.SuspectServiceImpl">
+		<property name="wsUrl" value="http://10.160.25.92:8081/ServiceBus/webService/convert/V_QQFW_CKXX_W_CXFW"></property>
+		<property name="targetNameSpace" value="http://standardSinoService.sjfwpt.jzpt.sinobest.cn"></property>
+		<property name="method" value="queryService"></property>
+		<property name="resourceid" value="S0000-00000026"></property>
+		<property name="qqbwBean" ref="qqbwBean"></property>
+	</bean>
+	<!--嫌疑人前科查询-->
+	<bean id="suspectPersonServiceImpl" class="com.taiji.pubsec.ajqlc.wrapper.jzpt.service.impl.SuspectServiceImpl">
+		<property name="wsUrl" value="http://10.160.25.92:8081/ServiceBus/webService/convert/ASJSAXYRXXCX"></property>
+		<property name="targetNameSpace" value="http://sinoService.sjfwpt.jzpt.sinobest.cn"></property>
+		<property name="method" value="queryService"></property>
+		<property name="resourceid" value="S0000-00000202"></property>
+		<property name="qqbwBean" ref="qqbwBean"></property>
+	</bean>
+	
+</beans>
+

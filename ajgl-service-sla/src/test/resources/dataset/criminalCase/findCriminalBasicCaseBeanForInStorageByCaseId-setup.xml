@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_sla_ajjbxx caseTimeStart="2016-01-01 12:00:00" caseKind="caseKind"
+    caseTimeEnd="2016-01-02 12:00:00" caseId="caseId" caseName="caseName"
+    caseSort="caseSort" community="community" caseState="caseState"
+    inputPerson="inputPerson" caseAddress="caseAddress"
+    businessType="1" dieNum="1" injureNum="1" lossValue="1.1"
+    markedRate="1" totalValue="1"/>
+  <t_sla_jcj caseId="caseId" xq="popedom" boatNum="1" censorNum="1" policeAssNum="1"
+    policeNum="1" rescuewNum="1" rescueyNum="1" rescurhNum="1"
+    salvationPeople="1" salvationWou="1" voitureNum="1" disposePerson = "disposePerson" disposePerson2 = "disposePerson2" />
+  <t_sla_jzws id = "jzwsId" caseId = "caseId" code = "code" name = "name" sourceId = "docid" type = "com.taiji.pubsec.ajqlc.sla.model.DocKouYaJueDingNew2012"></t_sla_jzws>
+  <t_sla_jzws id = "jzwsId2" caseId = "caseId" code = "code" name = "name" sourceId = "docid2" type = "com.taiji.pubsec.ajqlc.sla.model.DocKouYaJueDingNew2012"></t_sla_jzws>
+  <t_sla_doc_kyjds_new_2012 docid = "docid" caseid = "caseId" b2 = "b2" b3 = "b3" b4 = "b4" b5 = "b5" b6 = "b6" b7 = "b7" personid = "personid" ></t_sla_doc_kyjds_new_2012>
+  <t_sla_doc_kyjds_new_2012 docid = "docid2" caseid = "caseId" b2 = "b2" b3 = "b3" b4 = "b4" b5 = "b5" b6 = "b6" b7 = "b7" personid = "personid" ></t_sla_doc_kyjds_new_2012>
+
+	<t_sla_sary personid = "personid" name = "name" ></t_sla_sary>
+	<t_sla_sary personid = "personid2" ></t_sla_sary>
+	<t_sla_aj_xyrgx id = "xyrgx1" person_id = "personid" case_id = "caseId"></t_sla_aj_xyrgx>
+	<t_sla_aj_xyrgx id = "xyrgx2" person_id = "personid2" case_id = "caseId"></t_sla_aj_xyrgx>
+	
+	<t_sla_kywp id = "kywp1" caseId = "caseId" caseName = "caseName" code = "code" feature = "feature" name = "name" number = "number" paper = "docid" police = "police" suspectId = "suspectId1" suspectName = "suspectName"></t_sla_kywp>
+	<t_sla_kywp id = "kywp2" caseId = "caseId" caseName = "caseName" code = "code" feature = "feature" name = "name" number = "number" paper = "docid" police = "police" suspectId = "suspectId1" suspectName = "suspectName"></t_sla_kywp>
+	<t_sla_kywp id = "kywp3" caseId = "caseId" caseName = "caseName" code = "code" feature = "feature" name = "name" number = "number" paper = "docid" police = "police" suspectId = "suspectId1" suspectName = "suspectName"></t_sla_kywp>
+	<t_sla_kywp id = "kywp4" caseId = "caseId" caseName = "caseName" code = "code" feature = "feature" name = "name" number = "number" paper = "docid" police = "police" suspectId = "suspectId2" suspectName = "suspectName"></t_sla_kywp>
+	<t_sla_kywp id = "kywp5" caseId = "caseId" caseName = "caseName" code = "code" feature = "feature" name = "name" number = "number" paper = "docid" police = "police" suspectId = "suspectId2" suspectName = "suspectName"></t_sla_kywp>
+	
+</dataset>

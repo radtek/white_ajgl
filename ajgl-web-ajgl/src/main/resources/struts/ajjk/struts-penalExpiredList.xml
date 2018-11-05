@@ -1,0 +1,27 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="penalExpiredList" extends="ajgl-web-ajgl" namespace="/penalExpiredList">
+		<!-- 刑事案件到期提醒表-列表页面 -->
+		<action name="showPenalExpiredListPage">
+			<result name="success">/WEB-INF/view/ajjk/penalExpiredList/penalExpiredList.jsp</result>
+		</action>
+		<action name="searchPenalCaseByPage" class="penalExpiredListAction" method="searchPenalCaseByPage">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">psBeanLst.*,totalNum,length</param>
+			</result>
+		</action>
+		<action name="saveVerifierAndRemark" class="penalExpiredListAction" method="saveVerifierAndRemark">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="initData" class="penalExpiredListAction" method="initData">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="exportExcel" class="penalExpiredListAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

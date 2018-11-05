@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx
+     	   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+	<bean id="hdjlService" class="com.taiji.pubsec.ajqlc.syncdh.action.SyncDhHdjl">
+	</bean>
+	<bean id="springQtzJobMethod_DH"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="hdjlService" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>syncHdjlData</value>
+		</property>
+	</bean>
+	
+	<bean id="syncAskRoomInfo" class="com.taiji.pubsec.ajqlc.syncdh.action.SyncAskRoomInfo">
+	</bean>
+	<bean id="springQtzJobroomMethod_DH"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="syncAskRoomInfo" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>syncRoomInfo</value>
+		</property>
+	</bean>
+	
+	<bean id="syncHarBurningInfo" class="com.taiji.pubsec.ajqlc.syncdh.action.SyncHarBurningInfo">
+	</bean>
+	<bean id="springQtzJobHarBurningMethod_DH"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="syncHarBurningInfo" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>syncBurningInfo</value>
+		</property>
+	</bean>
+	
+	
+	<bean name="schedulerFactory_DH" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+		     <ref bean="cronTrigger_hdjl" /> 
+			 <ref bean="cronTrigger_room" />
+    		 <ref bean="cronTrigger_HarBurning" /> 
+			 <ref bean="sync_AlarmRecord" />
+			 
+			</list>
+		</property>
+		<property name="schedulerName">
+			<value>执行周期性任务</value>
+		</property>
+	</bean>
+	<bean id="cronTrigger_hdjl"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="jobDetail_hdjl" />
+		<property name="cronExpression" value="*/5 * * * * ?" />
+	</bean>
+	<bean id="jobDetail_hdjl"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="hdjlService" />
+		</property>
+		<property name="targetMethod">
+			<value>syncHdjlData</value>
+		</property>
+		<property name="concurrent"><!--配置为false不允许任务并发执行--> 
+	     <value>false</value> 
+	    </property>
+	</bean>
+	<bean id="cronTrigger_room"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="jobDetail_room" />
+		<property name="cronExpression" value="*/5 * * * * ?" />
+	</bean>
+	<bean id="jobDetail_room"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="syncAskRoomInfo" />
+		</property>
+		<property name="targetMethod">
+			<value>syncRoomInfo</value>
+		</property>
+		<property name="concurrent"><!--配置为false不允许任务并发执行--> 
+     <value>false</value> 
+    </property>
+	</bean>
+	
+	<bean id="sync_AlarmRecord"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="alarmRecord" />
+        <property name="cronExpression" value="*/5 * * * * ?" />
+	</bean>
+	
+	<bean id="alarmRecord" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+	    <property name="targetObject">  
+	        <ref bean="syncAlarmRecord"/>  
+	    </property>  
+	    <property name="targetMethod">  <!-- 要执行的方法名称   -->
+	        <value>alarmRecord</value>  
+	    </property>  
+	    <property name="concurrent"><!--配置为false不允许任务并发执行--> 
+     		<value>false</value> 
+    	</property>
+	</bean>
+	<bean id="syncAlarmRecord" class="com.taiji.pubsec.ajqlc.syncdh.action.SyncAlarmRecord">
+	</bean>
+
+	<bean id="cronTrigger_HarBurning"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="jobDetail_HarBurning" />
+		<property name="cronExpression" value="* */30 * * * ?" />
+	</bean>
+	<bean id="jobDetail_HarBurning"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="syncHarBurningInfo" />
+		</property>
+		<property name="targetMethod">
+			<value>syncBurningInfo</value>
+		</property>
+		<property name="concurrent"><!--配置为false不允许任务并发执行--> 
+     <value>false</value> 
+    </property>
+	</bean>
+</beans>

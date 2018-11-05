@@ -1,0 +1,50 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="leaveSituation" extends="ajgl-web-ajgl" namespace="/leaveSituation">
+		<!-- 离开办案去情况 - 查看界面-->
+		<action name="showLeaveSituation" class="leaveSituationAction" method="showLeaveSituation">
+			<result name="success">/WEB-INF/view/ajgl/leaveSituation/leaveSituation.jsp</result>
+		</action>
+		<!-- 离开办案去情况 - 维护界面-->
+		<action name="showUpdateLeaveSituation" class="leaveSituationAction" method="showUpdateLeaveSituation">
+			<result name="success">/WEB-INF/view/ajgl/leaveSituation/updateLeaveSituation.jsp</result>
+		</action>
+		<!-- 查询临时离开记录 -->
+		<action name="queryLeaveSituationList" class="leaveSituationAction" method="queryLeaveSituationList">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 保存修改临时离开记录 -->
+		<action name="saveorUpdateLeaveSituation" class="leaveSituationAction" method="saveorUpdateLeaveSituation">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,modifyPerson,modifyTime,errorMessage</param>
+			</result>
+		</action>
+		<!-- 定位卡列表页面 -->
+		<action name="showPoliceCardList">
+			<result name="success">/WEB-INF/view/ajgl/leaveSituation/showPoliceCardList.jsp</result>
+		</action>
+		<!-- 查询警员列表 -->
+		<action name="queryPoliceCardList" class="leaveSituationAction" method="queryPoliceCardList">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 手环操作 -->
+		<action name="braceletControl" class="leaveSituationAction" method="braceletControl">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,errorMessage</param>
+			</result>
+		</action>
+		<!-- 查询手环状态列表 -->
+		<action name="queryUnboundStatus" class="leaveSituationAction" method="queryUnboundStatus">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询手环是否挂起状态列表 -->
+		<action name="queryCuffStatus" class="leaveSituationAction" method="queryCuffStatus">
+			<result name="success" type="json">
+			<param name="ignoreHierarchy" >false</param>
+			<param name = "includeProperties">flag,errorMessage,cuffStatusMessage</param>
+			</result>
+		</action>
+	</package>
+</struts>

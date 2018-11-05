@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="templateStoragePrint" extends="ajgl-web-ajgl" namespace="/templateStoragePrint">
+		<action name="printTempStorageIn" class="templateStoragePrintAction" method="printTempStorageIn">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<action name="printTempStorageOut" class="templateStoragePrintAction" method="printTempStorageOut">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

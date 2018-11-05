@@ -1,0 +1,71 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="storageArea" extends="ajgl-web-ajgl" namespace="/storageArea">
+		<!-- 跳转到物证保管区维护列表 -->
+		<action name="showStorageAreaListPage" >
+			<result name="success">/WEB-INF/view/sawpgl/storageArea/storageAreaList.jsp</result>
+		</action>
+		
+		<!-- 新增物证保管区维护页面 -->
+		<action name="showNewOrUpdateStorageAreaPage" >
+			<result name="success">/WEB-INF/view/sawpgl/storageArea/newOrUpdateStorageArea.jsp</result>
+		</action>
+		
+		<!-- 新建物证保管区 -->
+		<action name="newStorageArea" class="storageAreaAction" method="newStorageArea">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		
+		<!-- 修改物品保管区 -->
+		<action name="updateStorageArea" class="storageAreaAction" method="updateStorageArea">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag,msg</param>
+			</result>
+		</action>
+		
+		<!-- 删除物品保管区 -->
+		<action name="deleteStorageAreaByIds" class="storageAreaAction" method="deleteStorageAreaByIds">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 修改物品保管区状态 -->
+		<action name="updateStorageAreaState" class="storageAreaAction" method="updateStorageAreaState">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 分页查询物证管理区 -->
+		<action name="findStorageAreaByPaging" class="storageAreaAction" method="findStorageAreaByPaging">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">storageAreaBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		<!--储物架维护 查询物证管理区 -->
+		<action name="findStorageAreaByFrame" class="storageAreaAction" method="findStorageAreaByFrame">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">storageAreaBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 根据id查询物证管理区 -->
+		<action name="findStorageAreaById" class="storageAreaAction" method="findStorageAreaById">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 验证物证保管区编码是否唯一 -->
+		<action name="verifyCodeIsOnly" class="storageAreaAction" method="verifyCodeIsOnly">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 验证物证保管区名称是否唯一 -->
+		<action name="verifyNameIsOnly" class="storageAreaAction" method="verifyNameIsOnly">
+			<result name="success" type="json"></result>
+		</action>
+		
+	</package>
+</struts>

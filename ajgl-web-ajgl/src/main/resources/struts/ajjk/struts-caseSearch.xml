@@ -1,0 +1,47 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="caseSearch" extends="ajgl-web-ajgl" namespace="/caseSearch">
+		<!-- 案件监控-列表页面 -->
+		<action name="showCaseSearchPage">
+			<result name="success">/WEB-INF/view/ajjk/caseSearch/caseSearch.jsp</result>
+		</action>
+		<!-- 案件监控-详情页面 -->
+		<action name="showCaseDetail">
+			<result name="success">/WEB-INF/view/ajjk/caseSearch/caseDetail.jsp</result>
+		</action>
+		<!-- 初始化页面数据 -->
+		<action name="queryPopedom" class="caseSearchAction" method="queryPopedom">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 初始化页面数据 -->
+		<action name="initData" class="caseSearchAction" method="initData">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询案件 -->
+		<action name="initCase" class="caseSearchAction" method="initCase">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询单位 -->
+		<action name="queryUnit" class="caseSearchAction" method="queryUnit">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 根据单位查询村居 -->
+		<action name="findCommunityByUnitCode" class="caseSearchAction" method="findCommunityByUnitCode">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 分页查询 -->
+		<action name="searchCaseByPageForHAR" class="caseSearchAction" method="searchCaseByPageForHAR">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">cbcBeanLst.*,totalNum,length</param>
+			</result>
+		</action>
+		<!-- 分页查询 -->
+		<action name="searchAllCaseByPage" class="caseSearchAction" method="searchAllCaseByPage">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">cbcBeanLst.*,totalNum,length</param>
+			</result>
+		</action>
+	</package>
+</struts>

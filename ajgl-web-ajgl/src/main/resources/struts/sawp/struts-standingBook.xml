@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="standingBook" extends="ajgl-web-ajgl" namespace="/standingBook">
+		<!-- 跳转到台账页面 -->
+		<action name="showStandingBookPage" >
+			<result name="success">/WEB-INF/view/sawpgl/standingBook/standingBook.jsp</result>
+		</action>
+		
+		<!-- 查询所有涉案物品管理区 -->
+		<action name="findAllStorageArea" class="standingBookAction" method="findAllStorageArea">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据涉案物品保管区id查询所属所有的储物柜 -->
+		<action name="findAllLockerByStorageAreaId" class="standingBookAction" method="findAllLockerByStorageAreaId">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 根据条件查询涉案物品（分页） -->
+		<action name="findInvolvedArticleListByCondition" class="standingBookAction" method="findInvolvedArticleListByCondition">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">storageBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 台账列表导出EXCEL -->
+		<action name="exportExcel" class="standingBookAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+	</package>
+</struts>

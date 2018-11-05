@@ -1,0 +1,14 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="syncDH" extends="ajgl-web-ajgl" namespace="/syncDH">
+		<!-- 同步大华组织机构-->
+		<action name="syncDHORGData" class="syncDHAction" method="syncDHORGData">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 同步大华人员-->
+		<action name="syncDHPersonData" class="syncDHAction" method="syncDHPersonData">
+			<result name="success" type="json"></result>
+		</action>
+		
+	</package>
+</struts>

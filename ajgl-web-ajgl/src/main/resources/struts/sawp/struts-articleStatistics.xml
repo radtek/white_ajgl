@@ -1,0 +1,35 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="articleStatistics" extends="ajgl-web-ajgl" namespace="/articleStatistics">
+	
+		<!-- 跳转涉案物品情况统计界面 -->
+		<action name="showArticleStatisticsPage" >
+			<result name="success">/WEB-INF/view/sawpgl/articleStatistics/lookArticleStatistics.jsp</result>
+		</action>
+		
+		<!-- 查询所有的涉案物品（分页查询） -->
+		<action name="findAllInvolvedArticle" class="articleStatisticsAction" method="findAllInvolvedArticle">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">articleInvolvedServiceBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+		<!-- 根据物品编码查询操作记录 -->
+		<action name="findAllOperationRecord" class="articleStatisticsAction" method="findAllOperationRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">operationRecordBeanList.*</param>
+			</result>
+		</action>
+		
+		<!-- 调整单列表导出EXCEL -->
+		<action name="exportExcel" class="articleStatisticsAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		
+	</package>
+</struts>

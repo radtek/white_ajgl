@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+ <package name="personInfoImage" extends="ajgl-web-xtgl" namespace="/personInfoImage">
+		<action name="personInfo">
+			<result name="success">/WEB-INF/personinfo/personInfo.jsp</result>
+		</action>
+		<action name="findCurrentPersonInfo" class="personInfoAction" method="findCurrentPersonInfo">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="changePassword">
+			<result name="success">/WEB-INF/personinfo/changePassWord.jsp </result>
+		</action>
+		<action name="changePasswordAction" class="personInfoAction" method="changePasswordAction">
+			<result name="success" type="json"></result>
+		</action>
+    </package>
+</struts>

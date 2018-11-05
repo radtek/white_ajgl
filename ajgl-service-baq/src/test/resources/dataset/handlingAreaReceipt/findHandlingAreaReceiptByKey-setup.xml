@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <t_og_ry id="123" zt="zt" sjc="2016-01-01 12:00:00"></t_og_ry>
+  <t_baq_baqsyd id="sydId" cjr="cjr" cjsj="2016-01-01 12:00:00"
+    cjbm="cjbm" zxxgr_id="123" xgsj="2016-01-01 12:00:00" zt="zt" />
+  <t_baq_baqsyd id="sydId2" cjr="cjr" cjsj="2016-01-01 12:00:00"
+    cjbm="cjbm" zxxgr_id="123" xgsj="2016-01-01 12:00:00" zt="zt" />
+  <t_og_zzjg id="cjbm" bm="bm" mc="mc" />
+  <t_og_dw id="cjbm" />
+  <t_baq_jbqk id="jbqkId" csrq="2016-01-01 12:00:00" jtzz="jtzz"
+    sfzjhm="sfzjhm" sfzjzl="sfzjzl" bwxrxm="bwxrxm" bwxrlxfs="bwxrlxfs"
+    ay="ay" qtay="qtay" jrbaqsj="2016-01-01 12:00:00" bamj="bamj" xb="xb"
+    sydbh="sydbh" ssaj="ssaj" zxxgr_id="123" xgsj="2016-01-01 12:00:00"
+    baqsyd_id="sydId" />
+  <t_baq_wxs id="wxsId" dw_id="cjbm" jksph="jksph" mc="mc" bz="bz"
+    lx="lx" bm="bm" zt='1' />
+  <t_baq_wxsfpjl id="wsxfpjlId" fpr="fpr" fpsj="2010-10-10 10:10:10"
+    wxs_id="wxsId" baqsyd_id="sydId"></t_baq_wxsfpjl>
+  <t_ywfj id="ywfjId"  mbid="baqhdjlId"
+    lx="com.taiji.pubsec.ajqlc.baq.model.HandlingAreaActivityRecord"></t_ywfj>
+  <t_baq_hdjlxx id="hdjlxxId" zxxgr_id="123"
+    xgsj="2010-10-10 10:10:10" baqsyd_id="sydId" blsl="3"></t_baq_hdjlxx>
+  <t_baq_baqhdjl id="baqhdjlId" hdnr="hdnr" hdlx="hdlx"
+    zcy="zcy" jssj="2010-10-10 10:10:10" kssj="2010-10-10 10:10:10"
+    cjsj="2010-10-10 10:10:10" zxxgsj="2010-10-10 10:10:10" whr="whr"
+    whsj="2010-10-10 10:10:10" bz="bz" wxs_id="wxsId" baqhdjlxx_id="hdjlxxId"></t_baq_baqhdjl>
+</dataset>

@@ -1,0 +1,12 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="dhinterface2" extends="ajgl-web-ajgl" namespace="/dhinterface">
+		<!-- 获取使用单word文件 -->
+		<action name="getCaseFormAttachment" class="hARPrintAction" method="printHandlingAreaReceipt">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+	</package>
+</struts>

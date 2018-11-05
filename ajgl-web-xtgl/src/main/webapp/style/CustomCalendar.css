@@ -1,0 +1,32 @@
+/*日历表*/
+#calendarTable{
+	border-color: #e1f2fa;
+	border-style : solid;
+	border-width: 2px;
+	border-left: #e1f2fa 2px solid;
+}
+.calenderTd, .calenderTh{
+	border-color: #e1f2fa;
+	border-style : solid;
+	border-width: 2px;
+}
+#calendarTable th{
+	background-color: #e1f2fa;
+} 
+
+.calenderCell, .calenderEmptyCell{
+	color: black;
+	background-color: #ffffff;
+}
+.calenderCell:hover{
+	color: #ffffff;
+	background-color: #0080ff;
+}
+.calenderCellChecked{
+	color: black;
+	background-color: #ff8040;
+}
+.calenderCellChecked:hover{
+	color: #ffffff;
+	background-color: #0080ff;
+}

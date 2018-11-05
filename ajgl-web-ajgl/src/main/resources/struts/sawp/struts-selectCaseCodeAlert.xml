@@ -1,0 +1,19 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="selectCaseCodeAlert" extends="ajgl-web-ajgl" namespace="/selectCaseCodeAlert">
+	
+		<!-- 跳转查询案件编号界面界面 -->
+		<action name="showSelectCaseCodeAlertPage" >
+			<result name="success">/WEB-INF/view/sawpgl/selectCaseCodeAlert/selectCaseCodeAlert.jsp</result>
+		</action>
+		
+		<!-- 根据条件查询案件（分页查询） -->
+		<action name="findCaseByCondition" class="selectCaseSearchAction" method="findCaseByCondition">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name="includeProperties">caseBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>

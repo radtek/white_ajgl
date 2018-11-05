@@ -1,0 +1,16 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="alertMessage" extends="ajgl-web-ajgl" namespace="/alertMessage">
+		<!-- 消息页面 -->
+		<action name="showMessageSearchPage">
+			<result name="success">/WEB-INF/view/alertMessage.jsp</result>
+		</action>
+		<!-- 查询消息记录 -->
+		<action name="findMessage" class="alertMessageAction" method="findMessage">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">amLst.*,totalNum,length</param>
+			</result>
+		</action>
+	</package>
+</struts>

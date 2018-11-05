@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="tempobject" extends="ajgl-web-all" namespace="/tempobject">
+		<!-- 查询暂存物品入库单详情 -->
+		<action name="findTempStorageInDetail" class="tempStorageInAction" method="findTempStorageInDetail">
+		<result name="success" type="json">
+		       <param name="ignoreHierarchy" >false</param>
+			   <param name = "includeProperties">tempStorageInInfoBean.*</param> 
+			</result>
+		</action>
+		<action name="updateTempStorageIn" class="tempStorageInAction" method="updateTempStorageIn">
+			<result name="success" type="json">
+			 <param name="ignoreHierarchy" >false</param>
+			   <param name = "includeProperties">flag</param> 
+			</result>
+		</action>
+		<action name="findStorageSelf" class="tempStorageInAction" method="findStorageSelf">
+			<result name="success" type="json">
+			<param name="ignoreHierarchy" >false</param>
+			   <param name = "includeProperties">temporaryStorageShelfBean.*</param> 
+			</result>
+		</action>
+		<action name="findTempStorageOut" class="tempStorageInAction" method="findTempStorageOut">
+			<result name="success" type="json">
+			<param name="ignoreHierarchy" >false</param>
+			   <param name = "includeProperties">tempStorageInInfoBean.*</param> 
+			</result>
+		</action>
+		<action name="updateTempStorageOut" class="tempStorageInAction" method="updateTempStorageOut">
+			<result name="success" type="json">
+			<param name="ignoreHierarchy" >false</param>
+			   <param name = "includeProperties">flag</param> 
+			</result>
+		</action>
+	</package>
+</struts>

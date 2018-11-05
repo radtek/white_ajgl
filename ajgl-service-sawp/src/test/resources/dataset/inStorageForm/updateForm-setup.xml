@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+	<t_sawp_bgq id = "bgqId1"></t_sawp_bgq>
+	<t_sawp_cwg id = "cwgId1" bgq_id = "bgqId1"></t_sawp_cwg>
+
+	<t_sawp_rkd id = "rkdId" bm = "bm" bz = "bz" cjsj = "2016-10-10 10:10:10" ajbh = "ajbh" wsmc = "wsmc" xyrxm = "xyrxm"></t_sawp_rkd>
+	<t_sawp_bgwz id = "bgwzId" zksl = "1" bcsl = "1" sawp_id = "sawpId" cwg_id = "cwgId1"></t_sawp_bgwz>
+	<t_sawp_rkdx id = "rkdxId" rksl = "1" bz = "bz" sawp_id = "sawpId" cwg_id = "cwgId1" rkd_id = "rkdId"></t_sawp_rkdx>
+</dataset>

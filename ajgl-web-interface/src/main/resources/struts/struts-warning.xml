@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="warningForETL" extends="ajgl-web-all" namespace="/warningForETL">
+		<!-- 逮捕到期预警 -->
+		<action name="arrestWarning" class="warningForETLAction" method="arrestWarning">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 保释到期预警 -->
+		<action name="bailWarning" class="warningForETLAction" method="bailWarning">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 刑拘到期预警 -->
+		<action name="detainedWarning" class="warningForETLAction" method="detainedWarning">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 延长拘留到期预警 -->
+		<action name="extendedDetentionWarning" class="warningForETLAction" method="extendedDetentionWarning">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 监视居住到期预警 -->
+		<action name="residentialSurveillanceWarning" class="warningForETLAction" method="residentialSurveillanceWarning">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 传唤到期预警 -->
+		<action name="subpoenaWarning" class="warningForETLAction" method="subpoenaWarning">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 涉案物品到期预警 -->
+		<action name="susObjWarning" class="warningForETLAction" method="susObjWarning">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

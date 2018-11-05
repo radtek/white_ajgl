@@ -1,0 +1,55 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="handlingAreaSupervision" extends="ajgl-web-ajgl" namespace="/handlingAreaSupervision">
+		<!-- 办案区督查  -主页面 -->
+		<action name="showHandlingAreaSupervision">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaSupervision/handlingAreaSupervision.jsp</result>
+		</action>
+		<!-- 查询所有问询室及办案区其他房间(包含所有状态) -->
+		<action name="queryAllRooms" class="handlingAreaSupervision" method="queryAllRooms">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询某单位下所有问询室及办案区其他房间(包含所有状态) -->
+		<action name="queryRoomsByUnitId" class="handlingAreaSupervision" method="queryRoomsByUnitId">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="queryRoomUseRecord">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaSupervision/askRoomUseRecord.jsp</result>
+		</action>
+		<action name="toRoomUseAbnormalList">
+			<result name="success">/WEB-INF/view/ajgl/handlingAreaSupervision/askRoomAbnormalList.jsp</result>
+		</action>
+		<!-- 讯（询）问室详情 -->
+		<action name="showAskRoomInfoDetail" class="handlingAreaSupervision" method="showAskRoomInfoDetail">
+			<result name="askRoomInfo">/WEB-INF/view/ajgl/handlingAreaSupervision/askRoomInfo.jsp</result>
+			<result name="askRoomAbnormalFind">/WEB-INF/view/ajgl/handlingAreaSupervision/askRoomAbnormalFind.jsp</result>
+			<result name="askRoomAbnormalDetailInfo">/WEB-INF/view/ajgl/handlingAreaSupervision/askRoomAbnormalDetailInfo.jsp</result>
+			<result name="askRoomAllocationDetailInfo">/WEB-INF/view/ajgl/askRoomAllocation/askRoomInfo.jsp</result>
+		</action>
+		
+		<!-- 查询所有问询室及办案区其他房间(包含所有状态) -->
+		<action name="queryAskRoomUseRecord" class="handlingAreaSupervision" method="queryAskRoomUseRecord">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询问询室异常使用记录 -->
+		<action name="queryRoomUseAbnormalList" class="handlingAreaSupervision" method="queryRoomUseAbnormalList">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询单位 -->
+		<action name="queryUnits" class="handlingAreaSupervision" method="queryUnits">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询附件 -->
+		<action name="queryAttach" class="handlingAreaSupervision" method="queryAttach">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 保存问询室及办案区其他房间违规记录 -->
+		<action name="saveorUpdateIllegalRecord" class="handlingAreaSupervision" method="saveorUpdateIllegalRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">flag</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>

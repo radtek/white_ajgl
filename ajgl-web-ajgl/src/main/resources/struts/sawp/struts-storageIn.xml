@@ -1,0 +1,96 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="storageIn" extends="ajgl-web-ajgl" namespace="/storageIn">
+		<!-- 跳转到入库单列表 -->
+		<action name="toStorageInRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/storageIn/storageInRecord.jsp</result>
+		</action>
+		<!-- 跳转到新增入库单页面 -->
+		<action name="toNewRecord" >
+			<result name="success">/WEB-INF/view/sawpgl/storageIn/addStorageIn.jsp</result>
+		</action>
+		<!-- 跳转到查看入库单页面 -->
+		<action name="viewStorageIn"  class="storageInAction" method="viewStorageIn">
+			<result name="success">/WEB-INF/view/sawpgl/storageIn/viewStorageIn.jsp</result>
+		</action>
+		<!-- 跳转到选择储物架页面 -->
+		<action name="showSelectStoragePage" >
+			<result name="success">/WEB-INF/view/sawpgl/storageIn/selectStorage.jsp</result>
+		</action>
+		
+		<!-- 跳转到物品二维码查看打印页面 -->
+		<action name="showArticleQrcodePage" >
+			<result name="success">/WEB-INF/view/util/articleQrcodeAlert.jsp</result>
+		</action>
+		
+		<!-- 查询入库单列表 -->
+		<action name="queryStorageInRecord" class="storageInAction" method="queryStorageInRecord">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">formBeanlist.*,totalNum</param>
+			</result>
+		</action>
+		
+		<!-- 根据编号查询涉案物品 -->
+		<action name="findArticleByCode" class="storageInAction" method="findArticleByCode">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 保存入库单 -->
+		<action name="saveStorageInfo" class="storageInAction" method="saveStorageInfo">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 保存入库单 -->
+		<action name="findInStorageFormById" class="storageInAction" method="findInStorageFormById">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 新增入库单页面数据初始化 -->
+		<action name="initData" class="storageInAction" method="initData">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 查询新增入库单页面的涉案物品 -->
+		<action name="findImpoundedObjectByCaseCodeAndSuspect" class="storageInAction" method="findImpoundedObjectByCaseCodeAndSuspect">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 获取启用的涉案物品保管区信息 -->
+		<action name="queryStorageAreaInfo" class="storageInAction" method="queryStorageAreaInfo">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 储物架选择页面数据初始化 -->
+		<action name="initDataForStorageSelectPage" class="storageInAction" method="initDataForStorageSelectPage">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<!-- 批量删除入库单 -->
+		<action name="deleteByIds" class="storageInAction" method="deleteByIds">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 根据案件id和嫌疑人id查询对应文书 -->
+		<action name="findDocBeanBySuspectIdAndCaseId" class="storageInAction" method="findDocBeanBySuspectIdAndCaseId">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询案件信息 -->
+		<action name="queryCaseInfo" class="storageInAction" method="queryCaseInfo">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 打印 -->
+		<action name="printStorageInById" class="storageInAction" method="printStorageInById">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+		</action>
+		<!-- 导出入库单 -->
+		<action name="exportExcel" class="storageInAction" method="exportExcel">
+			<result name="done" type="chain">
+		        <param name="actionName">export</param>
+			    <param name="namespace">/</param>
+	        </result> 
+	  </action> 
+		
+	</package>
+</struts>

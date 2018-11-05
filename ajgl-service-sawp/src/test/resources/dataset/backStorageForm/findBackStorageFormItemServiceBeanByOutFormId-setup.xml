@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<t_zdlx id = "0000000024" fl = "sawpgl" bm = "cklx" bz = "bz" mc = "cklx" zt = "1" sjc = "2016-07-29 08:02:48"></t_zdlx>
+	<t_zdx id = "0000000024001" bm = "0" mc = "zagj" sx = "1" zt = "1" sjc = "2016-07-29 08:02:48" zdlx_id = "0000000024"></t_zdx>
+	<t_sawp_cwg id="cwgId" bgq_id = "bgqId"></t_sawp_cwg>
+	<t_sawp_bgq id="bgqId"></t_sawp_bgq>
+	<t_sawp_sawp id="sawpId" zksl="5" bh = "bh" wpxz = "0000000024001"></t_sawp_sawp>
+	<t_sawp_bgwz id="bgwzId" zksl="2" bcsl="2" sawp_id="sawpId"
+		cwg_id="cwgId"></t_sawp_bgwz>
+		<t_sawp_ckd id = "ckdId" bm = "ckdbm"></t_sawp_ckd>
+	<t_sawp_ckdx id="ckdxId" cksl="5" zksl = "5" sawp_id="sawpId" ckd_id = "ckdId"></t_sawp_ckdx>
+	<t_sawp_fhd id="fhdId" bm="bm" bz="bz" ajbh="ajbh" ckdbm="ckdbm"></t_sawp_fhd>
+	<t_sawp_fhdx id="fhdxId1" bz="bz1" fhsl="1"
+		whsj="2016-10-10 10:10:10" sawp_id="sawpId" fhd_id="fhdId" cwg_id="cwgId"
+		ckdx_id="ckdxId" bgq_id="bgqId"></t_sawp_fhdx>
+</dataset>

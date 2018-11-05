@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#03285f">
+        <LinearLayout
+            android:id="@+id/scan_case_back_v3_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            >
+        <ImageView
+            android:id="@+id/main_item_back_v3_search_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/mainv2_logo_back"
+            />
+
+            <TextView
+                android:id="@+id/main_item_back_v3_search_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="0dp"
+                android:text="返回"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/main_item_back_v3_search_iv"
+                android:layout_toEndOf="@+id/main_item_back_v3_search_iv"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/collection_item_title_v3_search_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="0dp"
+            android:text="涉案物品管理"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/collecion_fg_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+</LinearLayout>

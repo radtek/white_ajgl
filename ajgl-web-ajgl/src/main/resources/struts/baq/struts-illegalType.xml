@@ -1,0 +1,51 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="illegalType" extends="ajgl-web-ajgl" namespace="/illegalType">
+	
+		<action name="toIllegalTypeNew">
+			<result name="success">/WEB-INF/view/ajgl/illegalType/addIllegalType.jsp</result>
+		</action>
+		<action name="toIllegalTypeList">
+			<result name="success">/WEB-INF/view/ajgl/illegalType/illegalTypeList.jsp</result>
+		</action>
+		<!-- 启用/停用 -->
+		<action name="updateIllegalTypeStatus" class="illegalTypeAction" method="updateIllegalTypeStatus">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 删除 -->
+		<action name="deleteIllegalTypeByIds" class="illegalTypeAction" method="deleteIllegalTypeByIds">
+			<result name="success" type="json"></result>
+		</action>
+		
+		
+		<!-- 保存 -->
+		<action name="saveIllegalType" class="illegalTypeAction" method="saveIllegalType">
+			<result name="success" type="json">
+			 <param name="ignoreHierarchy" >false</param>
+			   <param name = "includeProperties">flag,msg</param> 
+			</result>
+		</action>
+		<!-- 查询违规类型集合 -->
+		<action name="queryIllegalTypeList" class="illegalTypeAction" method="queryIllegalTypeList">
+			<result name="success" type="json">
+				<param name="ignoreHierarchy" >false</param>
+				<param name = "includeProperties">illegalTypeBeanList.*,totalNum,length</param>
+			</result>
+		</action>
+		<!-- 查询违规类型集合 -->
+		<action name="queryIllegalTypeForQyList" class="illegalTypeAction" method="queryIllegalTypeForQyList">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 查询违规类型 -->
+		<action name="queryIllegalType" class="illegalTypeAction" method="queryIllegalType">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 更新 -->
+		<action name="updateIllegalType" class="illegalTypeAction" method="updateIllegalType">
+			<result name="success" type="json">
+			   <param name="ignoreHierarchy" >false</param>
+			   <param name = "includeProperties">flag,msg</param> 
+			</result>
+		</action>
+	</package>
+</struts>
